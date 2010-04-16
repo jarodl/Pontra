@@ -15,6 +15,11 @@
 		2899E5220DE3E06400AC0155 /* PontraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* PontraViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* PontraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* PontraViewController.m */; };
+		7A04A2031178D56D00ECA3E0 /* ResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A2021178D56D00ECA3E0 /* ResourceManager.m */; };
+		7A04A20D1178D6B900ECA3E0 /* GLFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A20A1178D6B900ECA3E0 /* GLFont.m */; };
+		7A04A20E1178D6B900ECA3E0 /* GLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A20B1178D6B900ECA3E0 /* GLTexture.m */; };
+		7A04A20F1178D6B900ECA3E0 /* pointmath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A20C1178D6B900ECA3E0 /* pointmath.m */; };
+		7A04A24C1178DB0500ECA3E0 /* controls.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A04A24B1178DB0500ECA3E0 /* controls.png */; };
 		7A2C55581177F9390047C200 /* Paddle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C55571177F9390047C200 /* Paddle.m */; };
 		7A2C55931177FE210047C200 /* GameStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C55921177FE210047C200 /* GameStateManager.m */; };
 		7A2C55961177FE530047C200 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C55951177FE530047C200 /* GameState.m */; };
@@ -44,6 +49,15 @@
 		28D7ACF70DDB3853001CB0EB /* PontraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PontraViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Pontra_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pontra_Prefix.pch; sourceTree = "<group>"; };
+		7A04A2011178D56D00ECA3E0 /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
+		7A04A2021178D56D00ECA3E0 /* ResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceManager.m; sourceTree = "<group>"; };
+		7A04A2081178D6B900ECA3E0 /* GLFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLFont.h; sourceTree = "<group>"; };
+		7A04A2091178D6B900ECA3E0 /* GLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTexture.h; sourceTree = "<group>"; };
+		7A04A20A1178D6B900ECA3E0 /* GLFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLFont.m; sourceTree = "<group>"; };
+		7A04A20B1178D6B900ECA3E0 /* GLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLTexture.m; sourceTree = "<group>"; };
+		7A04A20C1178D6B900ECA3E0 /* pointmath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pointmath.m; sourceTree = "<group>"; };
+		7A04A2251178D6D800ECA3E0 /* pointmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pointmath.h; sourceTree = "<group>"; };
+		7A04A24B1178DB0500ECA3E0 /* controls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls.png; sourceTree = "<group>"; };
 		7A2C55561177F9390047C200 /* Paddle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Paddle.h; sourceTree = "<group>"; };
 		7A2C55571177F9390047C200 /* Paddle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Paddle.m; sourceTree = "<group>"; };
 		7A2C55911177FE210047C200 /* GameStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateManager.h; sourceTree = "<group>"; };
@@ -90,14 +104,13 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7A04A1EF1178D2C700ECA3E0 /* GameObjects */,
 				7A5E2CEC115FDF8600B0FBD5 /* GameStates */,
 				7A5E2CDB115FD3D600B0FBD5 /* Framework */,
 				1D3623240D0F684500981E51 /* PontraAppDelegate.h */,
 				1D3623250D0F684500981E51 /* PontraAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* PontraViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* PontraViewController.m */,
-				7A2C55561177F9390047C200 /* Paddle.h */,
-				7A2C55571177F9390047C200 /* Paddle.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -135,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				7A2C5784117837060047C200 /* pontra_logo.png */,
+				7A04A24B1178DB0500ECA3E0 /* controls.png */,
 				2899E5210DE3E06400AC0155 /* PontraViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Pontra-Info.plist */,
@@ -156,15 +170,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7A04A1EF1178D2C700ECA3E0 /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+				7A2C55561177F9390047C200 /* Paddle.h */,
+				7A2C55571177F9390047C200 /* Paddle.m */,
+			);
+			name = GameObjects;
+			sourceTree = "<group>";
+		};
 		7A5E2CDB115FD3D600B0FBD5 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
 				7A2C55911177FE210047C200 /* GameStateManager.h */,
 				7A2C55921177FE210047C200 /* GameStateManager.m */,
+				7A04A2081178D6B900ECA3E0 /* GLFont.h */,
+				7A04A2091178D6B900ECA3E0 /* GLTexture.h */,
+				7A04A20A1178D6B900ECA3E0 /* GLFont.m */,
+				7A04A2251178D6D800ECA3E0 /* pointmath.h */,
+				7A04A20B1178D6B900ECA3E0 /* GLTexture.m */,
+				7A04A20C1178D6B900ECA3E0 /* pointmath.m */,
 				7A2C55941177FE530047C200 /* GameState.h */,
 				7A2C55951177FE530047C200 /* GameState.m */,
 				7A2C55A1117801D10047C200 /* GLESGameState.h */,
 				7A2C55A2117801D10047C200 /* GLESGameState.m */,
+				7A04A2011178D56D00ECA3E0 /* ResourceManager.h */,
+				7A04A2021178D56D00ECA3E0 /* ResourceManager.m */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
@@ -235,6 +266,7 @@
 				2899E5220DE3E06400AC0155 /* PontraViewController.xib in Resources */,
 				7A2C56421178172A0047C200 /* gsMainMenu.xib in Resources */,
 				7A2C5785117837060047C200 /* pontra_logo.png in Resources */,
+				7A04A24C1178DB0500ECA3E0 /* controls.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +289,10 @@
 				7A2C55A6117807160047C200 /* gsHighScores.m in Sources */,
 				7A2C55AA117808090047C200 /* gsSettings.m in Sources */,
 				7A2C569E117827640047C200 /* gsPauseMenu.m in Sources */,
+				7A04A2031178D56D00ECA3E0 /* ResourceManager.m in Sources */,
+				7A04A20D1178D6B900ECA3E0 /* GLFont.m in Sources */,
+				7A04A20E1178D6B900ECA3E0 /* GLTexture.m in Sources */,
+				7A04A20F1178D6B900ECA3E0 /* pointmath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

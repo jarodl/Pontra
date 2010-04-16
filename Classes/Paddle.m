@@ -11,6 +11,14 @@
 
 @implementation Paddle
 
+- (void) Render
+{
+}
+
+- (void) Update
+{
+}
+
 - (void) moveY:(int) dir
 {
 }

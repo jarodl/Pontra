@@ -21,6 +21,8 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
   
+  [ResourceManager initialize];
+  
   // Set up the main loop
   [NSTimer scheduledTimerWithTimeInterval:LOOP_TIMER_MINIMUM target:self selector:@selector(gameLoop:) userInfo:nil repeats:NO];
   

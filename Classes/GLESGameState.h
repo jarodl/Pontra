@@ -6,12 +6,7 @@
 //  Copyright 2010 nil. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "GameState.h"
-#import <OpenGLES/EAGLDrawable.h>
-#import <QuartzCore/QuartzCore.h>
-#import <OpenGLES/ES1/gl.h>
-#import <OpenGLES/ES1/glext.h>
 #import <Foundation/Foundation.h>
 
 @interface GLESGameState : GameState {

@@ -15,10 +15,10 @@
   int y_pos;
 }
 
+- (void) Render;
+- (void) Update;
 - (void) moveY:(int) dir;
 - (void) moveX:(int) dir;
 - (void) setPos:(CGPoint) p;
-
-
 
 @end

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "GameStateManager.h"
+#import "ResourceManager.h"
 
 @class PontraViewController;
 

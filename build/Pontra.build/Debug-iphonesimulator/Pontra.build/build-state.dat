@@ -1,1652 +1,0 @@
-TPontra
-v7
-r0
-t293097703.414803
-cCheck dependencies
-cProcessInfoPlistFile /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Info.plist Pontra-Info.plist
-cCompileXIB /Users/Jarod/Documents/Repositories/Pontra/MainWindow.xib
-cCompileXIB /Users/Jarod/Documents/Repositories/Pontra/PontraViewController.xib
-cCompileXIB /Users/Jarod/Documents/Repositories/Pontra/gsMainMenu.xib
-cCpResource build/Debug-iphonesimulator/Pontra.app/pontra_logo.png pontra_logo.png
-cProcessPCH /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch.gch Pontra_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/main.o /Users/Jarod/Documents/Repositories/Pontra/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PontraAppDelegate.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PontraAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PontraViewController.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PontraViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/Paddle.o /Users/Jarod/Documents/Repositories/Pontra/Classes/Paddle.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/GameStateManager.o /Users/Jarod/Documents/Repositories/Pontra/Classes/GameStateManager.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/GameState.o /Users/Jarod/Documents/Repositories/Pontra/Classes/GameState.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsMainMenu.o /Users/Jarod/Documents/Repositories/Pontra/Classes/gsMainMenu.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsGame.o /Users/Jarod/Documents/Repositories/Pontra/Classes/gsGame.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/GLESGameState.o /Users/Jarod/Documents/Repositories/Pontra/Classes/GLESGameState.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsHighScores.o /Users/Jarod/Documents/Repositories/Pontra/Classes/gsHighScores.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsSettings.o /Users/Jarod/Documents/Repositories/Pontra/Classes/gsSettings.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsPauseMenu.o /Users/Jarod/Documents/Repositories/Pontra/Classes/gsPauseMenu.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Pontra normal i386
-cGenerateDSYMFile /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app.dSYM /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Pontra
-cTouch /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk
-c000000004B4AD79900000000000000EE
-t1263196057
-s238
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004ABDC853000000000026EE30
-t1253951571
-s2551344
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.h
-c000000004ABDC85300000000000004FE
-t1253951571
-s1278
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004ABDC952000000000027E880
-t1253951826
-s2615424
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004ABDC93F0000000000001355
-t1253951807
-s4949
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/OpenAL.framework/OpenAL
-c000000004ABDC952000000000001EEA0
-t1253951826
-s126624
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/EAGLDrawable.h
-c000000004ABDCA290000000000000A61
-t1253952041
-s2657
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES1/gl.h
-c000000004ABDCA290000000000009369
-t1253952041
-s37737
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES1/glext.h
-c000000004ABDCA290000000000002A42
-t1253952041
-s10818
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
-c000000004ABDCA31000000000001F8E0
-t1253952049
-s129248
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
-c000000004ABDCAC8000000000000007D
-t1253952200
-s125
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
-c000000004ABDCB2000000000000E5890
-t1253952288
-s940176
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004ABDEE1D0000000000000788
-t1253961245
-s1928
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIView.h
-c000000004ABDEE1D0000000000002AC7
-t1253961245
-s10951
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004ABDEEE200000000016721E0
-t1253961442
-s23536096
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/usr/include/assert.h
-c000000004748A1310000000000000DCB
-t1195942193
-s3531
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/usr/include/ctype.h
-c000000004748A1320000000000002C3A
-t1195942194
-s11322
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/usr/include/math.h
-c000000004748A10600000000000004B7
-t1195942150
-s1207
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/usr/include/stdio.h
-c000000004748A1330000000000003D1D
-t1195942195
-s15645
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/usr/include/stdlib.h
-c000000004748A1330000000000002A79
-t1195942195
-s10873
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/usr/include/string.h
-c000000004748A1330000000000001731
-t1195942195
-s5937
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/usr/include/time.h
-c000000004748A133000000000000178E
-t1195942195
-s6030
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/limits.h
-c000000004748AF950000000000000C7E
-t1195945877
-s3198
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdarg.h
-c000000004748AF9500000000000010DD
-t1195945877
-s4317
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stddef.h
-c000000004748AF950000000000003197
-t1195945877
-s12695
-
-N/Users/Jarod/Documents/Repositories/Pontra/../../../.Trash/pontra_logo.png
-c000000004BC7F46E0000000000003462
-t1271395438
-s13410
-
-N/Users/Jarod/Documents/Repositories/Pontra/../../../Desktop/pontra_logo.png
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/GLESGameState.h
-c000000004BC80097000000000000021E
-t1271398551
-s542
-i<UIKit/UIKit.h>
-i"GameState.h"
-i<OpenGLES/EAGLDrawable.h>
-i<QuartzCore/QuartzCore.h>
-i<OpenGLES/ES1/gl.h>
-i<OpenGLES/ES1/glext.h>
-i<Foundation/Foundation.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/GLESGameState.m
-c000000004BC814BF0000000000001655
-t1271403711
-s5717
-i"GLESGameState.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/GameState.h
-c000000004BC816DA00000000000001B1
-t1271404250
-s433
-i<UIKit/UIKit.h>
-i"GameStateManager.h"
-i<UIKit/UIView.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/GameState.m
-c000000004BC818A4000000000000034B
-t1271404708
-s843
-i"GameState.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/GameStateManager.h
-c000000004BC7C6B10000000000000101
-t1271383729
-s257
-i<Foundation/Foundation.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/GameStateManager.m
-c000000004BC7C6C500000000000000F2
-t1271383749
-s242
-i"GameStateManager.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp
-c000000004A6369FC0000000000001708
-t1248029180
-s5896
-i<string.h>
-i"PVRTFixedPoint.h"
-i"PVRTFixedPointAPI.h"
-i"../PVRTBackground.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTContext.h
-c000000004A6369FC0000000000000858
-t1248029180
-s2136
-i<stdio.h>
-i<OpenGLES/ES1/gl.h>
-i<OpenGLES/ES1/glext.h>
-i<GLES/egl.h>
-i<GLES/gl.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTFixedPointAPI.h
-c000000004A6369FC00000000000012C1
-t1248029180
-s4801
-i<OpenGLES/ES1/gl.h>
-i<GLES/gl.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTPrint3DAPI.cpp
-c000000004A6369FC000000000000493C
-t1248029180
-s18748
-i<stdarg.h>
-i<stdio.h>
-i<stdlib.h>
-i<string.h>
-i"PVRTContext.h"
-i"PVRTFixedPointAPI.h"
-i"PVRTFixedPoint.h"
-i"PVRTMatrix.h"
-i"PVRTPrint3D.h"
-i"PVRTglesExt.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTTextureAPI.cpp
-c000000004A6369FC0000000000004823
-t1248029180
-s18467
-i<string.h>
-i<stdlib.h>
-i"PVRTContext.h"
-i"PVRTglesExt.h"
-i"PVRTTexture.h"
-i"PVRTTextureAPI.h"
-i"PVRTDecompress.h"
-i"PVRTFixedPoint.h"
-i"PVRTMatrix.h"
-i"PVRTMisc.h"
-i"PVRTResourceFile.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTTextureAPI.h
-c000000004A6369FC0000000000000F0B
-t1248029180
-s3851
-i"../PVRTError.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTglesExt.cpp
-c000000004A6369FC0000000000002C23
-t1248029180
-s11299
-i<string.h>
-i"PVRTContext.h"
-i"PVRTglesExt.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTglesExt.h
-c000000004A6369FC0000000000003BD4
-t1248029180
-s15316
-i<OpenGLES/ES1/gl.h>
-i<OpenGLES/ES1/glext.h>
-i<GLES/egl.h>
-i<GLES/gl.h>
-i<GLES/glext.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTBackground.h
-c000000004A6369FC0000000000000EB7
-t1248029180
-s3767
-i"PVRTGlobal.h"
-i"PVRTContext.h"
-i"PVRTString.h"
-i"PVRTError.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTBoneBatch.cpp
-c000000004A6369FE00000000000039C1
-t1248029182
-s14785
-i"PVRTGlobal.h"
-i"PVRTContext.h"
-i<vector>
-i<list>
-i"PVRTMatrix.h"
-i"PVRTVertex.h"
-i"PVRTBoneBatch.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTBoneBatch.h
-c000000004A6369FC0000000000000CBF
-t1248029180
-s3263
-i"PVRTVertex.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTDecompress.cpp
-c000000004A6369FE000000000000651D
-t1248029182
-s25885
-i<stdlib.h>
-i<stdio.h>
-i<limits.h>
-i<math.h>
-i<string.h>
-i<assert.h>
-i"PVRTDecompress.h"
-i"PVRTTexture.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTDecompress.h
-c000000004A6369FE00000000000007D2
-t1248029182
-s2002
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTError.cpp
-c000000004A6369FE0000000000000797
-t1248029182
-s1943
-i"PVRTError.h"
-i<stdio.h>
-i<stdlib.h>
-i<string.h>
-i<stdarg.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTError.h
-c000000004A6369FC00000000000007FB
-t1248029180
-s2043
-i<e32debug.h>
-i<windows.h>
-i<stdio.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.cpp
-c000000004A6369FE0000000000001700
-t1248029182
-s5888
-i<math.h>
-i<string.h>
-i"PVRTContext.h"
-i"PVRTFixedPoint.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.h
-c000000004A6369FE0000000000001F76
-t1248029182
-s8054
-i"PVRTFixedPointAPI.h"
-i"PVRTMathTable.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTGeometry.cpp
-c000000004A6369FE0000000000007ACD
-t1248029182
-s31437
-i<vector>
-i<math.h>
-i"PVRTGeometry.h"
-i"PvrVGPBlockTest.h"
-i"PVRTGlobal.h"
-i"PVRTContext.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTGeometry.h
-c000000004A6369FE00000000000008A0
-t1248029182
-s2208
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTGlobal.h
-c000000004A6369FE0000000000001978
-t1248029182
-s6520
-i<windows.h>
-i<crtdbg.h>
-i<tchar.h>
-i<windows.h>
-i<stdlib.h>
-i<string.h>
-i<stdio.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMathTable.h
-c000000004A6369FE000000000000B66E
-t1248029182
-s46702
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMatrix.h
-c000000004A6369FE000000000000768A
-t1248029182
-s30346
-i"PVRTGlobal.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMatrixF.cpp
-c000000004A6369FE0000000000006C30
-t1248029182
-s27696
-i"PVRTGlobal.h"
-i"PVRTContext.h"
-i<math.h>
-i<string.h>
-i"PVRTFixedPoint.h"
-i"PVRTMatrix.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMatrixX.cpp
-c000000004A6369FE0000000000007874
-t1248029182
-s30836
-i"PVRTContext.h"
-i<math.h>
-i<string.h>
-i"PVRTFixedPoint.h"
-i"PVRTMatrix.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMemoryFileSystem.h
-c000000004A6369FC0000000000000E22
-t1248029180
-s3618
-i<stddef.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMisc.cpp
-c000000004A6369FC00000000000031D2
-t1248029180
-s12754
-i<string.h>
-i<stdlib.h>
-i<ctype.h>
-i"PVRTGlobal.h"
-i"PVRTContext.h"
-i"PVRTFixedPoint.h"
-i"PVRTMatrix.h"
-i"PVRTMisc.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMisc.h
-c000000004A6369FE0000000000000F14
-t1248029182
-s3860
-i"PVRTMatrix.h"
-i"PVRTFixedPoint.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPOD.cpp
-c000000004A6369FE000000000001AF39
-t1248029182
-s110393
-i<math.h>
-i<stdlib.h>
-i<stdio.h>
-i<string.h>
-i"PVRTGlobal.h"
-i"PVRTContext.h"
-i"PVRTFixedPoint.h"
-i"PVRTMatrix.h"
-i"PVRTQuaternion.h"
-i"PVRTVertex.h"
-i"PVRTBoneBatch.h"
-i"PVRTModelPOD.h"
-i"PVRTMisc.h"
-i"PVRTResourceFile.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPOD.h
-c000000004A6369FE0000000000007A68
-t1248029182
-s31336
-i"PVRTVector.h"
-i"PVRTError.h"
-i"PVRTVertex.h"
-i"PVRTBoneBatch.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp
-c000000004A6369FC0000000000005A48
-t1248029180
-s23112
-i<math.h>
-i<stdlib.h>
-i<stdio.h>
-i<string.h>
-i<time.h>
-i"PVRTGlobal.h"
-i"PVRTContext.h"
-i"PVRTMatrix.h"
-i"PVRTVertex.h"
-i"PVRTBoneBatch.h"
-i"PVRTFixedPoint.h"
-i"PVRTModelPOD.h"
-i<ctype.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTPrint3D.cpp
-c000000004A6369FE000000000000BB27
-t1248029182
-s47911
-i<stdarg.h>
-i<stdio.h>
-i<stdlib.h>
-i<string.h>
-i"PVRTGlobal.h"
-i"PVRTFixedPoint.h"
-i"PVRTMatrix.h"
-i"PVRTPrint3D.h"
-i"PVRTPrint3Ddat.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTPrint3D.h
-c000000004A6369FC00000000000049BE
-t1248029180
-s18878
-i"PVRTGlobal.h"
-i"PVRTContext.h"
-i"PVRTError.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTPrint3Ddat.h
-c000000004A6369FE0000000000081B88
-t1248029182
-s531336
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTQuaternion.h
-c000000004A6369FC0000000000002AB6
-t1248029180
-s10934
-i"PVRTMatrix.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTQuaternionF.cpp
-c000000004A6369FE000000000000247F
-t1248029182
-s9343
-i"PVRTGlobal.h"
-i"PVRTContext.h"
-i<math.h>
-i<string.h>
-i"PVRTFixedPoint.h"
-i"PVRTQuaternion.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTQuaternionX.cpp
-c000000004A6369FE0000000000002953
-t1248029182
-s10579
-i"PVRTContext.h"
-i<math.h>
-i<string.h>
-i"PVRTFixedPoint.h"
-i"PVRTQuaternion.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTResourceFile.cpp
-c000000004A6369FE00000000000028F1
-t1248029182
-s10481
-i"PVRTResourceFile.h"
-i<stdio.h>
-i<string.h>
-i"PVRTResourceFile.h"
-i"PVRTString.h"
-i"PVRTMemoryFileSystem.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTResourceFile.h
-c000000004A6369FC0000000000001065
-t1248029180
-s4197
-i<stdlib.h>
-i"PVRTString.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTShadowVol.cpp
-c000000004A6369FE0000000000008870
-t1248029182
-s34928
-i<stdlib.h>
-i<string.h>
-i"PVRTGlobal.h"
-i"PVRTContext.h"
-i"PVRTFixedPoint.h"
-i"PVRTMatrix.h"
-i"PVRTTrans.h"
-i"PVRTShadowVol.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTShadowVol.h
-c000000004A6369FE000000000000272A
-t1248029182
-s10026
-i"PVRTContext.h"
-i"PVRTVector.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTString.cpp
-c000000004A6369FE000000000000A78C
-t1248029182
-s42892
-i"PVRTString.h"
-i<stdlib.h>
-i<string.h>
-i<assert.h>
-i"PVRTGlobal.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTString.h
-c000000004A6369FE0000000000007D0D
-t1248029182
-s32013
-i<stdio.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTexture.cpp
-c000000004A6369FE00000000000011EB
-t1248029182
-s4587
-i<string.h>
-i<stdlib.h>
-i"PVRTTexture.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTexture.h
-c000000004A6369FE0000000000002A5E
-t1248029182
-s10846
-i"PVRTGlobal.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTrans.cpp
-c000000004A6369FC0000000000003B74
-t1248029180
-s15220
-i<string.h>
-i"PVRTGlobal.h"
-i"PVRTContext.h"
-i"PVRTFixedPoint.h"
-i"PVRTMatrix.h"
-i"PVRTTrans.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTrans.h
-c000000004A6369FE0000000000001D94
-t1248029182
-s7572
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTriStrip.cpp
-c000000004A6369FE0000000000004A1E
-t1248029182
-s18974
-i<stdlib.h>
-i"PVRTGlobal.h"
-i"PVRTContext.h"
-i"PVRTTriStrip.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTriStrip.h
-c000000004A6369FE0000000000000731
-t1248029182
-s1841
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTVector.cpp
-c000000004A6369FE0000000000003F17
-t1248029182
-s16151
-i"PVRTVector.h"
-i<math.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTVector.h
-c000000004A6369FE000000000001542D
-t1248029182
-s87085
-i"assert.h"
-i"PVRTGlobal.h"
-i"PVRTFixedPoint.h"
-i"PVRTMatrix.h"
-i<string.h>
-i<math.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTVertex.cpp
-c000000004A6369FE00000000000056D9
-t1248029182
-s22233
-i"PVRTGlobal.h"
-i"PVRTContext.h"
-i<stdlib.h>
-i<string.h>
-i"PVRTFixedPoint.h"
-i"PVRTMatrix.h"
-i"PVRTVertex.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTVertex.h
-c000000004A6369FC000000000000180B
-t1248029180
-s6155
-i"PVRTError.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/Paddle.h
-c000000004BC7DA15000000000000016F
-t1271388693
-s367
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-i<CoreGraphics/CoreGraphics.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/Paddle.m
-c000000004BC7DE890000000000000108
-t1271389833
-s264
-i"Paddle.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PontraAppDelegate.h
-c000000004BC7FE8800000000000002B8
-t1271398024
-s696
-i<UIKit/UIKit.h>
-i"GameStateManager.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PontraAppDelegate.m
-c000000004BC8190600000000000009D7
-t1271404806
-s2519
-i"PontraAppDelegate.h"
-i"PontraViewController.h"
-i"gsMainMenu.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PontraViewController.h
-c000000004BC6970C00000000000000DD
-t1271305996
-s221
-i<UIKit/UIKit.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/PontraViewController.m
-c000000004BC8172C0000000000000299
-t1271404332
-s665
-i"PontraViewController.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/gsGame.h
-c000000004BC8002200000000000000EE
-t1271398434
-s238
-i<UIKit/UIKit.h>
-i"GLESGameState.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/gsGame.m
-c000000004BC8147D0000000000000353
-t1271403645
-s851
-i"gsGame.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/gsHighScores.h
-c000000004BC7D0DD0000000000000117
-t1271386333
-s279
-i<Foundation/Foundation.h>
-i"GameState.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/gsHighScores.m
-c000000004BC7E825000000000000020C
-t1271392293
-s524
-i"gsHighScores.h"
-i"gsMainMenu.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/gsMainMenu.h
-c000000004BC7CF4F000000000000014E
-t1271385935
-s334
-i<Foundation/Foundation.h>
-i"GameState.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/gsMainMenu.m
-c000000004BC7E3BE00000000000003A0
-t1271391166
-s928
-i"gsMainMenu.h"
-i"gsGame.h"
-i"gsHighScores.h"
-i"gsSettings.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/gsPauseMenu.h
-c000000004BC7F1430000000000000117
-t1271394627
-s279
-i<Foundation/Foundation.h>
-i"GameState.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/gsPauseMenu.m
-c000000004BC7F1C700000000000002BF
-t1271394759
-s703
-i"gsPauseMenu.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/gsSettings.h
-c000000004BC7D0D00000000000000114
-t1271386320
-s276
-i<Foundation/Foundation.h>
-i"GameState.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/Classes/gsSettings.m
-c000000004BC7D7740000000000000197
-t1271388020
-s407
-i"gsSettings.h"
-
-N/Users/Jarod/Documents/Repositories/Pontra/MainWindow.xib
-c000000004BAF995E0000000000002443
-t1269799262
-s9283
-
-N/Users/Jarod/Documents/Repositories/Pontra/PontraViewController.xib
-c000000004BAF995E00000000000018D7
-t1269799262
-s6359
-
-N/Users/Jarod/Documents/Repositories/Pontra/Pontra_Prefix.pch
-c000000004BAF995E00000000000000B5
-t1269799262
-s181
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app
-t1271404902
-s306
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app.dSYM
-t1271404852
-s102
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Info.plist
-t1271404558
-s659
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/MainWindow.nib
-t1271401249
-s1493
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/PkgInfo
-t1271404558
-s8
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Pontra
-t1271404852
-s37832
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/PontraViewController.nib
-t1271401249
-s1151
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/gsMainMenu.nib
-t1271404902
-s3379
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/pontra_logo.png
-t1271401249
-s13262
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/GLESGameState.o
-t1271404265
-s20196
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/GameState.o
-t1271404708
-s12192
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/GameStateManager.o
-t1271401252
-s5784
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTBackground.o
-t2
-s0
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTBoneBatch.o
-t1271403022
-s116648
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTDecompress.o
-t1271403022
-s19744
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTError.o
-t1271403022
-s4284
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTFixedPoint.o
-t1271403022
-s4096
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTGeometry.o
-t1271403022
-s91732
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTMatrixF.o
-t1271403022
-s27480
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTMatrixX.o
-t1271403022
-s57744
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTMisc.o
-t1271403022
-s13616
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTModelPOD.o
-t1271403023
-s139628
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTModelPODWriteH.o
-t1271403023
-s55008
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTPrint3D.o
-t1271403023
-s205716
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTPrint3DAPI.o
-t1271403021
-s22684
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTQuaternionF.o
-t1271403023
-s10792
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTQuaternionX.o
-t1271403023
-s33352
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTResourceFile.o
-t1271403023
-s19692
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTShadowVol.o
-t1271403024
-s32616
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTString.o
-t1271403024
-s45560
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTexture.o
-t1271403024
-s6028
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTextureAPI.o
-t2
-s0
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTrans.o
-t1271403024
-s11920
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTriStrip.o
-t1271403024
-s18800
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTVector.o
-t1271403024
-s29528
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTVertex.o
-t1271403024
-s18156
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTglesExt.o
-t1271403021
-s4132
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/Paddle.o
-t1271401252
-s6636
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/Pontra.LinkFileList
-c000000004BC8122E0000000000000626
-t1271403054
-s1574
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PontraAppDelegate.o
-t1271404852
-s43372
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PontraViewController.o
-t1271404333
-s30232
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsGame.o
-t1271404265
-s11652
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsHighScores.o
-t1271404265
-s10920
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsMainMenu.o
-t1271404265
-s12828
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsPauseMenu.o
-t1271404266
-s10936
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsSettings.o
-t1271404265
-s10088
-
-N/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/main.o
-t1271401252
-s5964
-
-N/Users/Jarod/Documents/Repositories/Pontra/gsMainMenu.xib
-c000000004BC8196400000000000056CD
-t1271404900
-s22221
-
-N/Users/Jarod/Documents/Repositories/Pontra/main.m
-c000000004BAF995E000000000000015D
-t1269799262
-s349
-i<UIKit/UIKit.h>
-
-N/Users/Jarod/Documents/Repositories/Pontra/pontra_logo.png
-c000000004BC7FF5B00000000000033CE
-t1271398235
-s13262
-
-N/var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch.gch
-t1271403021
-s2519408
-
-N/var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch.gch
-t1271401252
-s13034960
-
-NPontra-Info.plist
-c000000004BC8180D000000000000040E
-t1271404557
-s1038
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies293097703#293097703#0(0"0(0#1#0"4300885448#0"0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/GLESGameState.o /Users/Jarod/Documents/Repositories/Pontra/Classes/GLESGameState.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s293097065.842977
-e293097065.965894
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/GLESGameState.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/GLESGameState.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@74"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/GLESGameState.m293097065#293097065#0(0"0(0#0#66"/Users/Jarod/Documents/Repositories/Pontra/Classes/GLESGameState.m4300885448#1909"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/GLESGameState.m -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/GLESGameState.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/GameState.o /Users/Jarod/Documents/Repositories/Pontra/Classes/GameState.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s293097508.539717
-e293097508.666114
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/GameState.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/GameState.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@70"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/GameState.m293097508#293097508#0(0"0(0#0#62"/Users/Jarod/Documents/Repositories/Pontra/Classes/GameState.m4300885448#1901"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/GameState.m -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/GameState.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/GameStateManager.o /Users/Jarod/Documents/Repositories/Pontra/Classes/GameStateManager.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s293094052.708608
-e293094052.775679
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/GameStateManager.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/GameStateManager.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@77"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/GameStateManager.m293094052#293094052#0(0"0(0#0#69"/Users/Jarod/Documents/Repositories/Pontra/Classes/GameStateManager.m4300885448#1915"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/GameStateManager.m -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/GameStateManager.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTBackground.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095821.579554
-e293095821.768764
-r0
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTBackground.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-oIn file included from /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp:16:
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTFixedPointAPI.h:42:1: warning: "VERTTYPE" redefined
-oIn file included from /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp:15:
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.h:20:1: warning: this is the location of the previous definition
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp:144: error: no 'EPVRTError CPVRTBackground::Draw(GLuint)' member function declared in class 'CPVRTBackground'
-lSLF07#2@88"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp293095821#293095821#0(659"In file included from /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp:16:/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTFixedPointAPI.h:42:1: warning: "VERTTYPE" redefinedIn file included from /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp:15:/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.h:20:1: warning: this is the location of the previous definition/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp:144: error: no 'EPVRTError CPVRTBackground::Draw(GLuint)' member function declared in class 'CPVRTBackground'3(22@20""VERTTYPE" redefined293095821#107#118#2(7@102"In file included from /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp293095821#18446744073709551615#0#0(6@80"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp269721980#16#0#16#0#0"0(13@105""VERTTYPE" redefined in /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTFixedPointAPI.h293095821#18446744073709551615#0#0(6@81"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTFixedPointAPI.h269721980#42#0#42#0#0"0(6@81"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTFixedPointAPI.h269721980#42#0#42#0#13""*" redefined0(22@47"This is the location of the previous definition293095821#332#136#2(7@102"In file included from /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp293095821#18446744073709551615#0#0(6@80"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp269721980#15#0#15#0#0"0(13@123"This is the location of the previous definition in /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.h293095821#18446744073709551615#0#0(6@72"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.h269721982#20#0#20#0#0"0(6@72"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.h269721982#20#0#20#0#47"this is the location of the previous definition0(4@97"No 'EPVRTError CPVRTBackground::Draw(GLuint)' member function declared in class 'CPVRTBackground'293095821#468#191#0(6@80"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp269721980#144#0#144#0#0"0(0#0#80"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp4300885448#1935"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTBackground.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTBackground.o1#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTBoneBatch.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTBoneBatch.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095821.952027
-e293095822.415339
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTBoneBatch.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTBoneBatch.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTBoneBatch.cpp293095821#293095822#0(0"0(0#0#73"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTBoneBatch.cpp4300885448#1927"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTBoneBatch.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTBoneBatch.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTDecompress.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTDecompress.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095821.954071
-e293095822.117689
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTDecompress.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTDecompress.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTDecompress.cpp293095821#293095822#0(0"0(0#0#74"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTDecompress.cpp4300885448#1929"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTDecompress.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTDecompress.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTError.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTError.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095822.117794
-e293095822.172018
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTError.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTError.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTError.cpp: In function 'void PVRTErrorOutputDebug(const char*, ...)':
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTError.cpp:66: warning: format not a string literal and no format arguments
-lSLF07#2@77"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTError.cpp293095822#293095822#0(265"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTError.cpp: In function 'void PVRTErrorOutputDebug(const char*, ...)':/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTError.cpp:66: warning: format not a string literal and no format arguments1(22@51"Format not a string literal and no format arguments293095822#130#135#0(6@69"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTError.cpp269721982#66#0#66#0#51"format not a string literal and no format arguments0(0#0#69"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTError.cpp4300885448#1919"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTError.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTError.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTFixedPoint.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095822.172122
-e293095822.237531
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTFixedPoint.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.cpp293095822#293095822#0(0"0(0#0#74"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.cpp4300885448#1929"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTFixedPoint.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTGeometry.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTGeometry.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095822.237636
-e293095822.606172
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTGeometry.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTGeometry.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@80"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTGeometry.cpp293095822#293095822#0(0"0(0#0#72"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTGeometry.cpp4300885448#1925"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTGeometry.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTGeometry.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTMatrixF.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMatrixF.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095822.415439
-e293095822.727441
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTMatrixF.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMatrixF.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMatrixF.cpp293095822#293095822#0(0"0(0#0#71"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMatrixF.cpp4300885448#1923"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMatrixF.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTMatrixF.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTMatrixX.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMatrixX.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095822.606274
-e293095822.962522
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTMatrixX.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMatrixX.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMatrixX.cpp293095822#293095822#0(0"0(0#0#71"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMatrixX.cpp4300885448#1923"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMatrixX.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTMatrixX.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTMisc.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMisc.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095822.727546
-e293095822.841268
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTMisc.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMisc.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@76"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMisc.cpp293095822#293095822#0(0"0(0#0#68"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMisc.cpp4300885448#1917"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTMisc.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTMisc.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTModelPOD.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPOD.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095822.841378
-e293095823.476334
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTModelPOD.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPOD.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@80"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPOD.cpp293095822#293095823#0(0"0(0#0#72"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPOD.cpp4300885448#1925"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPOD.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTModelPOD.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTModelPODWriteH.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095822.962736
-e293095823.226926
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTModelPODWriteH.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp: In function 'void WriteHUVW(FILE*, const SPODMesh&, bool, bool, const char*)':
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp:253: warning: format not a string literal and no format arguments
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp: In function 'void WriteHMeshes(FILE*, const SPODScene&, const char*, bool)':
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp:352: warning: format not a string literal and no format arguments
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp: In function 'void WriteHNodes(FILE*, const SPODScene&, const char*, bool)':
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp:476: warning: format not a string literal and no format arguments
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp: In function 'void WriteHTextures(FILE*, const SPODScene&, const char*, bool)':
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp:510: warning: format not a string literal and no format arguments
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp: In function 'void WriteHMaterials(FILE*, const SPODScene&, const char*, bool)':
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp:578: warning: format not a string literal and no format arguments
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp: In function 'bool WriteH(FILE*, const char*, const char*, const char*, const SPODScene&)':
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp:700: warning: format not a string literal and no format arguments
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp:704: warning: format not a string literal and no format arguments
-lSLF07#2@86"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp293095822#293095823#0(1977"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp: In function 'void WriteHUVW(FILE*, const SPODMesh&, bool, bool, const char*)':/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp:253: warning: format not a string literal and no format arguments/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp: In function 'void WriteHMeshes(FILE*, const SPODScene&, const char*, bool)':/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp:352: warning: format not a string literal and no format arguments/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp: In function 'void WriteHNodes(FILE*, const SPODScene&, const char*, bool)':/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp:476: warning: format not a string literal and no format arguments/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp: In function 'void WriteHTextures(FILE*, const SPODScene&, const char*, bool)':/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp:510: warning: format not a string literal and no format arguments/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp: In function 'void WriteHMaterials(FILE*, const SPODScene&, const char*, bool)':/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp:578: warning: format not a string literal and no format arguments/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp: In function 'bool WriteH(FILE*, const char*, const char*, const char*, const SPODScene&)':/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp:700: warning: format not a string literal and no format arguments/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp:704: warning: format not a string literal and no format arguments7(22@51"Format not a string literal and no format arguments293095823#159#145#0(6@78"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp269721980#253#0#253#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments293095823#461#145#0(6@78"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp269721980#352#0#352#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments293095823#762#145#0(6@78"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp269721980#476#0#476#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments293095823#1066#145#0(6@78"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp269721980#510#0#510#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments293095823#1371#145#0(6@78"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp269721980#578#0#578#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments293095823#1687#145#0(6@78"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp269721980#700#0#700#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments293095823#1832#145#0(6@78"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp269721980#704#0#704#0#51"format not a string literal and no format arguments0(0#0#78"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp4300885448#1937"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTModelPODWriteH.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTModelPODWriteH.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTPrint3D.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTPrint3D.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095823.227032
-e293095823.805619
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTPrint3D.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTPrint3D.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTPrint3D.cpp293095823#293095823#0(0"0(0#0#71"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTPrint3D.cpp4300885448#1923"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTPrint3D.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTPrint3D.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTPrint3DAPI.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTPrint3DAPI.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095821.768861
-e293095821.953977
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTPrint3DAPI.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTPrint3DAPI.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-oIn file included from /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTPrint3DAPI.cpp:23:
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.h:20:1: warning: "VERTTYPE" redefined
-oIn file included from /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTPrint3DAPI.cpp:22:
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTFixedPointAPI.h:42:1: warning: this is the location of the previous definition
-lSLF07#2@88"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTPrint3DAPI.cpp293095821#293095821#0(468"In file included from /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTPrint3DAPI.cpp:23:/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.h:20:1: warning: "VERTTYPE" redefinedIn file included from /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTPrint3DAPI.cpp:22:/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTFixedPointAPI.h:42:1: warning: this is the location of the previous definition2(22@20""VERTTYPE" redefined293095821#107#109#2(7@102"In file included from /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTPrint3DAPI.cpp293095821#18446744073709551615#0#0(6@80"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTPrint3DAPI.cpp269721980#23#0#23#0#0"0(13@96""VERTTYPE" redefined in /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.h293095821#18446744073709551615#0#0(6@72"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.h269721982#20#0#20#0#0"0(6@72"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTFixedPoint.h269721982#20#0#20#0#13""*" redefined0(22@47"This is the location of the previous definition293095821#323#145#2(7@102"In file included from /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTPrint3DAPI.cpp293095821#18446744073709551615#0#0(6@80"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTPrint3DAPI.cpp269721980#22#0#22#0#0"0(13@132"This is the location of the previous definition in /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTFixedPointAPI.h293095821#18446744073709551615#0#0(6@81"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTFixedPointAPI.h269721980#42#0#42#0#0"0(6@81"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTFixedPointAPI.h269721980#42#0#42#0#47"this is the location of the previous definition0(0#0#80"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTPrint3DAPI.cpp4300885448#1935"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTPrint3DAPI.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTPrint3DAPI.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTQuaternionF.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTQuaternionF.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095823.476521
-e293095823.577318
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTQuaternionF.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTQuaternionF.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@83"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTQuaternionF.cpp293095823#293095823#0(0"0(0#0#75"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTQuaternionF.cpp4300885448#1931"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTQuaternionF.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTQuaternionF.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTQuaternionX.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTQuaternionX.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095823.577426
-e293095823.763663
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTQuaternionX.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTQuaternionX.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@83"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTQuaternionX.cpp293095823#293095823#0(0"0(0#0#75"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTQuaternionX.cpp4300885448#1931"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTQuaternionX.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTQuaternionX.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTResourceFile.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTResourceFile.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095823.763766
-e293095823.846406
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTResourceFile.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTResourceFile.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@84"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTResourceFile.cpp293095823#293095823#0(0"0(0#0#76"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTResourceFile.cpp4300885448#1933"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTResourceFile.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTResourceFile.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTShadowVol.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTShadowVol.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095823.805727
-e293095824.072089
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTShadowVol.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTShadowVol.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTShadowVol.cpp: In function 'int PVRTShadowVolSilhouetteProjectedRender(const PVRTShadowVolShadowMesh*, const PVRTShadowVolShadowVol*, const SPVRTContext*)':
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTShadowVol.cpp:1213: warning: control reaches end of non-void function
-lSLF07#2@81"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTShadowVol.cpp293095823#293095824#0(347"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTShadowVol.cpp: In function 'int PVRTShadowVolSilhouetteProjectedRender(const PVRTShadowVolShadowMesh*, const PVRTShadowVolShadowVol*, const SPVRTContext*)':/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTShadowVol.cpp:1213: warning: control reaches end of non-void function1(22@40"Control reaches end of non-void function293095823#217#130#0(6@73"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTShadowVol.cpp269721982#1213#0#1213#0#40"control reaches end of non-void function0(0#0#73"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTShadowVol.cpp4300885448#1927"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTShadowVol.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTShadowVol.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTString.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTString.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095823.846519
-e293095824.022487
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTString.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTString.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@78"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTString.cpp293095823#293095824#0(0"0(0#0#70"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTString.cpp4300885448#1921"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTString.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTString.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTexture.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTexture.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095824.022585
-e293095824.090167
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTexture.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTexture.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTexture.cpp293095824#293095824#0(0"0(0#0#71"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTexture.cpp4300885448#1923"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTexture.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTexture.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTextureAPI.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTTextureAPI.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095821.843091
-e293095821.951923
-r0
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTextureAPI.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTTextureAPI.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTTextureAPI.cpp: In function 'EPVRTError PVRTTextureLoadFromPointer(const void*, GLuint*, const void*, bool, unsigned int, const void*)':
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTTextureAPI.cpp:500: error: 'myglTexParameter' was not declared in this scope
-o/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTTextureAPI.cpp:505: error: 'myglTexParameter' was not declared in this scope
-lSLF07#2@88"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTTextureAPI.cpp293095821#293095821#0(489"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTTextureAPI.cpp: In function 'EPVRTError PVRTTextureLoadFromPointer(const void*, GLuint*, const void*, bool, unsigned int, const void*)':/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTTextureAPI.cpp:500: error: 'myglTexParameter' was not declared in this scope/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTTextureAPI.cpp:505: error: 'myglTexParameter' was not declared in this scope2(4@49"'myglTexParameter' was not declared in this scope293095821#203#143#0(6@80"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTTextureAPI.cpp269721980#500#0#500#0#34"'*' was not declared in this scope0(4@49"'myglTexParameter' was not declared in this scope293095821#346#143#0(6@80"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTTextureAPI.cpp269721980#505#0#505#0#34"'*' was not declared in this scope0(0#0#80"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTTextureAPI.cpp4300885448#1935"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTTextureAPI.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTextureAPI.o1#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTrans.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTrans.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095824.072198
-e293095824.201274
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTrans.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTrans.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@77"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTrans.cpp293095824#293095824#0(0"0(0#0#69"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTrans.cpp4300885448#1919"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTrans.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTrans.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTriStrip.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTriStrip.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095824.090265
-e293095824.223391
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTriStrip.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTriStrip.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@80"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTriStrip.cpp293095824#293095824#0(0"0(0#0#72"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTriStrip.cpp4300885448#1925"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTTriStrip.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTTriStrip.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTVector.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTVector.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095824.201410
-e293095824.412645
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTVector.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTVector.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@78"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTVector.cpp293095824#293095824#0(0"0(0#0#70"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTVector.cpp4300885448#1921"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTVector.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTVector.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTVertex.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTVertex.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095824.223504
-e293095824.382215
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTVertex.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTVertex.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@78"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTVertex.cpp293095824#293095824#0(0"0(0#0#70"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTVertex.cpp4300885448#1921"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/PVRTVertex.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTVertex.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTglesExt.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTglesExt.cpp normal i386 c++ com.apple.compilers.gcc.4_2
-s293095821.755141
-e293095821.842986
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTglesExt.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTglesExt.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@85"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTglesExt.cpp293095821#293095821#0(0"0(0#0#77"/Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTglesExt.cpp4300885448#1929"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PVRT/OGLES/PVRTglesExt.cpp -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PVRTglesExt.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/Paddle.o /Users/Jarod/Documents/Repositories/Pontra/Classes/Paddle.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s293094052.656400
-e293094052.741939
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/Paddle.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/Paddle.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@67"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/Paddle.m293094052#293094052#0(0"0(0#0#59"/Users/Jarod/Documents/Repositories/Pontra/Classes/Paddle.m4300885448#1895"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/Paddle.m -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/Paddle.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PontraAppDelegate.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PontraAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s293097651.926975
-e293097652.073696
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PontraAppDelegate.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PontraAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@78"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PontraAppDelegate.m293097651#293097652#0(0"0(0#0#70"/Users/Jarod/Documents/Repositories/Pontra/Classes/PontraAppDelegate.m4300885448#1917"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PontraAppDelegate.m -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PontraAppDelegate.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PontraViewController.o /Users/Jarod/Documents/Repositories/Pontra/Classes/PontraViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s293097133.046207
-e293097133.208658
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PontraViewController.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/PontraViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/PontraViewController.m293097133#293097133#0(0"0(0#0#73"/Users/Jarod/Documents/Repositories/Pontra/Classes/PontraViewController.m4300885448#1923"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/PontraViewController.m -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/PontraViewController.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsGame.o /Users/Jarod/Documents/Repositories/Pontra/Classes/gsGame.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s293097065.674354
-e293097065.842871
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsGame.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/gsGame.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@67"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/gsGame.m293097065#293097065#0(0"0(0#0#59"/Users/Jarod/Documents/Repositories/Pontra/Classes/gsGame.m4300885448#1895"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/gsGame.m -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsGame.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsHighScores.o /Users/Jarod/Documents/Repositories/Pontra/Classes/gsHighScores.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s293097065.844187
-e293097065.907990
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsHighScores.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/gsHighScores.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@73"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/gsHighScores.m293097065#293097065#0(0"0(0#0#65"/Users/Jarod/Documents/Repositories/Pontra/Classes/gsHighScores.m4300885448#1907"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/gsHighScores.m -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsHighScores.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsMainMenu.o /Users/Jarod/Documents/Repositories/Pontra/Classes/gsMainMenu.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s293097065.642748
-e293097065.844107
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsMainMenu.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/gsMainMenu.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@71"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/gsMainMenu.m293097065#293097065#0(0"0(0#0#63"/Users/Jarod/Documents/Repositories/Pontra/Classes/gsMainMenu.m4300885448#1903"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/gsMainMenu.m -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsMainMenu.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsPauseMenu.o /Users/Jarod/Documents/Repositories/Pontra/Classes/gsPauseMenu.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s293097065.966109
-e293097066.036476
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsPauseMenu.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/gsPauseMenu.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@72"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/gsPauseMenu.m293097065#293097066#0(0"0(0#0#64"/Users/Jarod/Documents/Repositories/Pontra/Classes/gsPauseMenu.m4300885448#1905"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/gsPauseMenu.m -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsPauseMenu.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsSettings.o /Users/Jarod/Documents/Repositories/Pontra/Classes/gsSettings.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s293097065.908095
-e293097065.980357
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsSettings.o
-x/Users/Jarod/Documents/Repositories/Pontra/Classes/gsSettings.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@71"Compile /Users/Jarod/Documents/Repositories/Pontra/Classes/gsSettings.m293097065#293097066#0(0"0(0#0#63"/Users/Jarod/Documents/Repositories/Pontra/Classes/gsSettings.m4300885448#1903"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/Classes/gsSettings.m -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/gsSettings.o0#
-
-CCompileC build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/main.o /Users/Jarod/Documents/Repositories/Pontra/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s293094052.557133
-e293094052.633187
-r1
-xCompileC
-xbuild/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/main.o
-x/Users/Jarod/Documents/Repositories/Pontra/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@57"Compile /Users/Jarod/Documents/Repositories/Pontra/main.m293094052#293094052#0(0"0(0#0#49"/Users/Jarod/Documents/Repositories/Pontra/main.m4300885448#1883"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -include /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch -c /Users/Jarod/Documents/Repositories/Pontra/main.m -o /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/main.o0#
-
-CCompileXIB /Users/Jarod/Documents/Repositories/Pontra/MainWindow.xib
-s293094047.900844
-e293094049.744585
-r1
-xCompileXIB
-x/Users/Jarod/Documents/Repositories/Pontra/MainWindow.xib
-lSLF07#2@25"CompileXIB MainWindow.xib293094047#293094049#0(0"0(0#0#57"/Users/Jarod/Documents/Repositories/Pontra/MainWindow.xib4300885448#493"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/MainWindow.nib /Users/Jarod/Documents/Repositories/Pontra/MainWindow.xib0#
-
-CCompileXIB /Users/Jarod/Documents/Repositories/Pontra/PontraViewController.xib
-s293094047.901579
-e293094049.735954
-r1
-xCompileXIB
-x/Users/Jarod/Documents/Repositories/Pontra/PontraViewController.xib
-lSLF07#2@35"CompileXIB PontraViewController.xib293094047#293094049#0(0"0(0#0#67"/Users/Jarod/Documents/Repositories/Pontra/PontraViewController.xib4300885448#513"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/PontraViewController.nib /Users/Jarod/Documents/Repositories/Pontra/PontraViewController.xib0#
-
-CCompileXIB /Users/Jarod/Documents/Repositories/Pontra/gsMainMenu.xib
-s293097701.691225
-e293097702.781366
-r1
-xCompileXIB
-x/Users/Jarod/Documents/Repositories/Pontra/gsMainMenu.xib
-lSLF07#2@25"CompileXIB gsMainMenu.xib293097701#293097702#0(0"0(0#0#57"/Users/Jarod/Documents/Repositories/Pontra/gsMainMenu.xib4300885448#493"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/gsMainMenu.nib /Users/Jarod/Documents/Repositories/Pontra/gsMainMenu.xib0#
-
-CCpResource build/Debug-iphonesimulator/Pontra.app/pontra_logo.png ../../../.Trash/pontra_logo.png
-s293088486.990738
-e293088487.082739
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/Pontra.app/pontra_logo.png
-x../../../.Trash/pontra_logo.png
-lSLF07#2@36"Copy ../../../.Trash/pontra_logo.png293088486#293088487#0(0"0(0#0#74"/Users/Jarod/Documents/Repositories/Pontra/../../../.Trash/pontra_logo.png4300885448#486"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/Jarod/Documents/Repositories/Pontra/../../../.Trash/pontra_logo.png /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app0#
-
-CCpResource build/Debug-iphonesimulator/Pontra.app/pontra_logo.png ../../../Desktop/pontra_logo.png
-r0
-
-CCpResource build/Debug-iphonesimulator/Pontra.app/pontra_logo.png pontra_logo.png
-s293094049.744684
-e293094049.788444
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/Pontra.app/pontra_logo.png
-xpontra_logo.png
-lSLF07#2@20"Copy pontra_logo.png293094049#293094049#0(0"0(0#0#58"/Users/Jarod/Documents/Repositories/Pontra/pontra_logo.png4300885448#470"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/Jarod/Documents/Repositories/Pontra/pontra_logo.png /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app0#
-
-CGenerateDSYMFile /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app.dSYM /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Pontra
-s293097652.101060
-e293097652.120547
-r1
-xGenerateDSYMFile
-x/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app.dSYM
-x/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Pontra
-lSLF07#2@106"GenerateDSYMFile build/Debug-iphonesimulator/Pontra.app.dSYM build/Debug-iphonesimulator/Pontra.app/Pontra293097652#293097652#0(0"0(0#0#88"/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Pontra4300885448#392"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Pontra -o /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app.dSYM0#
-
-CLd /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Pontra normal i386
-s293097652.073788
-e293097652.100940
-r1
-xLd
-x/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Pontra
-xnormal
-xi386
-lSLF07#2@93"Link /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Pontra293097652#293097652#0(0"0(0#0#0"4300885448#939"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -L/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -filelist /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Objects-normal/i386/Pontra.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -framework OpenGLES -framework OpenAL -framework QuartzCore -o /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Pontra0#
-
-CProcessInfoPlistFile /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Info.plist Pontra-Info.plist
-s293097358.398653
-e293097358.430485
-r1
-xProcessInfoPlistFile
-x/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Info.plist
-xPontra-Info.plist
-lSLF07#2@25"Process Pontra-Info.plist293097358#293097358#0(0"0(0#0#60"/Users/Jarod/Documents/Repositories/Pontra/Pontra-Info.plist4300885448#488"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Pontra-Info.plist -genpkginfo /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app/Info.plist0#
-
-CProcessPCH /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch.gch Pontra_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s293094050.178249
-e293094052.556754
-r1
-xProcessPCH
-x/var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch.gch
-xPontra_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@28"Precompile Pontra_Prefix.pch293094050#293094052#0(0"0(0#0#60"/Users/Jarod/Documents/Repositories/Pontra/Pontra_Prefix.pch4300885448#1772"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -c /Users/Jarod/Documents/Repositories/Pontra/Pontra_Prefix.pch -o /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-duqjrcgsibpctddvoywaorxdipmd/Pontra_Prefix.pch.gch0#
-
-CProcessPCH++ /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch.gch Pontra_Prefix.pch normal i386 c++ com.apple.compilers.gcc.4_2
-s293095821.387566
-e293095821.575574
-r1
-xProcessPCH++
-x/var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch.gch
-xPontra_Prefix.pch
-xnormal
-xi386
-xc++
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@28"Precompile Pontra_Prefix.pch293095821#293095821#0(0"0(0#0#60"/Users/Jarod/Documents/Repositories/Pontra/Pontra_Prefix.pch4300885448#1783"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk -fvisibility=hidden -fvisibility-inlines-hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-generated-files.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-own-target-headers.hmap -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-all-target-headers.hmap -iquote /Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/Pontra-project-headers.hmap -F/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator -I/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/include -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources/i386 -I/Users/Jarod/Documents/Repositories/Pontra/build/Pontra.build/Debug-iphonesimulator/Pontra.build/DerivedSources -c /Users/Jarod/Documents/Repositories/Pontra/Pontra_Prefix.pch -o /var/folders/Uz/UzK2NzaTEF4QcmRWaAivvk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pontra_Prefix-bxzfpomezmxnosamwovkhyygpcll/Pontra_Prefix.pch.gch0#
-
-CTouch /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app
-s293097702.782748
-e293097702.785464
-r1
-xTouch
-x/Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app
-lSLF07#2@87"Touch /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app293097702#293097702#0(0"0(0#0#0"4300885448#285"    cd /Users/Jarod/Documents/Repositories/Pontra    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Jarod/Documents/Repositories/Pontra/build/Debug-iphonesimulator/Pontra.app0#
-

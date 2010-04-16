@@ -7,6 +7,10 @@
 //
 
 #import "GLESGameState.h"
+#import <OpenGLES/EAGLDrawable.h>
+#import <QuartzCore/QuartzCore.h>
+#import "ResourceManager.h"
+
 
 // Primary context for all OpenGL calls. Set this up in setup2D.
 // This should be cleared on teardown.
