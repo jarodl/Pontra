@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PontraViewController : UIViewController {
-
 }
 
 @end
-

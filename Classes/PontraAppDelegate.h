@@ -8,12 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
+#import "GameStateManager.h"
+
 @class PontraViewController;
 
-@interface PontraAppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *window;
-    PontraViewController *viewController;
+@interface PontraAppDelegate : GameStateManager <UIApplicationDelegate> {
+  UIWindow *window;
+  PontraViewController *viewController;
+  
+  CFTimeInterval FPS_lastSecondStart;
+  int FPS_framesThisSecond;
+  
+  CFTimeInterval lastUpdateTime;
+  float bestFramesPerSecond;
+  
 }
+
+- (void) gameLoop: (id) sender;
+- (float) getFramesPerSecond;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet PontraViewController *viewController;
