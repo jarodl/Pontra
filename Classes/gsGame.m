@@ -23,9 +23,15 @@
 - (void) Render
 {
   //clear anything left over from the last frame, and set background color.
-  glClearColor(0xff/256.0f, 0x66/256.0f, 0x00/256.0f, 1.0f);
-	glClear(GL_COLOR_BUFFER_BIT);
-		
+	glClearColor(0xff/256.0f, 0xcc/256.0f, 0x99/256.0f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //important to clear the depth buffer as well as color buffer.
+	
+	glLoadIdentity();
+	
+  glRotatef(90, 0, 0, -1);
+	//end drawing 2d stuff
+
+  
 	//you get a nice boring white screen if you forget to swap buffers.
 	[self swapBuffers];
 }

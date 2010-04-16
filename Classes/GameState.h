@@ -18,5 +18,6 @@
 - (id) initWithFrame:(CGRect)frame andManager:(GameStateManager*) pManager;
 - (void) Render;
 - (void) Update;
+- (void) setViewToLandscape:(UIView*)viewObject;
 
 @end

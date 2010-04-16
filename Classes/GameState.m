@@ -8,6 +8,7 @@
 
 #import "GameState.h"
 
+#define DEGREES_TO_RADIANS(__ANGLE__) ((__ANGLE__) / 180.0 * M_PI)
 
 @implementation GameState
 
@@ -17,8 +18,8 @@
     // init code
     manager = pManager;
     self.userInteractionEnabled = true;
-  }
-  
+    [self setViewToLandscape:self];
+  }  
   return self;
 }
 
@@ -37,6 +38,12 @@
 - (void) dealloc
 {
   [super dealloc];
+}
+
+-(void)setViewToLandscape:(UIView*)viewObject {
+  [viewObject setCenter:CGPointMake(160, 240)];
+  CGAffineTransform cgCTM = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(90));
+  viewObject.transform = cgCTM;
 }
 
 @end

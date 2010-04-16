@@ -20,6 +20,7 @@ GLuint gles_depthRenderbuffer;
 CGSize _size;
 
 #define DEGREES_TO_RADIANS(__ANGLE__) ((__ANGLE__) / 180.0 * M_PI)
+#define PI (3.1415926535f)*(65536)
 
 @implementation GLESGameState
 
@@ -64,19 +65,20 @@ CGSize _size;
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE); //todo: benchmark this.
 	
-	//Set the OpenGL projection matrix
+  //Set the OpenGL projection matrix.  this was in glesgamestate3d, moved to here for when we re-enter this game state.
 	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
 	const GLfloat			//lightShininess = 100.0,
 	zNear = 0.1,
 	zFar = 3000.0, //probably should be done in substates.
 	fieldOfView = 60.0;
-	GLfloat size = zNear * tanf(DEGREES_TO_RADIANS(fieldOfView) / 2.0);
+	GLfloat size = zNear * tanf(fieldOfView / 180.0f * PI / 2.0);
 	CGRect rect = CGRectMake(0, 0, 320, 480);
 	glFrustumf(-size, size, -size / (rect.size.width / rect.size.height), size / (rect.size.width / rect.size.height), zNear, zFar);
 	glViewport(0, 0, rect.size.width, rect.size.height);
-	
-	//Make the OpenGL modelview matrix the default
+	glRotatef(90.0f, 0, 0, -1); //rotate the display, so we play in landscape.  need to modify accelerometer data to reflect this world rotation, as well.
 	glMatrixMode(GL_MODELVIEW);
+  
 	glEnable(GL_TEXTURE_2D);
 	glEnableClientState(GL_VERTEX_ARRAY);
 }
