@@ -7,13 +7,23 @@
 //
 
 #import "gsHighScores.h"
-#import "gsMainMenu.h"
 
 @implementation gsHighScores
 
-- (id)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame andManager:manager]) {
-      [[NSBundle mainBundle] loadNibNamed:@"highscores" owner:self options:nil];
+/*
+ * initWithFrame andManager
+ * Last modified: 16April2010
+ * - Mark
+ *
+ * Initializes the frame that the highscores nib
+ * is loaded in.
+ *
+ * TODO: This is currently broken
+ *	
+ */
+- (id)initWithFrame:(CGRect)frame andManager:(GameStateManager *)pManager {
+    if (self = [super initWithFrame:frame andManager:pManager]) {
+      [[NSBundle mainBundle] loadNibNamed:@"gsHighscores" owner:self options:nil];
       
       [self addSubview:subview];
     }
