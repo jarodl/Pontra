@@ -12,8 +12,10 @@
 
 @interface gsSettings : GameState {
   IBOutlet UIView* subview;
+	IBOutlet UISwitch *soundSwitch;
 }
 
 - (IBAction) back;
+- (NSString *) settingsFile;
 
 @end
