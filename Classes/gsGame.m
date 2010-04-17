@@ -54,19 +54,23 @@
   int ycenter = self.frame.size.height/2 - 80;
 	int xcenter = 40;
 	
+	NSString *ctrl;
 	switch (control_pressed) {
 		case NO_CONTROL:
-			[[g_ResManager getTexture:@"controls.png"] drawAtPoint:CGPointMake(xcenter, ycenter) withRotation: 0 withScale: 1];
+			ctrl = @"controls.png";
 			break;
 		case TOP_CONTROL:
-			[[g_ResManager getTexture:@"controls_top.png"] drawAtPoint:CGPointMake(xcenter, ycenter) withRotation: 0 withScale: 1];
+			ctrl = @"controls_top.png";
 			break;
 		case BOTTOM_CONTROL:
-			[[g_ResManager getTexture:@"controls_bottom.png"] drawAtPoint:CGPointMake(xcenter, ycenter) withRotation: 0 withScale: 1];
+			ctrl = @"controls_bottom.png";
 			break;
 		default:
 			break;
 	}
+
+		// Draw the controls
+	[[g_ResManager getTexture:ctrl] drawAtPoint:CGPointMake(xcenter, ycenter) withRotation: 0 withScale: 1];
 	
 		// Draw the player here
 	[ball Render];
