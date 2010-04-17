@@ -57,7 +57,44 @@
 
 - (IBAction) pause
 {
+	
 }
+
+/*
+ * touchesBegan
+ * Last modified: 16April2010
+ * - Mark
+ *
+ * Method to track the coordinates when the user
+ * first touches the screen
+ *	
+ */
+- (void) touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
+	UITouch *touch = [touches anyObject];
+	CGPoint location = [touch locationInView:self];
+	printf("x: %g\n",location.x);
+	printf("y: %g\n",location.y);
+	[self setNeedsDisplay];
+}
+
+/*
+ * touchesMoved
+ * Last modified: 16April2010
+ * - Mark
+ *
+ * Method to track the coordinates when the user
+ * moves their finger around the screen
+ *	
+ */
+- (void) touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event {
+	UITouch *touch = [touches anyObject];
+	CGPoint location = [touch locationInView:self];
+	printf("x: %g\n",location.x);
+	printf("y: %g\n",location.y);
+	[self setNeedsDisplay];
+}
+
+
 
 - (void)dealloc {
     [super dealloc];
