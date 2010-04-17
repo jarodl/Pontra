@@ -15,13 +15,45 @@
 
 @implementation gsGame
 
-@synthesize ball;
+@synthesize ball, sound;
 
+
+/*
+ * initWithFrame andManager
+ * Last modified: 17April2010
+ * - Mark
+ * 
+ * Initializes the playing field.
+ * Loads the main sound in the audio driver, and
+ * checks the sound on/off in settings to play.
+ * Initializes the ball and sets the coordinates.
+ * 
+ */
 - (id)initWithFrame:(CGRect)frame andManager:pManager {
   if (self = [super initWithFrame:frame andManager:pManager]) {
     // Initialization code
   }
   
+	// initialize the sound
+	NSString *soundFile = [[NSBundle mainBundle] pathForResource:@"teachingrobot" ofType:@"wav"];	
+	NSMutableArray *sounds = [[NSMutableArray alloc] initWithCapacity:1];
+	[sounds addObject:soundFile];
+	
+	// initialize the sound with the array of audio files
+	sound = [[Balto alloc] initWithFiles:sounds];
+		
+	// check settings if sound is on/off
+	NSString *filePath = [self settingsFile];
+	BOOL soundSetting = FALSE;
+	if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+		NSArray *array = [[NSArray alloc]initWithContentsOfFile:filePath];
+		soundSetting = [[array objectAtIndex:0] boolValue];
+	}
+	
+	if (soundSetting) {
+		[sound Play:0 andLooping:YES];
+	}
+
 	ball = [[Ball alloc] init];
 	[ball setPos:CGPointMake(self.frame.size.width/2, self.frame.size.height/2)];
 	
@@ -116,6 +148,21 @@
 }
 
 /*
+ * settingsFile
+ * Last modified: 17April2010
+ * - Mark
+ * 
+ * Returns the settings.plist file 
+ * 
+ */
+- (NSString *)settingsFile {
+	// Get the documents directory
+	NSArray	*paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	return [documentsDirectory stringByAppendingPathComponent:@"settings.plist"];
+}
+
+/*
  * touchesBegan
  * Last modified: 16April2010
  * - Mark
@@ -193,6 +240,7 @@
 
 - (void)dealloc {
 	[ball release];
+	[sound release];
 	[super dealloc];
 }
 

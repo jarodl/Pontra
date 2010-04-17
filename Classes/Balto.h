@@ -2,9 +2,9 @@
  * Copyright (c) 2009, 2010 Mark Sands. All rights reserved.
  * March, 27 2010
  *
- * bALt - Basic openAL Toolkit
+ * bALto - Basic openAL Toolkit using OpenAL
  *
- * bALt - a lightweight OpenAL toolkit for Audio playback
+ * bALto - a lightweight OpenAL toolkit for Audio playback
  *	designed to encapsulate the low level audio handling
  *	and provide the user with a nice, easy to use
  *	high level application programming interface for
@@ -45,7 +45,7 @@
 	ALuint Sources[256];
 	
 	int altSourceData[256];
-		
+	
 	int playCount;
 	char* filename;
 	
@@ -58,6 +58,7 @@
 
 - (void) Play:(int)index andLooping:(BOOL)looping;
 - (void) Pause;
+- (void) Resume;
 - (void) Stop;
 - (void) SetVolume:(float)volume;	
 

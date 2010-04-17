@@ -2,9 +2,9 @@
  * Copyright (c) 2009, 2010 Mark Sands. All rights reserved.
  * March, 27 2010
  *
- * bALt - Basic openAL Toolkit
+ * bALto - Basic openAL Toolkit using OpenAL
  *
- * bALt - a lightweight OpenAL toolkit for Audio playback
+ * bALto - a lightweight OpenAL toolkit for Audio playback
  *	designed to encapsulate the low level audio handling
  *	and provide the user with a nice, easy to use
  *	high level application programming interface for
@@ -15,6 +15,7 @@
  * TODO:
  *			create an MP3Buffer.h
  *			see: http://en.wikipedia.org/wiki/MP3#File_structure
+ *		  see: TagLib
  ***/
 
 #import "Balto.h"
@@ -60,11 +61,11 @@ char* ReadWAV( char *filename, SimpleWAVHeader *header ) {
 		fread( header, sizeof(SimpleWAVHeader), 1, file );
 		
 		if (!( 
-			  memcmp("RIFF",header->riff,4) || 
-			  memcmp("WAVE",header->wave,4) || 
-			  memcmp("fmt ",header->fmt,4)  || 
-			  memcmp("data",header->data,4)
-			  ))
+					memcmp("RIFF",header->riff,4) || 
+					memcmp("WAVE",header->wave,4) || 
+					memcmp("fmt ",header->fmt,4)  || 
+					memcmp("data",header->data,4)
+					))
 		{	
 			buffer = (char*)malloc(header->dataSize);
 			
@@ -186,7 +187,7 @@ ALuint loadWAVFromFile( char* filename ) {
 	if ( ![self InitSources] )
 		NSLog(@"Failed to initialize OpenAL");
 	
-		// Preload files into buffers
+	// Preload files into buffers
 	[self Load];
 	
 	return self;
@@ -229,14 +230,14 @@ ALuint loadWAVFromFile( char* filename ) {
 - (void) Play:(int)index andLooping:(BOOL)looping
 {	
 	[self CleanSources];
-		
+	
 	int num = [self GetFreeSource];
-		
+	
 	if ( num != -1 ) {
 		altSourceData[num] = SOURCE_IN_USE;
 		playCount++;
 		
-			// set the source to the associated buffer
+		// set the source to the associated buffer
 		alSourceQueueBuffers( Sources[num], 1, &Buffers[index] );
 		alSourcei(Sources[num], AL_LOOPING, (looping ? AL_TRUE : AL_FALSE) );
 		alSourcePlay(Sources[num]);
@@ -247,7 +248,7 @@ ALuint loadWAVFromFile( char* filename ) {
 
 /*
  * Pause( index )
- * Last modified: 28Mar2010
+ * Last modified: 15April2010
  *
  * Pauses all sounds in the buffer
  *
@@ -261,14 +262,37 @@ ALuint loadWAVFromFile( char* filename ) {
 // OpenAL Pause Sound, pauses all sounds in the buffer
 - (void) Pause
 {
-	for ( int i = 0; i < (int)NUM_BUFFERS; i++ )
+	for ( int i = 0; i < 256; i++ )
 		alSourcePause( Sources[i] );
 }
 
 
 /*
+ * Resume
+ * Last modified: 15April2010
+ *
+ * Resumes all paused sounds in the buffer
+ *
+ * Returns:      <none>
+ * Parameters:	 <none>
+ *
+ */
+
+- (void) Resume
+{
+	ALenum state;
+	for ( int i = 0; i < 256; i++ ) {
+		alGetSourcei( Sources[i], AL_SOURCE_STATE, &state );
+		if ( state == AL_PAUSED ) {
+			alSourcePlay( Sources[i] );
+		}
+	}
+}
+
+
+/*
  * Stop( index )
- * Last modified: 28Mar2010
+ * Last modified: 15April2010
  *
  * stops all sounds in the buffer
  *
@@ -281,14 +305,14 @@ ALuint loadWAVFromFile( char* filename ) {
 // OpenAL Stop sound, stops all sounds in the buffer
 - (void) Stop
 {
-	for ( int i = 0; i < (int)NUM_BUFFERS; i++ )
+	for ( int i = 0; i < 256; i++ )
 		alSourceStop( Sources[i] );
 }
 
 
 /*
  * SetVolume( volume )
- * Last modified: 28Mar2010
+ * Last modified: 15April2010
  *
  * sets the volume from 0.0 to 1.0 (max)
  *
@@ -300,7 +324,7 @@ ALuint loadWAVFromFile( char* filename ) {
 
 - (void) SetVolume:(float)volume
 {
-	for ( int i = 0; i < (int)NUM_BUFFERS; i++ )
+	for ( int i = 0; i < 256; i++ )
 		alSourcei( Sources[i], AL_GAIN, volume );
 }
 
@@ -347,20 +371,20 @@ ALuint loadWAVFromFile( char* filename ) {
 		
 		for ( int i = 0; i < 256; i++ ) {
 			if ( altSourceData == SOURCE_IN_USE ) {
-			alGetSourcei( Sources[i], AL_SOURCE_STATE, &state);
-			if ( state != AL_PLAYING ) {
-				alSourceStop( Sources[i] );
-				alSourcei( Sources[i], AL_BUFFER, 0 );
-				altSourceData[i] == SOURCE_FREE;
-				playCount--;
-			}}}
+				alGetSourcei( Sources[i], AL_SOURCE_STATE, &state);
+				if ( state != AL_PLAYING ) {
+					alSourceStop( Sources[i] );
+					alSourcei( Sources[i], AL_BUFFER, 0 );
+					altSourceData[i] == SOURCE_FREE;
+					playCount--;
+				}}}
 	}
 }
 
 
 /*
  * InitSources()
- * Last modified: 28Mar2010
+ * Last modified: 15April2010
  *
  * Right now this is a nasty method
  * to initialize the sources from the
@@ -391,22 +415,22 @@ ALuint loadWAVFromFile( char* filename ) {
 	alcMakeContextCurrent(Context);
 	alGetError();
 	
-		// generate NUM_BUFFERS Buffers for use
+	// generate NUM_BUFFERS Buffers for use
 	alGenBuffers(256, Buffers);
 	
 	const ALfloat position[3] = { 0.0f, 0.0f, 0.0f };
 	const ALfloat velocity[3] = { 0.0f, 0.0f, 0.0f };	
 	const ALfloat orientation[5] = { 0.0f, 0.0f, 1.0f, 0.0f, -1.0f };
 	
-		// set our empty buffers to NULL
+	// set our empty buffers to NULL
 	for ( int i = 0; i < 256; i++)
 		Buffers[i] = 0;
 	
-		// generate NUM_BUFFERS Sources for use
+	// generate NUM_BUFFERS Sources for use
 	alGenSources(256, Sources);
 	
-		// we don't queue our buffers here yet, only during the playback call
-	for ( int i = 0; i < (int)NUM_BUFFERS; i++ ) {
+	// we don't queue our buffers here yet, only during the playback call
+	for ( int i = 0; i < 256; i++ ) {
 		alSourcefv(Sources[i], AL_POSITION, position);	
 		alSourcefv(Sources[i], AL_VELOCITY, velocity);
 	}
@@ -424,7 +448,7 @@ ALuint loadWAVFromFile( char* filename ) {
 
 /*
  * Delete()
- * Last modified: 26Mar2010
+ * Last modified: 15April2010
  *
  * Deletes the OpenAL buffers and sources by
  * calling the OpenAL methods, also destroys
@@ -438,8 +462,8 @@ ALuint loadWAVFromFile( char* filename ) {
 - (void) Delete
 {
 	
-	alDeleteBuffers(NUM_BUFFERS, Buffers);
-	alDeleteSources(NUM_BUFFERS, Sources);
+	alDeleteBuffers(256, Buffers);
+	alDeleteSources(256, Sources);
 	
 	Context = alcGetCurrentContext();
 	Device = alcGetContextsDevice(Context);

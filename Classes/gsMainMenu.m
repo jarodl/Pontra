@@ -29,7 +29,7 @@
 }
 
 - (IBAction) playGame
-{
+{		
   [manager doStateChange:[gsGame class]];
 }
 
