@@ -18,6 +18,11 @@
 		4D9AF72F11799FD20061711D /* controls_bold.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AF72C11799FD20061711D /* controls_bold.png */; };
 		4D9AF73011799FD20061711D /* controls_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AF72D11799FD20061711D /* controls_bottom.png */; };
 		4D9AF73111799FD20061711D /* controls_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AF72E11799FD20061711D /* controls_top.png */; };
+		4D9AF75F1179A80E0061711D /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9AF75E1179A80E0061711D /* Ball.m */; };
+		4D9AF7B01179BCA00061711D /* gsSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AF7AF1179BCA00061711D /* gsSettings.xib */; };
+		4D9AF7BD1179C0850061711D /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AF7BC1179C0850061711D /* back.png */; };
+		4DD346DE117A562D0041888E /* gsHighscores.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DD346DC117A562D0041888E /* gsHighscores.xib */; };
+		4DD346DF117A562D0041888E /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DD346DD117A562D0041888E /* player.png */; };
 		7A04A2031178D56D00ECA3E0 /* ResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A2021178D56D00ECA3E0 /* ResourceManager.m */; };
 		7A04A20D1178D6B900ECA3E0 /* GLFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A20A1178D6B900ECA3E0 /* GLFont.m */; };
 		7A04A20E1178D6B900ECA3E0 /* GLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A20B1178D6B900ECA3E0 /* GLTexture.m */; };
@@ -55,6 +60,12 @@
 		4D9AF72C11799FD20061711D /* controls_bold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls_bold.png; sourceTree = "<group>"; };
 		4D9AF72D11799FD20061711D /* controls_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls_bottom.png; sourceTree = "<group>"; };
 		4D9AF72E11799FD20061711D /* controls_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls_top.png; sourceTree = "<group>"; };
+		4D9AF75D1179A80E0061711D /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
+		4D9AF75E1179A80E0061711D /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
+		4D9AF7AF1179BCA00061711D /* gsSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = gsSettings.xib; sourceTree = "<group>"; };
+		4D9AF7BC1179C0850061711D /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		4DD346DC117A562D0041888E /* gsHighscores.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = gsHighscores.xib; sourceTree = "<group>"; };
+		4DD346DD117A562D0041888E /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
 		7A04A2011178D56D00ECA3E0 /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
 		7A04A2021178D56D00ECA3E0 /* ResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceManager.m; sourceTree = "<group>"; };
 		7A04A2081178D6B900ECA3E0 /* GLFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLFont.h; sourceTree = "<group>"; };
@@ -153,6 +164,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4DD346DC117A562D0041888E /* gsHighscores.xib */,
+				4DD346DD117A562D0041888E /* player.png */,
+				4D9AF7BC1179C0850061711D /* back.png */,
+				4D9AF7AF1179BCA00061711D /* gsSettings.xib */,
 				4D9AF72C11799FD20061711D /* controls_bold.png */,
 				4D9AF72D11799FD20061711D /* controls_bottom.png */,
 				4D9AF72E11799FD20061711D /* controls_top.png */,
@@ -182,6 +197,8 @@
 		7A04A1EF1178D2C700ECA3E0 /* GameObjects */ = {
 			isa = PBXGroup;
 			children = (
+				4D9AF75D1179A80E0061711D /* Ball.h */,
+				4D9AF75E1179A80E0061711D /* Ball.m */,
 				7A2C55561177F9390047C200 /* Paddle.h */,
 				7A2C55571177F9390047C200 /* Paddle.m */,
 			);
@@ -279,6 +296,10 @@
 				4D9AF72F11799FD20061711D /* controls_bold.png in Resources */,
 				4D9AF73011799FD20061711D /* controls_bottom.png in Resources */,
 				4D9AF73111799FD20061711D /* controls_top.png in Resources */,
+				4D9AF7B01179BCA00061711D /* gsSettings.xib in Resources */,
+				4D9AF7BD1179C0850061711D /* back.png in Resources */,
+				4DD346DE117A562D0041888E /* gsHighscores.xib in Resources */,
+				4DD346DF117A562D0041888E /* player.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +326,7 @@
 				7A04A20D1178D6B900ECA3E0 /* GLFont.m in Sources */,
 				7A04A20E1178D6B900ECA3E0 /* GLTexture.m in Sources */,
 				7A04A20F1178D6B900ECA3E0 /* pointmath.m in Sources */,
+				4D9AF75F1179A80E0061711D /* Ball.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
