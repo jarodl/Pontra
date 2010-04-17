@@ -30,6 +30,21 @@
 
 - (IBAction) back
 {
+	BOOL soundSetting;
+	if (soundSwitch.on) {
+		soundSetting = TRUE;
+	}
+	else {
+		soundSetting = FALSE;
+	}
+	
+	NSMutableArray *array = [[NSMutableArray alloc]init];
+	[array addObject:gameSetting];
+	[array addObject:[NSNumber numberWithBool:soundSetting]];
+	[array writeToFile:[self dataFilePath] atomically:YES];
+	[gameSetting release];
+	
+	[[self parentViewController] dismissModalViewControllerAnimated:YES];
 }
 
 - (void)dealloc {
