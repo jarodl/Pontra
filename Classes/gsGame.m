@@ -48,7 +48,10 @@
 	if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
 		NSArray *array = [[NSArray alloc]initWithContentsOfFile:filePath];
 		soundSetting = [[array objectAtIndex:0] boolValue];
+	} else {
+		soundSetting = TRUE;
 	}
+
 	
 	if (soundSetting) {
 		[sound Play:0 andLooping:YES];
