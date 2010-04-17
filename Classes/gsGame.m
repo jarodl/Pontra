@@ -9,6 +9,10 @@
 #import "gsGame.h"
 #import "ResourceManager.h"
 
+#define NO_CONTROL 0
+#define TOP_CONTROL 1
+#define BOTTOM_CONTROL 2
+
 @implementation gsGame
 
 
@@ -45,7 +49,20 @@
   // no idea why subtracting 80 is necessary
   int ycenter = self.frame.size.height/2 - 80;
 	int xcenter = 40;
-  [[g_ResManager getTexture:@"controls.png"] drawAtPoint:CGPointMake(xcenter, ycenter) withRotation: 0 withScale: 1];
+	
+	switch (control_pressed) {
+		case NO_CONTROL:
+			[[g_ResManager getTexture:@"controls.png"] drawAtPoint:CGPointMake(xcenter, ycenter) withRotation: 0 withScale: 1];
+			break;
+		case TOP_CONTROL:
+			[[g_ResManager getTexture:@"controls_top.png"] drawAtPoint:CGPointMake(xcenter, ycenter) withRotation: 0 withScale: 1];
+			break;
+		case BOTTOM_CONTROL:
+			[[g_ResManager getTexture:@"controls_bottom.png"] drawAtPoint:CGPointMake(xcenter, ycenter) withRotation: 0 withScale: 1];
+			break;
+		default:
+			break;
+	}
   
   glRotatef(90, 0, 0, -1);
 	//end drawing 2d stuff
@@ -69,11 +86,9 @@
  * first touches the screen
  *	
  */
-- (void) touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
-	UITouch *touch = [touches anyObject];
-	CGPoint location = [touch locationInView:self];
-	printf("x: %g\n",location.x);
-	printf("y: %g\n",location.y);
+- (void) touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event
+{
+	[self touchesHandler:touches];
 	[self setNeedsDisplay];
 }
 
@@ -86,14 +101,56 @@
  * moves their finger around the screen
  *	
  */
-- (void) touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event {
+- (void) touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event
+{
+	[self touchesHandler:touches];
+	[self setNeedsDisplay];
+}
+
+/*
+ * touchesEnded
+ * Last modified: 16April2010
+ * - Mark
+ *
+ * Method to track the coordinates when the user
+ * removes their finger from the screen
+ * This method releases the control_pressed var
+ * assuming the user is done 'moving' the ball
+ * around
+ *	
+ */
+- (void) touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event
+{
+	control_pressed = NO_CONTROL;
+}
+
+/*
+ * touchesHandler
+ * Last modified: 16April2010
+ * - Mark
+ *
+ * Touches Handler to avoid redudant code
+ * touchesBegan, touchesMoved, touchesEnded
+ * use this to handle touch events
+ *	
+ */
+- (void) touchesHandler:(NSSet*)touches
+{
 	UITouch *touch = [touches anyObject];
 	CGPoint location = [touch locationInView:self];
 	printf("x: %g\n",location.x);
 	printf("y: %g\n",location.y);
-	[self setNeedsDisplay];
+	
+	if ( location.x >=0 && location.x <= 75 &&
+			location.y >= 0 && location.y <= 85 )
+		control_pressed = TOP_CONTROL;
+	else if ( location.x >=0 && location.x <= 75 &&
+					 location.y >= 235 && location.y <= 320 )
+		control_pressed = BOTTOM_CONTROL;
+	else {
+		control_pressed = NO_CONTROL;
+	}
 }
-
 
 
 - (void)dealloc {

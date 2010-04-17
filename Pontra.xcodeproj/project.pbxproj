@@ -15,6 +15,9 @@
 		2899E5220DE3E06400AC0155 /* PontraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* PontraViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* PontraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* PontraViewController.m */; };
+		4D9AF72F11799FD20061711D /* controls_bold.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AF72C11799FD20061711D /* controls_bold.png */; };
+		4D9AF73011799FD20061711D /* controls_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AF72D11799FD20061711D /* controls_bottom.png */; };
+		4D9AF73111799FD20061711D /* controls_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AF72E11799FD20061711D /* controls_top.png */; };
 		7A04A2031178D56D00ECA3E0 /* ResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A2021178D56D00ECA3E0 /* ResourceManager.m */; };
 		7A04A20D1178D6B900ECA3E0 /* GLFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A20A1178D6B900ECA3E0 /* GLFont.m */; };
 		7A04A20E1178D6B900ECA3E0 /* GLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A20B1178D6B900ECA3E0 /* GLTexture.m */; };
@@ -49,6 +52,9 @@
 		28D7ACF70DDB3853001CB0EB /* PontraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PontraViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Pontra_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pontra_Prefix.pch; sourceTree = "<group>"; };
+		4D9AF72C11799FD20061711D /* controls_bold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls_bold.png; sourceTree = "<group>"; };
+		4D9AF72D11799FD20061711D /* controls_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls_bottom.png; sourceTree = "<group>"; };
+		4D9AF72E11799FD20061711D /* controls_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls_top.png; sourceTree = "<group>"; };
 		7A04A2011178D56D00ECA3E0 /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
 		7A04A2021178D56D00ECA3E0 /* ResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceManager.m; sourceTree = "<group>"; };
 		7A04A2081178D6B900ECA3E0 /* GLFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLFont.h; sourceTree = "<group>"; };
@@ -147,6 +153,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4D9AF72C11799FD20061711D /* controls_bold.png */,
+				4D9AF72D11799FD20061711D /* controls_bottom.png */,
+				4D9AF72E11799FD20061711D /* controls_top.png */,
 				7A2C5784117837060047C200 /* pontra_logo.png */,
 				7A04A24B1178DB0500ECA3E0 /* controls.png */,
 				2899E5210DE3E06400AC0155 /* PontraViewController.xib */,
@@ -267,6 +276,9 @@
 				7A2C56421178172A0047C200 /* gsMainMenu.xib in Resources */,
 				7A2C5785117837060047C200 /* pontra_logo.png in Resources */,
 				7A04A24C1178DB0500ECA3E0 /* controls.png in Resources */,
+				4D9AF72F11799FD20061711D /* controls_bold.png in Resources */,
+				4D9AF73011799FD20061711D /* controls_bottom.png in Resources */,
+				4D9AF73111799FD20061711D /* controls_top.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

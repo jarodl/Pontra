@@ -10,8 +10,10 @@
 #include "GLESGameState.h"
 
 @interface gsGame : GLESGameState {
+	int control_pressed;
 }
 
+- (void) touchesHandler:(NSSet*)touches;
 - (IBAction) pause;
 
 @end
