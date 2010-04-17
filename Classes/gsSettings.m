@@ -18,8 +18,6 @@
  *
  * Initializes the frame that the settings nib
  * is loaded in.
- *
- * TODO: This is currently broken
  *	
  */
 - (id)initWithFrame:(CGRect)frame andManager:(GameStateManager *)pManager {

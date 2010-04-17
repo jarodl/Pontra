@@ -17,8 +17,6 @@
  *
  * Initializes the frame that the highscores nib
  * is loaded in.
- *
- * TODO: This is currently broken
  *	
  */
 - (id)initWithFrame:(CGRect)frame andManager:(GameStateManager *)pManager {
