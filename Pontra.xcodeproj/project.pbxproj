@@ -23,6 +23,11 @@
 		7A04A20E1178D6B900ECA3E0 /* GLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A20B1178D6B900ECA3E0 /* GLTexture.m */; };
 		7A04A20F1178D6B900ECA3E0 /* pointmath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A20C1178D6B900ECA3E0 /* pointmath.m */; };
 		7A04A24C1178DB0500ECA3E0 /* controls.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A04A24B1178DB0500ECA3E0 /* controls.png */; };
+		7A1CB659117A3A2500721B9E /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1CB657117A3A2500721B9E /* Ball.m */; };
+		7A1CB65A117A3A2500721B9E /* Balto.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1CB658117A3A2500721B9E /* Balto.m */; };
+		7A1CB68C117A4CA700721B9E /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A1CB68B117A4CA700721B9E /* player.png */; };
+		7A1CB6C4117A550500721B9E /* gsHighscores.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1CB6C2117A550500721B9E /* gsHighscores.xib */; };
+		7A1CB6C5117A550500721B9E /* gsSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1CB6C3117A550500721B9E /* gsSettings.xib */; };
 		7A2C55581177F9390047C200 /* Paddle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C55571177F9390047C200 /* Paddle.m */; };
 		7A2C55931177FE210047C200 /* GameStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C55921177FE210047C200 /* GameStateManager.m */; };
 		7A2C55961177FE530047C200 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C55951177FE530047C200 /* GameState.m */; };
@@ -64,6 +69,13 @@
 		7A04A20C1178D6B900ECA3E0 /* pointmath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pointmath.m; sourceTree = "<group>"; };
 		7A04A2251178D6D800ECA3E0 /* pointmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pointmath.h; sourceTree = "<group>"; };
 		7A04A24B1178DB0500ECA3E0 /* controls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls.png; sourceTree = "<group>"; };
+		7A1CB655117A3A2500721B9E /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
+		7A1CB656117A3A2500721B9E /* Balto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balto.h; sourceTree = "<group>"; };
+		7A1CB657117A3A2500721B9E /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
+		7A1CB658117A3A2500721B9E /* Balto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Balto.m; sourceTree = "<group>"; };
+		7A1CB68B117A4CA700721B9E /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
+		7A1CB6C2117A550500721B9E /* gsHighscores.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = gsHighscores.xib; sourceTree = "<group>"; };
+		7A1CB6C3117A550500721B9E /* gsSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = gsSettings.xib; sourceTree = "<group>"; };
 		7A2C55561177F9390047C200 /* Paddle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Paddle.h; sourceTree = "<group>"; };
 		7A2C55571177F9390047C200 /* Paddle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Paddle.m; sourceTree = "<group>"; };
 		7A2C55911177FE210047C200 /* GameStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateManager.h; sourceTree = "<group>"; };
@@ -155,7 +167,10 @@
 			children = (
 				4D9AF72C11799FD20061711D /* controls_bold.png */,
 				4D9AF72D11799FD20061711D /* controls_bottom.png */,
+				7A1CB68B117A4CA700721B9E /* player.png */,
 				4D9AF72E11799FD20061711D /* controls_top.png */,
+				7A1CB6C2117A550500721B9E /* gsHighscores.xib */,
+				7A1CB6C3117A550500721B9E /* gsSettings.xib */,
 				7A2C5784117837060047C200 /* pontra_logo.png */,
 				7A04A24B1178DB0500ECA3E0 /* controls.png */,
 				2899E5210DE3E06400AC0155 /* PontraViewController.xib */,
@@ -182,6 +197,8 @@
 		7A04A1EF1178D2C700ECA3E0 /* GameObjects */ = {
 			isa = PBXGroup;
 			children = (
+				7A1CB655117A3A2500721B9E /* Ball.h */,
+				7A1CB657117A3A2500721B9E /* Ball.m */,
 				7A2C55561177F9390047C200 /* Paddle.h */,
 				7A2C55571177F9390047C200 /* Paddle.m */,
 			);
@@ -191,6 +208,8 @@
 		7A5E2CDB115FD3D600B0FBD5 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				7A1CB656117A3A2500721B9E /* Balto.h */,
+				7A1CB658117A3A2500721B9E /* Balto.m */,
 				7A2C55911177FE210047C200 /* GameStateManager.h */,
 				7A2C55921177FE210047C200 /* GameStateManager.m */,
 				7A04A2081178D6B900ECA3E0 /* GLFont.h */,
@@ -279,6 +298,9 @@
 				4D9AF72F11799FD20061711D /* controls_bold.png in Resources */,
 				4D9AF73011799FD20061711D /* controls_bottom.png in Resources */,
 				4D9AF73111799FD20061711D /* controls_top.png in Resources */,
+				7A1CB68C117A4CA700721B9E /* player.png in Resources */,
+				7A1CB6C4117A550500721B9E /* gsHighscores.xib in Resources */,
+				7A1CB6C5117A550500721B9E /* gsSettings.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +327,8 @@
 				7A04A20D1178D6B900ECA3E0 /* GLFont.m in Sources */,
 				7A04A20E1178D6B900ECA3E0 /* GLTexture.m in Sources */,
 				7A04A20F1178D6B900ECA3E0 /* pointmath.m in Sources */,
+				7A1CB659117A3A2500721B9E /* Ball.m in Sources */,
+				7A1CB65A117A3A2500721B9E /* Balto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
