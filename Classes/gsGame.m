@@ -15,12 +15,16 @@
 
 @implementation gsGame
 
+@synthesize ball;
 
 - (id)initWithFrame:(CGRect)frame andManager:pManager {
   if (self = [super initWithFrame:frame andManager:pManager]) {
     // Initialization code
   }
   
+	ball = [[Ball alloc] init];
+	[ball setPos:CGPointMake(self.frame.size.width/2, self.frame.size.height/2)];
+	
   return self;
 }
 
@@ -63,6 +67,9 @@
 		default:
 			break;
 	}
+	
+		// Draw the player here
+	[ball Render];
   
   glRotatef(90, 0, 0, -1);
 	//end drawing 2d stuff
@@ -154,7 +161,8 @@
 
 
 - (void)dealloc {
-    [super dealloc];
+	[ball release];
+	[super dealloc];
 }
 
 @end
