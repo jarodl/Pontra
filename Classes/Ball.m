@@ -7,12 +7,24 @@
 //
 
 #import "Ball.h"
+#import "ResourceManager.h"
 
 
 @implementation Ball
 
+@synthesize x, y;
+
+/*
+ * Render
+ * Last modified: 17April2010
+ * - Jarod
+ *
+ * Draws the ball image to the screen.
+ *	
+ */
 - (void) Render
-{		
+{
+  [[g_ResManager getTexture:@"player.png"] drawAtPoint:CGPointMake(self.x, self.y)];
 }
 
 - (void) Update

@@ -49,9 +49,11 @@
 	glEnable(GL_BLEND); //needed, otherwise extra chunks of the image are drawn
 	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); //needed
 	glDisable(GL_DEPTH_TEST); //needed for overlaying images
-	
-  // no idea why subtracting 80 is necessary
-  int ycenter = self.frame.size.height/2 - 80;
+
+  /* This needed to be the width/2 because it happens
+   * before rotation.
+   * - Jarod */
+  int ycenter = self.frame.size.width/2;
 	int xcenter = 40;
 	
 	NSString *ctrl;
@@ -69,10 +71,10 @@
 			break;
 	}
 
-		// Draw the controls
+  // Draw the controls
 	[[g_ResManager getTexture:ctrl] drawAtPoint:CGPointMake(xcenter, ycenter) withRotation: 0 withScale: 1];
 	
-		// Draw the player here
+  // Draw the player here
 	[ball Render];
   
   glRotatef(90, 0, 0, -1);
@@ -81,6 +83,31 @@
   
 	//you get a nice boring white screen if you forget to swap buffers.
 	[self swapBuffers];
+}
+
+/*
+ * Update
+ * Last modified: 17April2010
+ * - Jarod
+ *
+ * This is inherited from GameState and will be used to
+ * update the paddles and player's position on the screen.
+ *	
+ */
+- (void) Update
+{
+  switch (control_pressed) {
+    case TOP_CONTROL:
+      // move the ball up
+      [ball moveY:5];
+      break;
+    case BOTTOM_CONTROL:
+      // move the ball down
+      [ball moveY:-5];
+      break;
+    default:
+      break;
+  }
 }
 
 - (IBAction) pause

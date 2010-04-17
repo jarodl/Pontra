@@ -15,6 +15,12 @@
   int y;
 }
 
+// Not sure if the 'nonatomic' keyword is the one to use, but it works.
+// If this is a problem, please fix. ;)
+// - Jarod
+@property (nonatomic) int x;
+@property (nonatomic) int y;
+
 - (void) Render;
 - (void) Update;
 - (void) moveY:(int) dir;
