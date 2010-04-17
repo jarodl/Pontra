@@ -190,9 +190,9 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">subview</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="552354323"/>
+						<reference key="destination" ref="191373211"/>
 					</object>
-					<int key="connectionID">19</int>
+					<int key="connectionID">20</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -280,7 +280,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>gsMainMenu</string>
 					<string>UIResponder</string>
-					<string>{{597, 68}, {480, 320}}</string>
+					<string>{{691, 208}, {480, 320}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -306,7 +306,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">19</int>
+			<int key="maxID">20</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
