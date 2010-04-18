@@ -49,12 +49,14 @@
 		
 	// check settings if sound is on/off
 	NSString *filePath = [self settingsFile];
-	BOOL soundSetting = FALSE;
+	soundSetting = FALSE, fxSetting = FALSE;
 	if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
 		NSArray *array = [[NSArray alloc]initWithContentsOfFile:filePath];
 		soundSetting = [[array objectAtIndex:0] boolValue];
+		fxSetting = [[array objectAtIndex:1] boolValue];
 	} else {
 		soundSetting = TRUE;
+		fxSetting = TRUE;
 	}
 
 	
@@ -279,10 +281,12 @@
 /*
  * collisionHandler
  * Last modified: 17April2010
- * - Jarod
+ * - Mark
  *
  * Collision Handler that updates a game object
  * to resolve a collision.
+ * Also plays sound effects on collision if
+ * the settings are on.
  *	
  */
 - (void) handleCollision:(GameObject*) object
@@ -314,7 +318,8 @@
 		shouldpop = TRUE;
   }
 	
-	if (shouldpop )
+	// play soundFX
+	if (shouldpop && fxSetting )
 		[sound Play:POP andLooping:NO];
 }
 

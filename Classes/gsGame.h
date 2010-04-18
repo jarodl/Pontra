@@ -16,6 +16,9 @@
 	int control_pressed;
 	Ball *ball;
 	Balto *sound;
+	
+	BOOL soundSetting;
+	BOOL fxSetting;
 }
 
 @property (nonatomic, retain) Ball *ball;
