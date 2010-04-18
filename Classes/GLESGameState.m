@@ -77,12 +77,20 @@ CGSize _size;
 	zFar = 3000.0, //probably should be done in substates.
 	fieldOfView = 60.0;
 	GLfloat size = zNear * tanf(fieldOfView / 180.0f * PI / 2.0);
-	CGRect rect = CGRectMake(0, 0, 320, 480);
+	CGRect rect = CGRectMake(0, 0, 480.0, 320.0);
 	glFrustumf(-size, size, -size / (rect.size.width / rect.size.height), size / (rect.size.width / rect.size.height), zNear, zFar);
 	glViewport(0, 0, rect.size.width, rect.size.height);
-	glRotatef(90.0f, 0, 0, -1); //rotate the display, so we play in landscape.  need to modify accelerometer data to reflect this world rotation, as well.
-	glMatrixMode(GL_MODELVIEW);
   
+  /*
+   * This doesn't seem necessary anymore since I added a method in the
+   * view controller, but I'll leave it here for reference if something goes
+   * wrong with rotating the view.
+   *
+   * - Jarod
+   */
+	glRotatef(90.0f, 0, 0, -1); //rotate the display, so we play in landscape.  need to modify accelerometer data to reflect this world rotation, as well.
+  
+	glMatrixMode(GL_MODELVIEW);
 	glEnable(GL_TEXTURE_2D);
 	glEnableClientState(GL_VERTEX_ARRAY);
 }

@@ -7,7 +7,7 @@
 //
 
 #import "gsSettings.h"
-
+#import "gsMainMenu.h"
 
 @implementation gsSettings
 
@@ -27,12 +27,13 @@
 			[[NSBundle mainBundle] loadNibNamed:@"gsSettings" owner:self options:nil];
 			[self addSubview:subview];
     }
+  
     return self;
 }
 
 - (IBAction) back
 {
-
+  [manager doStateChange:[gsMainMenu class]];
 }
 
 - (void)dealloc {

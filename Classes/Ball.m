@@ -14,6 +14,16 @@
 
 @synthesize x, y;
 
+- (id) init
+{
+  if (self = [super init]) {
+    x_velocity = 1;
+    y_velocity = 0;
+  }
+  
+  return self;
+}
+
 /*
  * Render
  * Last modified: 17April2010
@@ -29,7 +39,8 @@
 
 - (void) Update
 {
-	
+  [self moveX:x_velocity];
+  [self moveY:y_velocity];
 }
 
 - (void) moveY:(int) dir

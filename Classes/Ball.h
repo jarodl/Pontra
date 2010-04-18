@@ -13,6 +13,8 @@
 @interface Ball : NSObject {
   int x;
   int y;
+  int x_velocity;
+  int y_velocity;
 }
 
 // Not sure if the 'nonatomic' keyword is the one to use, but it works.
