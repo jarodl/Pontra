@@ -41,6 +41,21 @@
   [self moveY:y_velocity];
 }
 
+/*
+ * setYVelocity
+ * Last modified: 17April2010
+ * - Mark
+ *
+ * called by the user controls
+ * to set the balls y_velocity
+ * so it moves diagonally as well
+ *	
+ */
+- (void) setYVelocity:(int) val
+{
+	y_velocity = val;
+}
+
 - (void) collidedRight
 {
   x_velocity *= -1;
@@ -53,7 +68,7 @@
 
 - (void) collidedTop
 {
-  y_velocity *= 1;
+  y_velocity *= -1;
 }
 
 - (void) collidedBottom

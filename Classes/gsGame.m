@@ -143,11 +143,13 @@
 /*
  * Update
  * Last modified: 17April2010
- * - Jarod
+ * - Mark
  *
  * This is inherited from GameState and will be used to
  * update the paddles and player's position on the screen.
- *	
+ *
+ * The collision handler should be called before the ball updates
+ * itself so the ball's coordinates stay on screen.
  */
 - (void) Update
 {
@@ -156,21 +158,22 @@
   switch (control_pressed) {
     case TOP_CONTROL:
       // move the ball up
-      [ball moveY:5];
-      break;
+			[ball setYVelocity:5];
+			break;
     case BOTTOM_CONTROL:
       // move the ball down
-      [ball moveY:-5];
+			[ball setYVelocity:-5];
       break;
     default:
       break;
   }
   
+	// Check for collisions and resolve them.
+  [self handleCollision:ball];
+
   // Call the ball's update method to apply velocity/acceleration.
   [ball Update];
   
-  // Check for collisions and resolve them.
-  [self handleCollision:ball];
 }
 
 - (IBAction) pause
