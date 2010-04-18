@@ -7,8 +7,9 @@
 //
 
 #import "Ball.h"
-#import "ResourceManager.h"
 
+#define WIDTH 8
+#define HEIGHT 8
 
 @implementation Ball
 
@@ -17,6 +18,8 @@
   if (self = [super init]) {
     x_velocity = 5;
     y_velocity = 0;
+    width = WIDTH;
+    height = HEIGHT;
   }
   
   return self;

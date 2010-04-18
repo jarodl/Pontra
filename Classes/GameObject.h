@@ -7,18 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "ResourceManager.h"
 
 @interface GameObject : NSObject {
   int x;
   int y;
   int x_velocity;
   int y_velocity;
+  int width;
+  int height;
 }
 
 @property (nonatomic) int x;
 @property (nonatomic) int y;
+@property (nonatomic) int width;
+@property (nonatomic) int height;
 
+- (id) initWithPosition:(CGPoint) p;
 - (void) Render;
 - (void) Update;
 - (void) moveY:(int) dir;

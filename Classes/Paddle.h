@@ -8,7 +8,17 @@
 
 #import "GameObject.h"
 
+#define LEFT 0
+#define RIGHT 1
+
 @interface Paddle : GameObject {
+  int side;
 }
+
+@property (nonatomic) int side;
+
+- (void) seek:(GameObject*) object;
+- (void) avoid:(GameObject*) object;
+- (BOOL) didCollideWith:(GameObject*) object;
 
 @end

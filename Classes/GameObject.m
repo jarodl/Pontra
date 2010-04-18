@@ -11,7 +11,16 @@
 
 @implementation GameObject
 
-@synthesize x, y;
+@synthesize x, y, width, height;
+
+- (id) initWithPosition:(CGPoint) p
+{
+  if (self = [super init]) {
+    [self setPos:p];
+  }
+  
+  return self;
+}
 
 - (void) Render
 {
@@ -33,8 +42,8 @@
 
 - (void) setPos:(CGPoint) p
 {
-	x = p.x;
-	y = p.y;
+  [self setX:p.x];
+  [self setY:p.y];
 }
 
 - (void) collidedRight

@@ -7,7 +7,6 @@
 //
 
 #import "gsGame.h"
-#import "ResourceManager.h"
 
 #define NO_CONTROL 0
 #define TOP_CONTROL 1
@@ -57,12 +56,17 @@
 		[sound Play:0 andLooping:YES];
 	}
 
+  // init game objects
 	ball = [[Ball alloc] init];
+  leftPaddle = [[Paddle alloc] initWithPosition:CGPointMake(90, self.frame.size.height/2)];
+  [leftPaddle setSide:LEFT];
+  rightPaddle = [[Paddle alloc] initWithPosition:CGPointMake(self.frame.size.width - 15, self.frame.size.height/2)];
+  [rightPaddle setSide:RIGHT];
   
   // flipped the height and width here, this is due to the rotation of the
   // frame again. We should fix that.
   // - Jarod
-	[ball setPos:CGPointMake(self.frame.size.height/2, self.frame.size.width/2)];
+	[ball setPos:CGPointMake(self.frame.size.width/2, self.frame.size.height/2)];
 	
   return self;
 }
@@ -126,10 +130,9 @@
 	
   // Draw the player here
 	[ball Render];
-  
-  // This doesn't do anything?
-  //glRotatef(90, 0, 0, -1);
-	//end drawing 2d stuff
+  // Draw the paddles
+  [leftPaddle Render];
+  [rightPaddle Render];
   
 	//pop the 2d hud stuff off the projection stack
 	glMatrixMode(GL_PROJECTION);
@@ -168,6 +171,10 @@
   
   // Call the ball's update method to apply velocity/acceleration.
   [ball Update];
+  
+  // Update the AI for the paddles
+  [leftPaddle seek:ball];
+  [rightPaddle avoid:ball];
   
   // Check for collisions and resolve them.
   [self handleCollision:ball];
@@ -275,30 +282,38 @@
  *
  * Collision Handler that updates a game object
  * to resolve a collision.
- *	
+ *
  */
 - (void) handleCollision:(GameObject*) object
 {
   float height = self.frame.size.width;
   float width = self.frame.size.height;
   
-  if (object.x >= width) {
+  if ([leftPaddle didCollideWith:object]) {
+    [object collidedLeft];
+  }
+  if ([rightPaddle didCollideWith:object]) {
+    [object collidedRight];
+  }
+  
+  if (object.x + object.width/2 >= width) {
     // handle hit right side
     [object collidedRight];
   }
-  else if (object.x <= 0) {
+  else if (object.x - object.width/2 <= 0) {
     // handle hit left side
     [object collidedLeft];
   }
   
-  if (object.y >= height) {
+  if (object.y + object.height/2 >= height) {
     // handle hit top
     [object collidedTop];
   }
-  else if (object.y <= 0) {
+  else if (object.y - object.height/2 <= 0) {
     // handle hit bottom
     [object collidedBottom];
   }
+  
 }
 
 - (void)dealloc {

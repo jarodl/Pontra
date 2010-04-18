@@ -8,13 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #include "GLESGameState.h"
-#include "Ball.h"
-#include "Balto.h"
-#include "GameObject.h"
+#import "Ball.h"
+#import "Paddle.h"
+#import "Balto.h"
+#import "GameObject.h"
+#import "ResourceManager.h"
 
 @interface gsGame : GLESGameState {
 	int control_pressed;
 	Ball *ball;
+  Paddle *leftPaddle;
+  Paddle *rightPaddle;
 	Balto *sound;
 }
 
