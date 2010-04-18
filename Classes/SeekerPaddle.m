@@ -8,25 +8,41 @@
 
 #import "SeekerPaddle.h"
 
-#define WIDTH 7
-#define HEIGHT 150
-
 @implementation SeekerPaddle
 
-- (id) initWithPosition:(CGPoint) p
+- (void) seek:(GameObject*) object
 {
-  if (self = [super initWithPosition:p]) {
-    width = WIDTH;
-    height = HEIGHT;
-    y_velocity = 0;
+  if ([self isInProximity:object]) {
+    // within proxmity, so react
+    if ([object y_velocity] > 0) {
+      // the object is moving upward, so go up
+      [self setY_velocity:[object y_velocity]];
+    }
+    else if ([object y_velocity] <= 0) {
+      // the object is moving down, so go down
+      [self setY_velocity:[object y_velocity]];
+    }
   }
-  
-  return self;
+  // start moving the paddle back to the middle
+  else if ([self y] > IPHONE_HEIGHT/2 + 10) {
+    [self setY_velocity:-1];
+  }
+  else if ([self y] < IPHONE_HEIGHT/2 - 10) {
+    [self setY_velocity:1];
+  }
+  else {
+    [self setY_velocity:0];
+  }
 }
 
-- (void) Render
+- (BOOL) isInProximity:(GameObject*) object
 {
-  [[g_ResManager getTexture:@"paddle.png"] drawAtPoint:CGPointMake(self.x, self.y)];
+  if ([self side] == LEFT) {
+    return ([self x] + proximity >= [object x]);
+  }
+  else {
+    return ([self x] - proximity <= [object x]);
+  }
 }
 
 @end

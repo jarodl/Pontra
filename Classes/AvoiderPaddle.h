@@ -6,7 +6,6 @@
 //  Copyright 2010 nil. All rights reserved.
 //
 
-#import "GameObject.h"
 #import "Paddle.h"
 
 @interface AvoiderPaddle : Paddle {

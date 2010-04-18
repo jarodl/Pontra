@@ -10,15 +10,21 @@
 
 #define LEFT 0
 #define RIGHT 1
+#define WIDTH 7
+#define HEIGHT 150
+// I know this isn't where this goes.. but this is due Wednesday. :/
+#define IPHONE_HEIGHT 320
 
 @interface Paddle : GameObject {
   int side;
+  int proximity;
 }
 
+@property (nonatomic) int proximity;
 @property (nonatomic) int side;
 
-- (void) seek:(GameObject*) object;
 - (void) avoid:(GameObject*) object;
+- (void) seek:(GameObject*) object;
 - (BOOL) didCollideWith:(GameObject*) object;
 
 @end

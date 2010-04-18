@@ -67,10 +67,14 @@
   // init game objects
 	ball = [[Ball alloc] init];
   
-	leftPaddle = [[AvoiderPaddle alloc] initWithPosition:CGPointMake(90, self.frame.size.height/2)];
+  // For level one the left paddle should seek the ball no matter what.
+	leftPaddle = [[SeekerPaddle alloc] initWithPosition:CGPointMake(90, self.frame.size.height/2)];
+  // For the first level the left paddle should be unstoppable.
+  [leftPaddle setProximity:300];
   [leftPaddle setSide:LEFT];
 
   rightPaddle = [[SeekerPaddle alloc] initWithPosition:CGPointMake(self.frame.size.width - 15, self.frame.size.height/2)];
+  [rightPaddle setProximity:80];
   [rightPaddle setSide:RIGHT];
   
   // flipped the height and width here, this is due to the rotation of the
@@ -189,10 +193,12 @@
 
   // Call the ball's update method to apply velocity/acceleration.
   [ball Update];
+  [leftPaddle Update];
+  [rightPaddle Update];
   
   // Update the AI for the paddles
   [leftPaddle seek:ball];
-  [rightPaddle avoid:ball];
+  [rightPaddle seek:ball];
   
   // Check for collisions and resolve them.
   [self handleCollision:ball];

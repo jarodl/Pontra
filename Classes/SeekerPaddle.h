@@ -6,10 +6,11 @@
 //  Copyright 2010 nil. All rights reserved.
 //
 
-#import "GameObject.h"
 #import "Paddle.h"
 
 @interface SeekerPaddle : Paddle {
 }
+
+- (BOOL) isInProximity:(GameObject*) object;
 
 @end

@@ -8,10 +8,9 @@
 
 #import "GameObject.h"
 
-
 @implementation GameObject
 
-@synthesize x, y, width, height;
+@synthesize x, y, width, height, x_velocity, y_velocity;
 
 - (id) initWithPosition:(CGPoint) p
 {

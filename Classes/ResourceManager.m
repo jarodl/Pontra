@@ -78,6 +78,7 @@ ResourceManager *g_ResManager;
   
 	//load time seems to correlate with image complexity with png files.  Images loaded later in the app were quicker as well.  Ranged 0.075 (seconds) to 0.288 in test app.  Tested once per image, on device, with varying load order.
 	NSString *fullpath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:filename];
+  
 	UIImage *loadImage = [UIImage imageWithContentsOfFile:fullpath];
 	retval = [[GLTexture alloc] initWithImage: loadImage];
 	[textures setValue:[retval autorelease] forKey:filename];

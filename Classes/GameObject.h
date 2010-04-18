@@ -20,6 +20,8 @@
 
 @property (nonatomic) int x;
 @property (nonatomic) int y;
+@property (nonatomic) int x_velocity;
+@property (nonatomic) int y_velocity;
 @property (nonatomic) int width;
 @property (nonatomic) int height;
 

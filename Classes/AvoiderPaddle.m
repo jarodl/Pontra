@@ -8,26 +8,10 @@
 
 #import "AvoiderPaddle.h"
 
-#define WIDTH 7
-#define HEIGHT 150
-
 @implementation AvoiderPaddle
 
-- (id) initWithPosition:(CGPoint) p
+- (void) avoid:(GameObject*) object
 {
-  if (self = [super initWithPosition:p]) {
-    width = WIDTH;
-    height = HEIGHT;
-    y_velocity = 0;
-  }
-  
-  return self;
 }
-
-- (void) Render
-{
-  [[g_ResManager getTexture:@"paddle.png"] drawAtPoint:CGPointMake(self.x, self.y)];
-}
-
 
 @end

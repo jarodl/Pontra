@@ -8,12 +8,9 @@
 
 #import "Paddle.h"
 
-#define WIDTH 7
-#define HEIGHT 150
-
 @implementation Paddle
 
-@synthesize side;
+@synthesize side, proximity;
 
 - (id) initWithPosition:(CGPoint) p
 {
@@ -33,7 +30,11 @@
 
 - (void) Update
 {
-  [self moveY:y_velocity];
+  int upper_bound = self.y + self.height/2 + y_velocity;
+  int lower_bound = self.y - self.height/2 + y_velocity;
+  if (upper_bound <= IPHONE_HEIGHT && lower_bound >= 0) {
+    [self moveY:y_velocity];
+  }
 }
 
 - (void) seek:(GameObject*) object
