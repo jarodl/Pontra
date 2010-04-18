@@ -67,28 +67,28 @@
 
 - (void) doStateChange: (Class) state
 {
-  BOOL animateTransition = TRUE;
-  
-  if (animateTransition) {
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.5];
-    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:window cache:YES];
-  }
-  
-  if (viewController.view != nil) {
-    [viewController.view removeFromSuperview];
-    [viewController.view release];
-  }
-  
-  viewController.view = [[state alloc] initWithFrame:CGRectMake(0, 0, IPHONE_WIDTH, IPHONE_HEIGHT) andManager:self];
-  
-  // now set the view as visible
+	BOOL animateTransition = true;
+	
+	if(animateTransition){
+		[UIView beginAnimations:nil context:NULL];
+		[UIView setAnimationDuration:0.5];
+		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:window cache:YES]; //does nothing without this line.
+	}
+	
+	if( viewController.view != nil ) {
+		[viewController.view removeFromSuperview]; //remove view from window's subviews.
+		[viewController.view release]; //release gamestate 
+	}
+	
+	viewController.view = [[state alloc]  initWithFrame:CGRectMake(0, 0, IPHONE_WIDTH, IPHONE_HEIGHT) andManager:self];
+	
+	//now set our view as visible
   [window addSubview:viewController.view];
   [window makeKeyAndVisible];
-  
-  if (animateTransition) {
-    [UIView commitAnimations];
-  }
+	
+	if(animateTransition){
+		[UIView commitAnimations];
+	}
 }
 
 - (void)dealloc {

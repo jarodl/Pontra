@@ -12,7 +12,15 @@
 
 @implementation Ball
 
-@synthesize x, y;
+- (id) init
+{
+  if (self = [super init]) {
+    x_velocity = 5;
+    y_velocity = 0;
+  }
+  
+  return self;
+}
 
 /*
  * Render
@@ -29,23 +37,29 @@
 
 - (void) Update
 {
-	
+  [self moveX:x_velocity];
+  [self moveY:y_velocity];
 }
 
-- (void) moveY:(int) dir
+- (void) collidedRight
 {
-	y += dir;
+  x_velocity *= -1;
 }
 
-- (void) moveX:(int) dir
+- (void) collidedLeft
 {
-	x += dir;
+  x_velocity *= -1;
 }
 
-- (void) setPos:(CGPoint) p
+- (void) collidedTop
 {
-	x = p.x;
-	y = p.y;
+  y_velocity *= 1;
 }
+
+- (void) collidedBottom
+{
+  y_velocity *= -1;
+}
+
 
 @end

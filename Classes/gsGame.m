@@ -58,7 +58,11 @@
 	}
 
 	ball = [[Ball alloc] init];
-	[ball setPos:CGPointMake(self.frame.size.width/2, self.frame.size.height/2)];
+  
+  // flipped the height and width here, this is due to the rotation of the
+  // frame again. We should fix that.
+  // - Jarod
+	[ball setPos:CGPointMake(self.frame.size.height/2, self.frame.size.width/2)];
 	
   return self;
 }
@@ -66,16 +70,27 @@
 - (void) Render
 {
   //clear anything left over from the last frame, and set background color.
-	glClearColor(0xff/256.0f, 0xcc/256.0f, 0x99/256.0f, 1.0f);
+	glClearColor(0x1b/256.0f, 0x1b/256.0f, 0x1b/256.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //important to clear the depth buffer as well as color buffer.
 	
 	glLoadIdentity();
-  
+
   //Set up OpenGL projection matrix for 2d hud rendering.
 	glMatrixMode(GL_PROJECTION);
 	glPushMatrix(); //pushing so we can restore the main game view after playing with the hud.
 	glLoadIdentity(); //needed, glorthof doesn't clobber the matrix like joe would expect
-	glOrthof(0, self.frame.size.width, 0, self.frame.size.height, -1, 1);
+  
+  //
+  // Okay, so this is the weirdest problem ever. If you switch the height
+  // and the width here then the view is stretched out and messed up.
+  // This has to have something to do with the way I am rotating all of the
+  // subviews. This needs fixed throughout the entire application.
+  // 
+  // TODO:
+  // * Fix the way the entire application handles landscape mode.
+  //
+  // - Jarod (16April2010)
+	glOrthof(0, self.frame.size.height, 0, self.frame.size.width, -1, 1);
 	
 	//setup for drawing the alpha blended textures used in the hud.
 	glMatrixMode(GL_MODELVIEW);
@@ -112,9 +127,14 @@
   // Draw the player here
 	[ball Render];
   
-  glRotatef(90, 0, 0, -1);
+  // This doesn't do anything?
+  //glRotatef(90, 0, 0, -1);
 	//end drawing 2d stuff
-
+  
+	//pop the 2d hud stuff off the projection stack
+	glMatrixMode(GL_PROJECTION);
+	glPopMatrix();
+	glMatrixMode(GL_MODELVIEW);
   
 	//you get a nice boring white screen if you forget to swap buffers.
 	[self swapBuffers];
@@ -131,6 +151,8 @@
  */
 - (void) Update
 {
+  // Update the balls position based on what control the player
+  // is pressing.
   switch (control_pressed) {
     case TOP_CONTROL:
       // move the ball up
@@ -143,6 +165,12 @@
     default:
       break;
   }
+  
+  // Call the ball's update method to apply velocity/acceleration.
+  [ball Update];
+  
+  // Check for collisions and resolve them.
+  [self handleCollision:ball];
 }
 
 - (IBAction) pause
@@ -240,6 +268,38 @@
 	}
 }
 
+/*
+ * collisionHandler
+ * Last modified: 17April2010
+ * - Jarod
+ *
+ * Collision Handler that updates a game object
+ * to resolve a collision.
+ *	
+ */
+- (void) handleCollision:(GameObject*) object
+{
+  float height = self.frame.size.width;
+  float width = self.frame.size.height;
+  
+  if (object.x >= width) {
+    // handle hit right side
+    [object collidedRight];
+  }
+  else if (object.x <= 0) {
+    // handle hit left side
+    [object collidedLeft];
+  }
+  
+  if (object.y >= height) {
+    // handle hit top
+    [object collidedTop];
+  }
+  else if (object.y <= 0) {
+    // handle hit bottom
+    [object collidedBottom];
+  }
+}
 
 - (void)dealloc {
 	[ball release];
