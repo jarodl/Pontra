@@ -135,6 +135,7 @@
   [ball Update];
   
   // Check for collisions and resolve them.
+  [self handleCollision:ball];
 }
 
 - (IBAction) pause
@@ -217,6 +218,38 @@
 	}
 }
 
+/*
+ * collisionHandler
+ * Last modified: 17April2010
+ * - Jarod
+ *
+ * Collision Handler that updates a game object
+ * to resolve a collision.
+ *	
+ */
+- (void) handleCollision:(GameObject*) object
+{
+  float height = self.frame.size.width;
+  float width = self.frame.size.height;
+  
+  if (object.x >= width) {
+    // handle hit right side
+    [object collidedRight];
+  }
+  else if (object.x <= 0) {
+    // handle hit left side
+    [object collidedLeft];
+  }
+  
+  if (object.y >= height) {
+    // handle hit top
+    [object collidedTop];
+  }
+  else if (object.y <= 0) {
+    // handle hit bottom
+    [object collidedBottom];
+  }
+}
 
 - (void)dealloc {
 	[ball release];

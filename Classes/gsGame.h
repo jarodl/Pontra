@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #include "GLESGameState.h"
 #include "Ball.h"
+#include "GameObject.h"
 
 @interface gsGame : GLESGameState {
 	int control_pressed;
@@ -19,5 +20,6 @@
 
 - (void) touchesHandler:(NSSet*)touches;
 - (IBAction) pause;
+- (void) handleCollision:(GameObject*) object;
 
 @end

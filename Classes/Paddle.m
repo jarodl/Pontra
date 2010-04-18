@@ -19,16 +19,4 @@
 {
 }
 
-- (void) moveY:(int) dir
-{
-}
-
-- (void) moveX:(int) dir
-{
-}
-
-- (void) setPos:(CGPoint) p
-{
-}
-
 @end

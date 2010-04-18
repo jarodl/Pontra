@@ -6,19 +6,9 @@
 //  Copyright 2010 nil. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <CoreGraphics/CoreGraphics.h>
+#import "GameObject.h"
 
-@interface Paddle : NSObject {
-  int x_pos;
-  int y_pos;
+@interface Paddle : GameObject {
 }
-
-- (void) Render;
-- (void) Update;
-- (void) moveY:(int) dir;
-- (void) moveX:(int) dir;
-- (void) setPos:(CGPoint) p;
 
 @end
