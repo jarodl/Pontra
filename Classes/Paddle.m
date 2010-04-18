@@ -15,9 +15,9 @@
 
 @synthesize side;
 
-- (id) init
+- (id) initWithPosition:(CGPoint) p
 {
-  if (self = [super init]) {
+  if (self = [super initWithPosition:p]) {
     width = WIDTH;
     height = HEIGHT;
     y_velocity = 0;
@@ -44,23 +44,20 @@
 {
 }
 
-
-// This sucks and it doesn't work.
-// I'm so freaking tired.
 - (BOOL) didCollideWith:(GameObject *)object
 {
   if ([self side] == LEFT) {
-    if (object.x <= self.x &&
-        object.y <= self.y + self.height &&
-        object.y >= self.y - self.height) {
-      return TRUE;
+		if (object.x - object.width/2 <= self.x + self.width/2 &&
+				object.y >= self.y - self.height/2 &&
+				object.y <= self.y + self.height/2 ) {
+			return TRUE;
     }
   }
-  else if ([self side] == RIGHT) {
-    if (object.x >= self.x &&
-        object.y <= self.y + self.height &&
-        object.y >= self.y - self.height) {
-      return TRUE;
+  if ([self side] == RIGHT) {	
+		if (object.x + object.width/2 >= self.x - self.width/2 &&
+				object.y >= self.y - self.height/2 &&
+				object.y <= self.y + self.height/2 ) {
+			return TRUE;
     }
   }
   

@@ -305,6 +305,16 @@
   float width = self.frame.size.height;
   
   BOOL shouldpop = FALSE;
+	
+	if ([rightPaddle didCollideWith:object]) {
+		[object collidedRight];
+		shouldpop = TRUE;
+	}
+	
+	if ([leftPaddle didCollideWith:object]) {
+		[object collidedLeft];
+		shouldpop = TRUE;
+	}
   
   if (object.x + object.width/2 >= width) {
     // handle hit right side

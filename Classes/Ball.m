@@ -53,7 +53,7 @@
  * in order to give the ball's
  * angle an effected response.
  * The y_velocity is halted at
- * 6 for obvious reasons. This
+ * 5 for obvious reasons. This
  * number is safe to alter.
  *	
  */
@@ -71,7 +71,7 @@
  * in order to give the ball's
  * angle an effected response
  * The y_velocity is halted at
- * 6 for obvious reasons. This
+ * 5 for obvious reasons. This
  * number is safe to alter.
  *	
  */
