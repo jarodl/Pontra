@@ -16,7 +16,6 @@
 	int control_pressed;
 	Ball *ball;
 	Balto *sound;
-	int ydir;
 }
 
 @property (nonatomic, retain) Ball *ball;

@@ -57,7 +57,6 @@
 		[sound Play:0 andLooping:YES];
 	}
 	
-	ydir = 0;
 	ball = [[Ball alloc] init];
   
   // flipped the height and width here, this is due to the rotation of the
