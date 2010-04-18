@@ -179,7 +179,7 @@
   }
   
 	// Check for collisions and resolve them.
-  [self handleCollision:ball];
+  [self handleCollision: ball];
 
   // Call the ball's update method to apply velocity/acceleration.
   [ball Update];
@@ -303,10 +303,6 @@
 {
   float height = self.frame.size.width;
   float width = self.frame.size.height;
-  
-  if ([rightPaddle didCollideWith:object]) {
-    [object collidedRight];
-  }
   
   BOOL shouldpop = FALSE;
   

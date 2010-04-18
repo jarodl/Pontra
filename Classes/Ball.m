@@ -82,21 +82,25 @@
 
 - (void) collidedRight
 {
+  x -= width/2;
   x_velocity *= -1;
 }
 
 - (void) collidedLeft
 {
+  x += width/2;
   x_velocity *= -1;
 }
 
 - (void) collidedTop
 {
+  y -= height/2;
   y_velocity *= -1;
 }
 
 - (void) collidedBottom
 {
+  y += height/2;
   y_velocity *= -1;
 }
 
