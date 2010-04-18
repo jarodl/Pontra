@@ -62,6 +62,8 @@
 		[sound Play:THEME andLooping:YES];
 	}
 
+	pause = FALSE;
+	
   // init game objects
 	ball = [[Ball alloc] init];
   
@@ -164,6 +166,9 @@
  */
 - (void) Update
 {
+	if (pause)
+		return;
+	
   // Update the balls position based on what control the player
   // is pressing.
   switch (control_pressed) {
@@ -191,11 +196,6 @@
   
   // Check for collisions and resolve them.
   [self handleCollision:ball];
-}
-
-- (IBAction) pause
-{
-	
 }
 
 /*
@@ -262,7 +262,7 @@
 
 /*
  * touchesHandler
- * Last modified: 16April2010
+ * Last modified: 17April2010
  * - Mark
  *
  * Touches Handler to avoid redudant code
@@ -283,8 +283,20 @@
 	else if ( location.x >=0 && location.x <= 75 &&
 					 location.y >= 235 && location.y <= 320 )
 		control_pressed = BOTTOM_CONTROL;
+	else if ( location.x >= 90 ) {
+		pause = !pause;
+	}
 	else {
 		control_pressed = NO_CONTROL;
+	}
+	
+	// handle pause
+	if (pause) {
+		[sound Pause];
+		control_pressed = NO_CONTROL;
+	}
+	else {
+		[sound Resume];
 	}
 }
 

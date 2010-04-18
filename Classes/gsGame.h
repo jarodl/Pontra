@@ -24,13 +24,14 @@
 	
 	BOOL soundSetting;
 	BOOL fxSetting;
+	
+	BOOL pause;
 }
 
 @property (nonatomic, retain) Ball *ball;
 @property (nonatomic, retain) Balto *sound;
 
 - (void) touchesHandler:(NSSet*)touches;
-- (IBAction) pause;
 - (NSString *) settingsFile;
 - (void) handleCollision:(GameObject*) object;
 
