@@ -14,5 +14,6 @@
 }
 
 - (IBAction) back;
+- (NSString *) settingsFile;
 
 @end

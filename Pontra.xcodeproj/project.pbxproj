@@ -24,6 +24,7 @@
 		4DC36B5E117A9FF000B602E8 /* Balto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC36B5D117A9FF000B602E8 /* Balto.m */; };
 		4DC36B6C117AA00C00B602E8 /* teachingrobot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36B6B117AA00C00B602E8 /* teachingrobot.wav */; };
 		4DC36BA9117AC05900B602E8 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC36BA8117AC05900B602E8 /* GameObject.m */; };
+		4DC36C87117ADACB00B602E8 /* pop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36C86117ADACB00B602E8 /* pop.wav */; };
 		4DD346DE117A562D0041888E /* gsHighscores.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DD346DC117A562D0041888E /* gsHighscores.xib */; };
 		4DD346DF117A562D0041888E /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DD346DD117A562D0041888E /* player.png */; };
 		7A04A2031178D56D00ECA3E0 /* ResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A2021178D56D00ECA3E0 /* ResourceManager.m */; };
@@ -72,6 +73,7 @@
 		4DC36B6B117AA00C00B602E8 /* teachingrobot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = teachingrobot.wav; sourceTree = "<group>"; };
 		4DC36BA7117AC05900B602E8 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		4DC36BA8117AC05900B602E8 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
+		4DC36C86117ADACB00B602E8 /* pop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pop.wav; sourceTree = "<group>"; };
 		4DD346DC117A562D0041888E /* gsHighscores.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = gsHighscores.xib; sourceTree = "<group>"; };
 		4DD346DD117A562D0041888E /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
 		7A04A2011178D56D00ECA3E0 /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4DC36C86117ADACB00B602E8 /* pop.wav */,
 				4DC36B6B117AA00C00B602E8 /* teachingrobot.wav */,
 				4DD346DC117A562D0041888E /* gsHighscores.xib */,
 				4DD346DD117A562D0041888E /* player.png */,
@@ -314,6 +317,7 @@
 				4DD346DE117A562D0041888E /* gsHighscores.xib in Resources */,
 				4DD346DF117A562D0041888E /* player.png in Resources */,
 				4DC36B6C117AA00C00B602E8 /* teachingrobot.wav in Resources */,
+				4DC36C87117ADACB00B602E8 /* pop.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

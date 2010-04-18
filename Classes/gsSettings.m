@@ -49,7 +49,7 @@
 	// Get the documents directory
 	NSArray	*paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
-	return [documentsDirectory stringByAppendingPathComponent:@"settings.plist"];
+	return [documentsDirectory stringByAppendingPathComponent:@"pontra-settings.plist"];
 }
 
 /*

@@ -13,6 +13,9 @@
 #define TOP_CONTROL 1
 #define BOTTOM_CONTROL 2
 
+#define THEME 0
+#define POP 1
+
 @implementation gsGame
 
 @synthesize ball, sound;
@@ -35,9 +38,11 @@
   }
   
 	// initialize the sound
-	NSString *soundFile = [[NSBundle mainBundle] pathForResource:@"teachingrobot" ofType:@"wav"];	
-	NSMutableArray *sounds = [[NSMutableArray alloc] initWithCapacity:1];
-	[sounds addObject:soundFile];
+	NSString *soundFile1 = [[NSBundle mainBundle] pathForResource:@"teachingrobot" ofType:@"wav"];
+	NSString *soundFile2 = [[NSBundle mainBundle] pathForResource:@"pop" ofType:@"wav"];
+	NSMutableArray *sounds = [[NSMutableArray alloc] initWithCapacity:2];
+	[sounds addObject:soundFile1];
+	[sounds addObject:soundFile2];
 	
 	// initialize the sound with the array of audio files
 	sound = [[Balto alloc] initWithFiles:sounds];
@@ -54,7 +59,7 @@
 
 	
 	if (soundSetting) {
-		[sound Play:0 andLooping:YES];
+		[sound Play:THEME andLooping:YES];
 	}
 	
 	ball = [[Ball alloc] init];
@@ -193,7 +198,7 @@
 	// Get the documents directory
 	NSArray	*paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
-	return [documentsDirectory stringByAppendingPathComponent:@"settings.plist"];
+	return [documentsDirectory stringByAppendingPathComponent:@"pontra-settings.plist"];
 }
 
 /*
@@ -285,23 +290,32 @@
   float height = self.frame.size.width;
   float width = self.frame.size.height;
   
+	BOOL shouldpop = FALSE;
+	
   if (object.x >= width) {
     // handle hit right side
     [object collidedRight];
+		shouldpop = TRUE;
   }
   else if (object.x <= 0) {
     // handle hit left side
     [object collidedLeft];
+		shouldpop = TRUE;
   }
   
   if (object.y >= height) {
     // handle hit top
     [object collidedTop];
+		shouldpop = TRUE;
   }
   else if (object.y <= 0) {
     // handle hit bottom
     [object collidedBottom];
+		shouldpop = TRUE;
   }
+	
+	if (shouldpop )
+		[sound Play:POP andLooping:NO];
 }
 
 - (void)dealloc {
