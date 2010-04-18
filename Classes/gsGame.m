@@ -57,7 +57,6 @@
 		soundSetting = TRUE;
 		fxSetting = TRUE;
 	}
-
 	
 	if (soundSetting) {
 		[sound Play:THEME andLooping:YES];
@@ -65,9 +64,11 @@
 
   // init game objects
 	ball = [[Ball alloc] init];
-  leftPaddle = [[Paddle alloc] initWithPosition:CGPointMake(90, self.frame.size.height/2)];
+  
+	leftPaddle = [[AvoiderPaddle alloc] initWithPosition:CGPointMake(90, self.frame.size.height/2)];
   [leftPaddle setSide:LEFT];
-  rightPaddle = [[Paddle alloc] initWithPosition:CGPointMake(self.frame.size.width - 15, self.frame.size.height/2)];
+
+  rightPaddle = [[SeekerPaddle alloc] initWithPosition:CGPointMake(self.frame.size.width - 15, self.frame.size.height/2)];
   [rightPaddle setSide:RIGHT];
   
   // flipped the height and width here, this is due to the rotation of the

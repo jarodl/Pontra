@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #include "GLESGameState.h"
 #import "Ball.h"
-#import "Paddle.h"
+#import "SeekerPaddle.h"
+#import "AvoiderPaddle.h"
 #import "Balto.h"
 #import "GameObject.h"
 #import "ResourceManager.h"
