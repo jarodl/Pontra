@@ -56,7 +56,8 @@
 	if (soundSetting) {
 		[sound Play:0 andLooping:YES];
 	}
-
+	
+	ydir = 0;
 	ball = [[Ball alloc] init];
   
   // flipped the height and width here, this is due to the rotation of the
@@ -158,11 +159,11 @@
   switch (control_pressed) {
     case TOP_CONTROL:
       // move the ball up
-			[ball setYVelocity:5];
+			[ball increaseYVelocity];
 			break;
     case BOTTOM_CONTROL:
       // move the ball down
-			[ball setYVelocity:-5];
+			[ball decreaseYVelocity];
       break;
     default:
       break;

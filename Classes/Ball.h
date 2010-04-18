@@ -11,6 +11,7 @@
 @interface Ball : GameObject {
 }
 
-- (void) setYVelocity:(int) val;
+- (void) increaseYVelocity;
+- (void) decreaseYVelocity;
 
 @end
