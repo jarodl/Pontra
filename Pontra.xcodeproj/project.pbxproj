@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* PontraAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* PontraAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* PontraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* PontraViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* PontraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* PontraViewController.m */; };
+		4D9AF72F11799FD20061711D /* controls_bold.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AF72C11799FD20061711D /* controls_bold.png */; };
+		4D9AF73011799FD20061711D /* controls_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AF72D11799FD20061711D /* controls_bottom.png */; };
+		4D9AF73111799FD20061711D /* controls_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AF72E11799FD20061711D /* controls_top.png */; };
+		4D9AF75F1179A80E0061711D /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9AF75E1179A80E0061711D /* Ball.m */; };
+		4D9AF7B01179BCA00061711D /* gsSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AF7AF1179BCA00061711D /* gsSettings.xib */; };
+		4D9AF7BD1179C0850061711D /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D9AF7BC1179C0850061711D /* back.png */; };
+		4DC36B5E117A9FF000B602E8 /* Balto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC36B5D117A9FF000B602E8 /* Balto.m */; };
+		4DC36B6C117AA00C00B602E8 /* teachingrobot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36B6B117AA00C00B602E8 /* teachingrobot.wav */; };
+		4DC36BA9117AC05900B602E8 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC36BA8117AC05900B602E8 /* GameObject.m */; };
+		4DC36C87117ADACB00B602E8 /* pop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4DC36C86117ADACB00B602E8 /* pop.wav */; };
+		4DD346DE117A562D0041888E /* gsHighscores.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DD346DC117A562D0041888E /* gsHighscores.xib */; };
+		4DD346DF117A562D0041888E /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DD346DD117A562D0041888E /* player.png */; };
+		7A04A2031178D56D00ECA3E0 /* ResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A2021178D56D00ECA3E0 /* ResourceManager.m */; };
+		7A04A20D1178D6B900ECA3E0 /* GLFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A20A1178D6B900ECA3E0 /* GLFont.m */; };
+		7A04A20E1178D6B900ECA3E0 /* GLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A20B1178D6B900ECA3E0 /* GLTexture.m */; };
+		7A04A20F1178D6B900ECA3E0 /* pointmath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A04A20C1178D6B900ECA3E0 /* pointmath.m */; };
+		7A04A24C1178DB0500ECA3E0 /* controls.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A04A24B1178DB0500ECA3E0 /* controls.png */; };
+		7A2C55581177F9390047C200 /* Paddle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C55571177F9390047C200 /* Paddle.m */; };
+		7A2C55931177FE210047C200 /* GameStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C55921177FE210047C200 /* GameStateManager.m */; };
+		7A2C55961177FE530047C200 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C55951177FE530047C200 /* GameState.m */; };
+		7A2C55991177FFCC0047C200 /* gsMainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C55981177FFCC0047C200 /* gsMainMenu.m */; };
+		7A2C55A0117801990047C200 /* gsGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C559F117801990047C200 /* gsGame.m */; };
+		7A2C55A3117801D10047C200 /* GLESGameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C55A2117801D10047C200 /* GLESGameState.m */; };
+		7A2C55A6117807160047C200 /* gsHighScores.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C55A5117807160047C200 /* gsHighScores.m */; };
+		7A2C55AA117808090047C200 /* gsSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C55A9117808090047C200 /* gsSettings.m */; };
+		7A2C55C2117811CA0047C200 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2C55C1117811CA0047C200 /* OpenGLES.framework */; };
+		7A2C55D1117811D90047C200 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2C55D0117811D90047C200 /* OpenAL.framework */; };
+		7A2C55D5117811F00047C200 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2C55D4117811F00047C200 /* QuartzCore.framework */; };
+		7A2C56421178172A0047C200 /* gsMainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A2C56411178172A0047C200 /* gsMainMenu.xib */; };
+		7A2C569E117827640047C200 /* gsPauseMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2C569D117827640047C200 /* gsPauseMenu.m */; };
+		7A2C5785117837060047C200 /* pontra_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A2C5784117837060047C200 /* pontra_logo.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* PontraAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PontraAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* PontraAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PontraAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* Pontra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pontra.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* PontraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PontraViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* PontraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PontraViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* PontraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PontraViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Pontra_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pontra_Prefix.pch; sourceTree = "<group>"; };
+		4D9AF72C11799FD20061711D /* controls_bold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls_bold.png; sourceTree = "<group>"; };
+		4D9AF72D11799FD20061711D /* controls_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls_bottom.png; sourceTree = "<group>"; };
+		4D9AF72E11799FD20061711D /* controls_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls_top.png; sourceTree = "<group>"; };
+		4D9AF75D1179A80E0061711D /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
+		4D9AF75E1179A80E0061711D /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
+		4D9AF7AF1179BCA00061711D /* gsSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = gsSettings.xib; sourceTree = "<group>"; };
+		4D9AF7BC1179C0850061711D /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		4DC36B5C117A9FF000B602E8 /* Balto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balto.h; sourceTree = "<group>"; };
+		4DC36B5D117A9FF000B602E8 /* Balto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Balto.m; sourceTree = "<group>"; };
+		4DC36B6B117AA00C00B602E8 /* teachingrobot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = teachingrobot.wav; sourceTree = "<group>"; };
+		4DC36BA7117AC05900B602E8 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		4DC36BA8117AC05900B602E8 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
+		4DC36C86117ADACB00B602E8 /* pop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pop.wav; sourceTree = "<group>"; };
+		4DD346DC117A562D0041888E /* gsHighscores.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = gsHighscores.xib; sourceTree = "<group>"; };
+		4DD346DD117A562D0041888E /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
+		7A04A2011178D56D00ECA3E0 /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
+		7A04A2021178D56D00ECA3E0 /* ResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResourceManager.m; sourceTree = "<group>"; };
+		7A04A2081178D6B900ECA3E0 /* GLFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLFont.h; sourceTree = "<group>"; };
+		7A04A2091178D6B900ECA3E0 /* GLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTexture.h; sourceTree = "<group>"; };
+		7A04A20A1178D6B900ECA3E0 /* GLFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLFont.m; sourceTree = "<group>"; };
+		7A04A20B1178D6B900ECA3E0 /* GLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLTexture.m; sourceTree = "<group>"; };
+		7A04A20C1178D6B900ECA3E0 /* pointmath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pointmath.m; sourceTree = "<group>"; };
+		7A04A2251178D6D800ECA3E0 /* pointmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pointmath.h; sourceTree = "<group>"; };
+		7A04A24B1178DB0500ECA3E0 /* controls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controls.png; sourceTree = "<group>"; };
+		7A2C55561177F9390047C200 /* Paddle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Paddle.h; sourceTree = "<group>"; };
+		7A2C55571177F9390047C200 /* Paddle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Paddle.m; sourceTree = "<group>"; };
+		7A2C55911177FE210047C200 /* GameStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStateManager.h; sourceTree = "<group>"; };
+		7A2C55921177FE210047C200 /* GameStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStateManager.m; sourceTree = "<group>"; };
+		7A2C55941177FE530047C200 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
+		7A2C55951177FE530047C200 /* GameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameState.m; sourceTree = "<group>"; };
+		7A2C55971177FFCC0047C200 /* gsMainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gsMainMenu.h; sourceTree = "<group>"; };
+		7A2C55981177FFCC0047C200 /* gsMainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gsMainMenu.m; sourceTree = "<group>"; };
+		7A2C559E117801990047C200 /* gsGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gsGame.h; sourceTree = "<group>"; };
+		7A2C559F117801990047C200 /* gsGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gsGame.m; sourceTree = "<group>"; };
+		7A2C55A1117801D10047C200 /* GLESGameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESGameState.h; sourceTree = "<group>"; };
+		7A2C55A2117801D10047C200 /* GLESGameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLESGameState.m; sourceTree = "<group>"; };
+		7A2C55A4117807160047C200 /* gsHighScores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gsHighScores.h; sourceTree = "<group>"; };
+		7A2C55A5117807160047C200 /* gsHighScores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gsHighScores.m; sourceTree = "<group>"; };
+		7A2C55A8117808090047C200 /* gsSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gsSettings.h; sourceTree = "<group>"; };
+		7A2C55A9117808090047C200 /* gsSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gsSettings.m; sourceTree = "<group>"; };
+		7A2C55C1117811CA0047C200 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		7A2C55D0117811D90047C200 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		7A2C55D4117811F00047C200 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7A2C56411178172A0047C200 /* gsMainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = gsMainMenu.xib; sourceTree = "<group>"; };
+		7A2C569C117827640047C200 /* gsPauseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gsPauseMenu.h; sourceTree = "<group>"; };
+		7A2C569D117827640047C200 /* gsPauseMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gsPauseMenu.m; sourceTree = "<group>"; };
+		7A2C5784117837060047C200 /* pontra_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pontra_logo.png; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Pontra-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pontra-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				7A2C55C2117811CA0047C200 /* OpenGLES.framework in Frameworks */,
+				7A2C55D1117811D90047C200 /* OpenAL.framework in Frameworks */,
+				7A2C55D5117811F00047C200 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7A04A1EF1178D2C700ECA3E0 /* GameObjects */,
+				7A5E2CEC115FDF8600B0FBD5 /* GameStates */,
+				7A5E2CDB115FD3D600B0FBD5 /* Framework */,
+				1D3623240D0F684500981E51 /* PontraAppDelegate.h */,
+				1D3623250D0F684500981E51 /* PontraAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* PontraViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* PontraViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Pontra.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Pontra_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DC36C86117ADACB00B602E8 /* pop.wav */,
+				4DC36B6B117AA00C00B602E8 /* teachingrobot.wav */,
+				4DD346DC117A562D0041888E /* gsHighscores.xib */,
+				4DD346DD117A562D0041888E /* player.png */,
+				4D9AF7BC1179C0850061711D /* back.png */,
+				4D9AF7AF1179BCA00061711D /* gsSettings.xib */,
+				4D9AF72C11799FD20061711D /* controls_bold.png */,
+				4D9AF72D11799FD20061711D /* controls_bottom.png */,
+				4D9AF72E11799FD20061711D /* controls_top.png */,
+				7A2C5784117837060047C200 /* pontra_logo.png */,
+				7A04A24B1178DB0500ECA3E0 /* controls.png */,
+				2899E5210DE3E06400AC0155 /* PontraViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* Pontra-Info.plist */,
+				7A2C56411178172A0047C200 /* gsMainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A2C55D4117811F00047C200 /* QuartzCore.framework */,
+				7A2C55C1117811CA0047C200 /* OpenGLES.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				7A2C55D0117811D90047C200 /* OpenAL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A04A1EF1178D2C700ECA3E0 /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+				4DC36BA7117AC05900B602E8 /* GameObject.h */,
+				4DC36BA8117AC05900B602E8 /* GameObject.m */,
+				4D9AF75D1179A80E0061711D /* Ball.h */,
+				4D9AF75E1179A80E0061711D /* Ball.m */,
+				7A2C55561177F9390047C200 /* Paddle.h */,
+				7A2C55571177F9390047C200 /* Paddle.m */,
+			);
+			name = GameObjects;
+			sourceTree = "<group>";
+		};
+		7A5E2CDB115FD3D600B0FBD5 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				4DC36B5C117A9FF000B602E8 /* Balto.h */,
+				4DC36B5D117A9FF000B602E8 /* Balto.m */,
+				7A2C55911177FE210047C200 /* GameStateManager.h */,
+				7A2C55921177FE210047C200 /* GameStateManager.m */,
+				7A04A2081178D6B900ECA3E0 /* GLFont.h */,
+				7A04A2091178D6B900ECA3E0 /* GLTexture.h */,
+				7A04A20A1178D6B900ECA3E0 /* GLFont.m */,
+				7A04A2251178D6D800ECA3E0 /* pointmath.h */,
+				7A04A20B1178D6B900ECA3E0 /* GLTexture.m */,
+				7A04A20C1178D6B900ECA3E0 /* pointmath.m */,
+				7A2C55941177FE530047C200 /* GameState.h */,
+				7A2C55951177FE530047C200 /* GameState.m */,
+				7A2C55A1117801D10047C200 /* GLESGameState.h */,
+				7A2C55A2117801D10047C200 /* GLESGameState.m */,
+				7A04A2011178D56D00ECA3E0 /* ResourceManager.h */,
+				7A04A2021178D56D00ECA3E0 /* ResourceManager.m */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		7A5E2CEC115FDF8600B0FBD5 /* GameStates */ = {
+			isa = PBXGroup;
+			children = (
+				7A2C55971177FFCC0047C200 /* gsMainMenu.h */,
+				7A2C55981177FFCC0047C200 /* gsMainMenu.m */,
+				7A2C559E117801990047C200 /* gsGame.h */,
+				7A2C559F117801990047C200 /* gsGame.m */,
+				7A2C55A4117807160047C200 /* gsHighScores.h */,
+				7A2C55A5117807160047C200 /* gsHighScores.m */,
+				7A2C55A8117808090047C200 /* gsSettings.h */,
+				7A2C55A9117808090047C200 /* gsSettings.m */,
+				7A2C569C117827640047C200 /* gsPauseMenu.h */,
+				7A2C569D117827640047C200 /* gsPauseMenu.m */,
+			);
+			name = GameStates;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Pontra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Pontra" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pontra;
+			productName = Pontra;
+			productReference = 1D6058910D05DD3D006BFB54 /* Pontra.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = nil;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Pontra" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Pontra */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* PontraViewController.xib in Resources */,
+				7A2C56421178172A0047C200 /* gsMainMenu.xib in Resources */,
+				7A2C5785117837060047C200 /* pontra_logo.png in Resources */,
+				7A04A24C1178DB0500ECA3E0 /* controls.png in Resources */,
+				4D9AF72F11799FD20061711D /* controls_bold.png in Resources */,
+				4D9AF73011799FD20061711D /* controls_bottom.png in Resources */,
+				4D9AF73111799FD20061711D /* controls_top.png in Resources */,
+				4D9AF7B01179BCA00061711D /* gsSettings.xib in Resources */,
+				4D9AF7BD1179C0850061711D /* back.png in Resources */,
+				4DD346DE117A562D0041888E /* gsHighscores.xib in Resources */,
+				4DD346DF117A562D0041888E /* player.png in Resources */,
+				4DC36B6C117AA00C00B602E8 /* teachingrobot.wav in Resources */,
+				4DC36C87117ADACB00B602E8 /* pop.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* PontraAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* PontraViewController.m in Sources */,
+				7A2C55581177F9390047C200 /* Paddle.m in Sources */,
+				7A2C55931177FE210047C200 /* GameStateManager.m in Sources */,
+				7A2C55961177FE530047C200 /* GameState.m in Sources */,
+				7A2C55991177FFCC0047C200 /* gsMainMenu.m in Sources */,
+				7A2C55A0117801990047C200 /* gsGame.m in Sources */,
+				7A2C55A3117801D10047C200 /* GLESGameState.m in Sources */,
+				7A2C55A6117807160047C200 /* gsHighScores.m in Sources */,
+				7A2C55AA117808090047C200 /* gsSettings.m in Sources */,
+				7A2C569E117827640047C200 /* gsPauseMenu.m in Sources */,
+				7A04A2031178D56D00ECA3E0 /* ResourceManager.m in Sources */,
+				7A04A20D1178D6B900ECA3E0 /* GLFont.m in Sources */,
+				7A04A20E1178D6B900ECA3E0 /* GLTexture.m in Sources */,
+				7A04A20F1178D6B900ECA3E0 /* pointmath.m in Sources */,
+				4D9AF75F1179A80E0061711D /* Ball.m in Sources */,
+				4DC36B5E117A9FF000B602E8 /* Balto.m in Sources */,
+				4DC36BA9117AC05900B602E8 /* GameObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Pontra_Prefix.pch;
+				INFOPLIST_FILE = "Pontra-Info.plist";
+				PRODUCT_NAME = Pontra;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Pontra_Prefix.pch;
+				INFOPLIST_FILE = "Pontra-Info.plist";
+				PRODUCT_NAME = Pontra;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Pontra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Pontra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

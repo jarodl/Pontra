@@ -44,6 +44,42 @@
   [self moveY:y_velocity];
 }
 
+/*
+ * decreaseYVelocity
+ * Last modified: 17April2010
+ * - Mark
+ *
+ * called by the user controls
+ * in order to give the ball's
+ * angle an effected response.
+ * The y_velocity is halted at
+ * 6 for obvious reasons. This
+ * number is safe to alter.
+ *	
+ */
+- (void) decreaseYVelocity {
+	if ( y_velocity >= -5 )
+		y_velocity--;
+}
+
+/*
+ * increaseYVelocity
+ * Last modified: 17April2010
+ * - Mark
+ *
+ * called by the user controls
+ * in order to give the ball's
+ * angle an effected response
+ * The y_velocity is halted at
+ * 6 for obvious reasons. This
+ * number is safe to alter.
+ *	
+ */
+- (void) increaseYVelocity {
+	if ( y_velocity <= 5 )
+		y_velocity++;
+}
+
 - (void) collidedRight
 {
   x_velocity *= -1;
@@ -56,7 +92,7 @@
 
 - (void) collidedTop
 {
-  y_velocity *= 1;
+  y_velocity *= -1;
 }
 
 - (void) collidedBottom

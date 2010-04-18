@@ -12,6 +12,9 @@
 #define TOP_CONTROL 1
 #define BOTTOM_CONTROL 2
 
+#define THEME 0
+#define POP 1
+
 @implementation gsGame
 
 @synthesize ball, sound;
@@ -34,26 +37,30 @@
   }
   
 	// initialize the sound
-	NSString *soundFile = [[NSBundle mainBundle] pathForResource:@"teachingrobot" ofType:@"wav"];	
-	NSMutableArray *sounds = [[NSMutableArray alloc] initWithCapacity:1];
-	[sounds addObject:soundFile];
+	NSString *soundFile1 = [[NSBundle mainBundle] pathForResource:@"teachingrobot" ofType:@"wav"];
+	NSString *soundFile2 = [[NSBundle mainBundle] pathForResource:@"pop" ofType:@"wav"];
+	NSMutableArray *sounds = [[NSMutableArray alloc] initWithCapacity:2];
+	[sounds addObject:soundFile1];
+	[sounds addObject:soundFile2];
 	
 	// initialize the sound with the array of audio files
 	sound = [[Balto alloc] initWithFiles:sounds];
 		
 	// check settings if sound is on/off
 	NSString *filePath = [self settingsFile];
-	BOOL soundSetting = FALSE;
+	soundSetting = FALSE, fxSetting = FALSE;
 	if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
 		NSArray *array = [[NSArray alloc]initWithContentsOfFile:filePath];
 		soundSetting = [[array objectAtIndex:0] boolValue];
+		fxSetting = [[array objectAtIndex:1] boolValue];
 	} else {
 		soundSetting = TRUE;
+		fxSetting = TRUE;
 	}
 
 	
 	if (soundSetting) {
-		[sound Play:0 andLooping:YES];
+		[sound Play:THEME andLooping:YES];
 	}
 
   // init game objects
@@ -146,11 +153,13 @@
 /*
  * Update
  * Last modified: 17April2010
- * - Jarod
+ * - Mark
  *
  * This is inherited from GameState and will be used to
  * update the paddles and player's position on the screen.
- *	
+ *
+ * The collision handler should be called before the ball updates
+ * itself so the ball's coordinates stay on screen.
  */
 - (void) Update
 {
@@ -159,16 +168,19 @@
   switch (control_pressed) {
     case TOP_CONTROL:
       // move the ball up
-      [ball moveY:5];
-      break;
+			[ball increaseYVelocity];
+			break;
     case BOTTOM_CONTROL:
       // move the ball down
-      [ball moveY:-5];
+			[ball decreaseYVelocity];
       break;
     default:
       break;
   }
   
+	// Check for collisions and resolve them.
+  [self handleCollision:ball];
+
   // Call the ball's update method to apply velocity/acceleration.
   [ball Update];
   
@@ -197,7 +209,7 @@
 	// Get the documents directory
 	NSArray	*paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
-	return [documentsDirectory stringByAppendingPathComponent:@"settings.plist"];
+	return [documentsDirectory stringByAppendingPathComponent:@"pontra-settings.plist"];
 }
 
 /*
@@ -278,42 +290,51 @@
 /*
  * collisionHandler
  * Last modified: 17April2010
- * - Jarod
+ * - Mark
  *
  * Collision Handler that updates a game object
  * to resolve a collision.
  *
+ * Also plays sound effects on collision if
+ * the settings are on.
+ *	
  */
 - (void) handleCollision:(GameObject*) object
 {
   float height = self.frame.size.width;
   float width = self.frame.size.height;
   
-  if ([leftPaddle didCollideWith:object]) {
-    [object collidedLeft];
-  }
   if ([rightPaddle didCollideWith:object]) {
     [object collidedRight];
   }
   
+  BOOL shouldpop = FALSE;
+  
   if (object.x + object.width/2 >= width) {
     // handle hit right side
     [object collidedRight];
+		shouldpop = TRUE;
   }
   else if (object.x - object.width/2 <= 0) {
     // handle hit left side
     [object collidedLeft];
+		shouldpop = TRUE;
   }
   
   if (object.y + object.height/2 >= height) {
     // handle hit top
     [object collidedTop];
+		shouldpop = TRUE;
   }
   else if (object.y - object.height/2 <= 0) {
     // handle hit bottom
     [object collidedBottom];
+		shouldpop = TRUE;
   }
-  
+	
+	// play soundFX
+	if (shouldpop && fxSetting )
+		[sound Play:POP andLooping:NO];
 }
 
 - (void)dealloc {

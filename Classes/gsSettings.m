@@ -31,7 +31,9 @@
 		if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
 			NSArray *array = [[NSArray alloc]initWithContentsOfFile:filePath];
 			BOOL soundSetting = [[array objectAtIndex:0] boolValue];
+			BOOL fxSetting = [[array objectAtIndex:1] boolValue];
 			[soundSwitch setOn:soundSetting animated:YES];
+			[fxSwitch setOn:fxSetting animated:YES];
 		}
 
     return self;
@@ -49,7 +51,7 @@
 	// Get the documents directory
 	NSArray	*paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
-	return [documentsDirectory stringByAppendingPathComponent:@"settings.plist"];
+	return [documentsDirectory stringByAppendingPathComponent:@"pontra-settings.plist"];
 }
 
 /*
@@ -64,15 +66,28 @@
  */
 - (IBAction) back
 {
-	BOOL soundSetting;
-	if (soundSwitch.on)
+	BOOL soundSetting, fxSetting;
+
+	// theme music
+	if (soundSwitch.on) {
 		soundSetting = TRUE;
-	else
+	}
+	else {
 		soundSetting = FALSE;
+	}
+	
+	// sound effects
+	if (fxSwitch.on) {
+		fxSetting = TRUE;
+	}
+	else {
+		fxSwitch = FALSE;
+	}
 		
 	// write the soundSetting to the array which is saved to the plist
 	NSMutableArray *array = [[NSMutableArray alloc] init];
 	[array addObject:[NSNumber numberWithBool:soundSetting]];
+	[array addObject:[NSNumber numberWithBool:fxSetting]];
 	[array writeToFile:[self settingsFile] atomically:YES];
 	
 	[manager doStateChange:[gsMainMenu class]];

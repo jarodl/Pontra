@@ -13,6 +13,7 @@
 @interface gsSettings : GameState {
   IBOutlet UIView* subview;
 	IBOutlet UISwitch *soundSwitch;
+	IBOutlet UISwitch *fxSwitch;
 }
 
 - (IBAction) back;

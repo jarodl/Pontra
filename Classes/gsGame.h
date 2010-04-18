@@ -20,6 +20,9 @@
   Paddle *leftPaddle;
   Paddle *rightPaddle;
 	Balto *sound;
+	
+	BOOL soundSetting;
+	BOOL fxSetting;
 }
 
 @property (nonatomic, retain) Ball *ball;
