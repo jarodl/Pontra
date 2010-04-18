@@ -47,14 +47,14 @@
 - (BOOL) didCollideWith:(GameObject *)object
 {
   if ([self side] == LEFT) {
-		if (object.x - object.width/2 <= self.x + self.width/2 &&
+		if (object.x <= self.x + self.width/2 &&
 				object.y >= self.y - self.height/2 &&
 				object.y <= self.y + self.height/2 ) {
 			return TRUE;
     }
   }
   if ([self side] == RIGHT) {	
-		if (object.x + object.width/2 >= self.x - self.width/2 &&
+		if (object.x >= self.x - self.width/2 &&
 				object.y >= self.y - self.height/2 &&
 				object.y <= self.y + self.height/2 ) {
 			return TRUE;
