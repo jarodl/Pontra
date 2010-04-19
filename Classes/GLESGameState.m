@@ -11,11 +11,12 @@
 #import <QuartzCore/QuartzCore.h>
 #import "ResourceManager.h"
 
+#define IPHONE_WIDTH 320.0
+#define IPHONE_HEIGHT 480.0
 
 // Primary context for all OpenGL calls. Set this up in setup2D.
 // This should be cleared on teardown.
 EAGLContext* gles_context;
-
 // These next 3 variables should really be tied whatever state we get bound to.
 // This is why there is a white flash when a state changes.
 GLuint gles_framebuffer;
@@ -54,38 +55,20 @@ CGSize _size;
 
 + (void) setup2D
 {
-	//create and set the gles context.  All opengl calls are done relative to a context, so it
-	//is important to set the context before anything else.  
 	gles_context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
 	[EAGLContext setCurrentContext:gles_context];
-	
 	glGenRenderbuffersOES(1, &gles_renderbuffer);
-	glBindRenderbufferOES(GL_RENDERBUFFER_OES, gles_renderbuffer);
-	
+	glBindRenderbufferOES(GL_RENDERBUFFER_OES, gles_renderbuffer);	
 	glGenFramebuffersOES(1, &gles_framebuffer);
 	glBindFramebufferOES(GL_FRAMEBUFFER_OES, gles_framebuffer);
 	glFramebufferRenderbufferOES(GL_FRAMEBUFFER_OES, GL_COLOR_ATTACHMENT0_OES, GL_RENDERBUFFER_OES, gles_renderbuffer);
-  
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE); //todo: benchmark this.
-	
-  //Set the OpenGL projection matrix.  this was in glesgamestate3d, moved to here for when we re-enter this game state.
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	CGRect rect = CGRectMake(0, 0, 480.0, 320.0);
-  glFrustumf(0, 480.0, 0, 320.0, 1.0, -1.0);
-//	glFrustumf(-size, size, -size / (rect.size.width / rect.size.height), size / (rect.size.width / rect.size.height), zNear, zFar);
+	CGRect rect = CGRectMake(0, 0, IPHONE_HEIGHT, IPHONE_WIDTH);
+  glFrustumf(0, IPHONE_HEIGHT, 0, IPHONE_WIDTH, 1.0, -1.0);
 	glViewport(0, 0, rect.size.width, rect.size.height);
-  
-  /*
-   * This doesn't seem necessary anymore since I added a method in the
-   * view controller, but I'll leave it here for reference if something goes
-   * wrong with rotating the view.
-   *
-   * - Jarod
-   */
-//	glRotatef(90.0f, 0, 0, -1); //rotate the display, so we play in landscape.  need to modify accelerometer data to reflect this world rotation, as well.
-  
 	glMatrixMode(GL_MODELVIEW);
 	glEnable(GL_TEXTURE_2D);
 	glEnableClientState(GL_VERTEX_ARRAY);
