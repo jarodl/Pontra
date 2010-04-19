@@ -94,7 +94,7 @@
 - (void) addLevels {
 	gsLevel *lvl;
 	levels = [[NSMutableArray alloc] initWithCapacity:5];
-	for ( int i = 75, j = 0; i > 50; i-=5, j++ ) {
+	for ( int i = 100; i <= 300; i+=50 ) {
 		lvl = [[[gsLevel alloc] initWithDifficulty:i] autorelease];
 		[levels addObject:lvl];
 	}

@@ -11,4 +11,6 @@
 @interface AvoiderPaddle : Paddle {
 }
 
+- (BOOL) isInProximity:(GameObject*) object;
+
 @end
