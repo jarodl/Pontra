@@ -396,6 +396,7 @@
 - (void)dealloc {
 	[ball release];
 	[modal release];
+	[sound release];
 	[super dealloc];
 }
 

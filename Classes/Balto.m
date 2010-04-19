@@ -176,20 +176,22 @@ ALuint loadWAVFromFile( char* filename ) {
  *
  */
 
-- (id) initWithFiles:(NSMutableArray*)filenames {
-	
-	audioFiles = [[NSMutableArray alloc] initWithCapacity:(int)[filenames count]];
-	playCount = 0;
-	
-	for ( int i = 0; i < (int)[filenames count]; i++)
-		[audioFiles addObject:[filenames objectAtIndex:i]];
-	
-	if ( ![self InitSources] )
-		NSLog(@"Failed to initialize OpenAL");
-	
-	// Preload files into buffers
-	[self Load];
-	
+- (id) initWithFiles:(NSMutableArray*)filenames
+{
+	if( self = [super init] ) {
+		
+		audioFiles = [[NSMutableArray alloc] initWithCapacity:(int)[filenames count]];
+		playCount = 0;
+		
+		for ( int i = 0; i < (int)[filenames count]; i++)
+			[audioFiles addObject:[filenames objectAtIndex:i]];
+		
+		if ( ![self InitSources] )
+			NSLog(@"Failed to initialize OpenAL");
+		
+		// Preload files into buffers
+		[self Load];
+	}
 	return self;
 }
 
@@ -486,9 +488,9 @@ ALuint loadWAVFromFile( char* filename ) {
  */
 
 - (void) dealloc {
-	[super dealloc];
 	[audioFiles release];
 	[self Delete];
+	[super dealloc];
 }
 
 @end
