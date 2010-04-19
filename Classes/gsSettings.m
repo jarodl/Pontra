@@ -91,6 +91,7 @@
 	[array addObject:[NSNumber numberWithBool:fxSetting]];
   [array addObject:[NSString stringWithString:nameField.text]];
 	[array writeToFile:[self settingsFile] atomically:YES];
+	[array release];
 	
 	[manager doStateChange:[gsMainMenu class]];
 }
