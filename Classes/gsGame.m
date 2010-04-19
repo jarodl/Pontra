@@ -163,7 +163,7 @@
 	//pop the 2d hud stuff off the projection stack
 	glMatrixMode(GL_PROJECTION);
 	glPopMatrix();
-	glMatrixMode(GL_MODELVIEW);    
+	glMatrixMode(GL_MODELVIEW);
 	//you get a nice boring white screen if you forget to swap buffers.
 	[self swapBuffers];
 }
