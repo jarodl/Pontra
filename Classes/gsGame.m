@@ -34,6 +34,7 @@
 - (id)initWithFrame:(CGRect)frame andManager:pManager {
   if (self = [super initWithFrame:frame andManager:pManager]) {
     // Initialization code
+    score = 0;
   }
   
 	// initialize the sound
@@ -90,7 +91,7 @@
   //clear anything left over from the last frame, and set background color.
 	glClearColor(0x1b/256.0f, 0x1b/256.0f, 0x1b/256.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //important to clear the depth buffer as well as color buffer.
-	
+
 	glLoadIdentity();
 
   //Set up OpenGL projection matrix for 2d hud rendering.
@@ -117,7 +118,11 @@
 	glEnable(GL_BLEND); //needed, otherwise extra chunks of the image are drawn
 	glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA); //needed
 	glDisable(GL_DEPTH_TEST); //needed for overlaying images
-
+  
+  // Draw level text to the screen
+	[[g_ResManager defaultFont] drawString:[NSString stringWithString:@"Go Right!"] atPoint:CGPointMake(self.frame.size.height/2, 300) withAnchor:GRAPHICS_HCENTER | GRAPHICS_TOP];
+	[[g_ResManager defaultFont] drawString:[NSString stringWithFormat:@"%d", score] atPoint:CGPointMake(self.frame.size.height - 10, 300) withAnchor:GRAPHICS_RIGHT | GRAPHICS_TOP];
+  
   /* This needed to be the width/2 because it happens
    * before rotation.
    * - Jarod */
@@ -152,7 +157,7 @@
 	glMatrixMode(GL_PROJECTION);
 	glPopMatrix();
 	glMatrixMode(GL_MODELVIEW);
-  
+    
 	//you get a nice boring white screen if you forget to swap buffers.
 	[self swapBuffers];
 }

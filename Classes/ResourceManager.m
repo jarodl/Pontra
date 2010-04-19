@@ -124,10 +124,10 @@ ResourceManager *g_ResManager;
 
 - (GLFont *) defaultFont {
 	if(default_font == nil){
-		default_font = [[GLFont alloc] initWithString:@"0123456789timeTIMERank,.?!@/: " //cut down the font because it doesn't support trimming texture down to 1024 pixels yet, todo
-                                         fontName:@"Helvetica" 
+		default_font = [[GLFont alloc] initWithString:@"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWYXZ,.?!@/: " //cut down the font because it doesn't support trimming texture down to 1024 pixels yet, todo
+                                         fontName:@"Marker Felt" 
                                          fontSize:24.0f
-                                      strokeWidth:1.0f
+                                      strokeWidth:0.0f
                                         fillColor:[UIColor whiteColor]
                                       strokeColor:[UIColor grayColor]];
 	}

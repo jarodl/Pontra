@@ -17,6 +17,7 @@
 
 @interface gsGame : GLESGameState {
 	int control_pressed;
+  int score;
 	Ball *ball;
   Paddle *leftPaddle;
   Paddle *rightPaddle;
