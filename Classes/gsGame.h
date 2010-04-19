@@ -15,6 +15,8 @@
 #import "GameObject.h"
 #import "ResourceManager.h"
 #import "gsLevel.h"
+#import "gsModal.h"
+#import "gsSettings.h"
 
 @interface gsGame : GLESGameState {
 	int control_pressed;
@@ -23,6 +25,7 @@
 	
 	Ball *ball;
 	Balto *sound;
+	gsModal *modal;
 	
 	NSMutableArray *levels;
 	
@@ -36,6 +39,7 @@
 
 @property (nonatomic, retain) Ball *ball;
 @property (nonatomic, retain) Balto *sound;
+@property (nonatomic,	retain) gsModal *modal;
 
 @property (nonatomic, retain) NSMutableArray *levels;
 

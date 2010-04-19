@@ -17,7 +17,7 @@
 
 @implementation gsGame
 
-@synthesize ball, sound, levels, current_level;
+@synthesize ball, sound, levels, current_level, modal;
 
 /*
  * initWithFrame andManager
@@ -45,6 +45,7 @@
 	
 	// initialize the sound with the array of audio files
 	sound = [[Balto alloc] initWithFiles:sounds];
+	[sounds release];
 		
 	// check settings if sound is on/off
 	NSString *filePath = [self settingsFile];
@@ -74,6 +75,9 @@
 	
 	// first level
 	current_level = 0;
+	
+	// pause menu
+	modal = [[gsModal alloc] initWithText:@"Paused" middle:@"Resume" andBottom:@"Settings"];
 	
 	// init levels
 	[self addLevels];
@@ -150,6 +154,11 @@
 	[ball Render];
   // Draw the paddles
 	[[levels objectAtIndex:current_level] Render];
+  
+	// Pause modal display
+	if (pause) {
+		[modal Render];
+	}
 
 	//pop the 2d hud stuff off the projection stack
 	glMatrixMode(GL_PROJECTION);
@@ -301,6 +310,14 @@
 	if (pause) {
 		[sound Pause];
 		control_pressed = NO_CONTROL;
+		
+		if (location.x >= 480/2 - 50 &&
+				location.x <= 480/2 + 50 &&
+				location.y >= 320/2 - 20 &&
+				location.y <= 320/2 + 20) {
+			// ??? :\
+			// [manager doStateChange:[gsSettings class]];
+		}
 	}
 	else {
 		[sound Resume];
@@ -360,7 +377,8 @@
 	
 	// level done, advance ball back to start position
 	if ( [[levels objectAtIndex:current_level] shouldAdvanceToNext:object] ) {
-		current_level++;
+		if (current_level < 4)
+			current_level++;
 		[ball setPos:CGPointMake(self.frame.size.width/2, self.frame.size.height/2)];
 	}
 				
@@ -372,6 +390,7 @@
 - (void)dealloc {
 	[ball release];
 	[sound release];
+	[modal release];
 	[super dealloc];
 }
 

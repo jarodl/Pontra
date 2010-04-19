@@ -18,7 +18,7 @@
 	leftPaddle = [[AvoiderPaddle alloc] initWithPosition:CGPointMake(90, 160)];
 	rightPaddle =[[SeekerPaddle alloc] initWithPosition:CGPointMake(465, 160)];
 	
-	[leftPaddle setProximity:300];
+	[leftPaddle setProximity:480];
 	[leftPaddle setSide:LEFT];
 	
 	[rightPaddle setProximity:diff];
