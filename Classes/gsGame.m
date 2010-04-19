@@ -261,7 +261,7 @@
 
 /*
  * touchesEnded
- * Last modified: 16April2010
+ * Last modified: 19April2010
  * - Mark
  *
  * Method to track the coordinates when the user
@@ -273,6 +273,15 @@
  */
 - (void) touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event
 {
+	UITouch *touch = [touches anyObject];
+	CGPoint location = [touch locationInView:self];
+
+	if ([modal buttonPressed:location] == 2) {
+		pause = false;
+		[modal setButton_pressed:0];
+		[sound Resume];
+	}
+
 	control_pressed = NO_CONTROL;
 }
 
@@ -299,9 +308,8 @@
 	else if ( location.x >=0 && location.x <= 75 &&
 					 location.y >= 235 && location.y <= 320 )
 		control_pressed = BOTTOM_CONTROL;
-	else if ( location.x >= 90 ) {
-		pause = !pause;
-	}
+	else if ( location.x >= 90 )
+		pause = true;
 	else {
 		control_pressed = NO_CONTROL;
 	}
@@ -309,18 +317,8 @@
 	// handle pause
 	if (pause) {
 		[sound Pause];
+		[modal buttonPressed:location];
 		control_pressed = NO_CONTROL;
-		
-		if (location.x >= 480/2 - 50 &&
-				location.x <= 480/2 + 50 &&
-				location.y >= 320/2 - 20 &&
-				location.y <= 320/2 + 20) {
-			// ??? :\
-			// [manager doStateChange:[gsSettings class]];
-		}
-	}
-	else {
-		[sound Resume];
 	}
 }
 
