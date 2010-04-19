@@ -14,6 +14,7 @@
   IBOutlet UIView* subview;
 	IBOutlet UISwitch *soundSwitch;
 	IBOutlet UISwitch *fxSwitch;
+  IBOutlet UITextField *nameField;
 }
 
 - (IBAction) back;

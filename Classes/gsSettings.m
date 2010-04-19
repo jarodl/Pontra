@@ -32,6 +32,7 @@
 			NSArray *array = [[NSArray alloc]initWithContentsOfFile:filePath];
 			BOOL soundSetting = [[array objectAtIndex:0] boolValue];
 			BOOL fxSetting = [[array objectAtIndex:1] boolValue];
+      nameField.text = [array objectAtIndex:2];
 			[soundSwitch setOn:soundSetting animated:YES];
 			[fxSwitch setOn:fxSetting animated:YES];
 		}
@@ -88,6 +89,7 @@
 	NSMutableArray *array = [[NSMutableArray alloc] init];
 	[array addObject:[NSNumber numberWithBool:soundSetting]];
 	[array addObject:[NSNumber numberWithBool:fxSetting]];
+  [array addObject:[NSString stringWithString:nameField.text]];
 	[array writeToFile:[self settingsFile] atomically:YES];
 	
 	[manager doStateChange:[gsMainMenu class]];
