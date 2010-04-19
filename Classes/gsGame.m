@@ -99,8 +99,9 @@
 	gsLevel *lvl;
 	levels = [[NSMutableArray alloc] initWithCapacity:5];
 	for ( int i = 100; i <= 300; i+=50 ) {
-		lvl = [[[gsLevel alloc] initWithDifficulty:i] autorelease];
+		lvl = [[gsLevel alloc] initWithDifficulty:i];
 		[levels addObject:lvl];
+		[lvl release];
 	}
 }
 
@@ -268,7 +269,8 @@
  * removes their finger from the screen
  * This method releases the control_pressed var
  * assuming the user is done 'moving' the ball
- * around
+ * around. Also checks for modal button presses
+ * resuming pause or quitting to home screen.
  *	
  */
 - (void) touchesEnded:(NSSet*)touches withEvent:(UIEvent*)event
@@ -282,6 +284,7 @@
 		[sound Resume];
 	}
 	else if (pause && [modal buttonPressedFromPoint:location] == 3) {
+		[sound Stop];
 		[manager doStateChange:[gsMainMenu class]];
 	}
 	else if (location.x >= 90) {
@@ -294,7 +297,7 @@
 
 /*
  * touchesHandler
- * Last modified: 17April2010
+ * Last modified: 19April2010
  * - Mark
  *
  * Touches Handler to avoid redudant code
@@ -306,8 +309,6 @@
 {
 	UITouch *touch = [touches anyObject];
 	CGPoint location = [touch locationInView:self];
-	printf("x: %g\n",location.x);
-	printf("y: %g\n",location.y);
 	
 	if ( location.x >=0 && location.x <= 75 &&
 			 location.y >= 0 && location.y <= 85 ) {

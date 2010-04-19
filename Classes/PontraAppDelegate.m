@@ -30,7 +30,7 @@
   
   FPS_lastSecondStart = lastUpdateTime;
   FPS_framesThisSecond = 0;
-    
+	
   // set up our first game state
   [self doStateChange:[gsMainMenu class]];
 }

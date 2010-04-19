@@ -58,6 +58,8 @@
 }
 
 - (void) dealloc {
+	[leftPaddle release];
+	[rightPaddle release];
 	[super dealloc];
 }
 

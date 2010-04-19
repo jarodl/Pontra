@@ -10,6 +10,7 @@
 
 #import "GameStateManager.h"
 #import "ResourceManager.h"
+#import "Balto.h"
 
 @class PontraViewController;
 
@@ -22,7 +23,6 @@
   
   CFTimeInterval lastUpdateTime;
   float bestFramesPerSecond;
-  
 }
 
 - (void) gameLoop: (id) sender;

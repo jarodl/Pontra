@@ -14,6 +14,8 @@
 	NSString *middle_text;
 	NSString *bottom_text;
 	
+	GLFont *default_font;
+	
 	int button_pressed;
 }
 
@@ -22,6 +24,7 @@
 @property (nonatomic,retain) NSString *bottom_text;
 
 @property (nonatomic) int button_pressed;
+@property (retain) GLFont *default_font;
 
 - (id) initWithText:(NSString*)top middle:(NSString*)md andBottom:(NSString*)btm;
 - (GLFont *) font:(UIColor*)color;

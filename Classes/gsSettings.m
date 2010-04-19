@@ -33,8 +33,8 @@
 			BOOL soundSetting = [[array objectAtIndex:0] boolValue];
 			BOOL fxSetting = [[array objectAtIndex:1] boolValue];
       nameField.text = [array objectAtIndex:2];
-			[soundSwitch setOn:soundSetting animated:YES];
-			[fxSwitch setOn:fxSetting animated:YES];
+			[soundSwitch setOn:soundSetting animated:NO];
+			[fxSwitch setOn:fxSetting animated:NO];
 		}
 
     return self;

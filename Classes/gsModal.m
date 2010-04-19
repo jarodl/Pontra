@@ -16,7 +16,7 @@
 
 @implementation gsModal
 
-@synthesize top_text, middle_text, bottom_text, button_pressed;
+@synthesize top_text, middle_text, bottom_text, button_pressed, default_font;
 
 - (id) initWithText:(NSString*)top middle:(NSString*)middle andBottom:(NSString*)bottom
 {
@@ -25,18 +25,23 @@
 		[self setMiddle_text:middle];
 		[self setBottom_text:bottom];
 		button_pressed = 0;
+		default_font = nil;
 	}
 	return self;
 }
 
 - (GLFont *) font:(UIColor*)color
 {
-	return [[GLFont alloc] initWithString:@"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWYXZ,.?!@/:- "
+	 if ( default_font != nil )
+		[default_font release];
+
+	default_font = [[GLFont alloc] initWithString:@"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWYXZ,.?!@/:- "
 																			 fontName:@"Marker Felt" 
 																			 fontSize:24.0f
 																		strokeWidth:0.0f
 																			fillColor:color
 																		strokeColor:[UIColor grayColor]];
+	return default_font;
 }
 
 - (void) Render
@@ -71,23 +76,23 @@
  *  the 'BOTTOM' is actually the location's top point and
  *  the 'TOP' is actually the location's bottom point.
  */
-- (int) buttonPressedFromPoint:(CGPoint) point {
-
+- (int) buttonPressedFromPoint:(CGPoint) point
+{
 	if ( point.x >= CENTER - 90 && point.x <= CENTER + 90 &&
 			 point.y >= BOTTOM - 15 && point.y <= BOTTOM + 15 ) {
 		button_pressed = 1;
 		return 1;
-	}
+	} 
 	else if ( point.x >= CENTER - 90 && point.x <= CENTER + 90 &&
 					  point.y >= MIDDLE - 15 && point.y <= MIDDLE + 15 ) {		
 		button_pressed = 2;
 		return 2;
-	}
+	} 
 	else if ( point.x >= CENTER - 90 && point.x <= CENTER + 90 &&
 					  point.y >= TOP	- 15 && point.y <= TOP + 15 ) {
 		button_pressed = 3;
 		return 3;
-	}
+	} 
 	button_pressed = 0;
 	return 0;
 }
@@ -97,6 +102,12 @@
 	[[self font:color] drawString:[NSString stringWithString:str] 
 												atPoint:CGPointMake(CENTER, pos)
 										 withAnchor:GRAPHICS_HCENTER | GRAPHICS_TOP];
+}
+
+- (void) dealloc {
+	if (default_font != nil)
+		[default_font release];
+	[super dealloc];
 }
 
 @end
