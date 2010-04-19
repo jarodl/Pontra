@@ -14,14 +14,7 @@
 {
   if ([self isInProximity:object]) {
     // within proxmity, so react
-    if ([object y_velocity] > 0) {
-      // the object is moving upward, so go up
-      [self setY_velocity:[object y_velocity]];
-    }
-    else if ([object y_velocity] <= 0) {
-      // the object is moving down, so go down
-      [self setY_velocity:[object y_velocity]];
-    }
+    [self setY_velocity:[object y_velocity]];
   }
   // start moving the paddle back to the middle
   else if ([self y] > IPHONE_HEIGHT/2 + 10) {
