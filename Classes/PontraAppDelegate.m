@@ -11,8 +11,8 @@
 #import "gsMainMenu.h"
 
 #define LOOP_TIMER_MINIMUM 0.033f
-#define IPHONE_HEIGHT 320
-#define IPHONE_WIDTH 480
+#define IPHONE_HEIGHT 480
+#define IPHONE_WIDTH 320
 
 @implementation PontraAppDelegate
 
@@ -66,29 +66,17 @@
 }
 
 - (void) doStateChange: (Class) state
-{
-	BOOL animateTransition = true;
-	
-	if(animateTransition){
-		[UIView beginAnimations:nil context:NULL];
-		[UIView setAnimationDuration:0.5];
-		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:window cache:YES]; //does nothing without this line.
-	}
-	
+{	
 	if( viewController.view != nil ) {
 		[viewController.view removeFromSuperview]; //remove view from window's subviews.
 		[viewController.view release]; //release gamestate 
 	}
 	
-	viewController.view = [[state alloc]  initWithFrame:CGRectMake(0, 0, IPHONE_WIDTH, IPHONE_HEIGHT) andManager:self];
-	
-	//now set our view as visible
+  // If you can figure out why 160 is needed here, I'll buy you a beer.
+  // If it's zero then the game screen is thrown off by, well, 160px or so.
+	viewController.view = [[state alloc]  initWithFrame:CGRectMake(0, 160, 480.0, 320.0) andManager:self];	
   [window addSubview:viewController.view];
   [window makeKeyAndVisible];
-	
-	if(animateTransition){
-		[UIView commitAnimations];
-	}
 }
 
 - (void)dealloc {

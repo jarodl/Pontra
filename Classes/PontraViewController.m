@@ -32,21 +32,23 @@
     [super dealloc];
 }
 
+- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+  return (toInterfaceOrientation == UIInterfaceOrientationLandscapeRight);
+}
+
 /*
  * viewWillAppear
  * Added by Jarod
  * 
- * This is part of the mysterious landscape orientation problem. This seems
- * to fix it. The magic numbers "+80.0" were originally +90.0 in the post I
- * found on the internet but that added a white margin on the top left and right
- * corners so.. Yeah. Once again, this needs fixed accross the application.
+ * Fixed. "Don't touch this." - M.C. Hammer
  *
- * 16April2010
+ * 18April2010
  *
  */
 - (void) viewWillAppear:(BOOL)animated {
   CGAffineTransform landscapeTransform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(90));
-  landscapeTransform = CGAffineTransformTranslate(landscapeTransform, +80.0, +80.0);
+  // Mystery numbers below are still a mystery.
+  landscapeTransform = CGAffineTransformTranslate(landscapeTransform, -80.0, +80.0);
   [self.view setTransform:landscapeTransform];
 }
 

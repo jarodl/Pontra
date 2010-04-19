@@ -121,7 +121,7 @@
   
   // Draw level text to the screen
 	[[g_ResManager defaultFont] drawString:[NSString stringWithString:@"Go Right!"] atPoint:CGPointMake(self.frame.size.height/2, 300) withAnchor:GRAPHICS_HCENTER | GRAPHICS_TOP];
-	[[g_ResManager defaultFont] drawString:[NSString stringWithFormat:@"%d", score] atPoint:CGPointMake(self.frame.size.height - 10, 300) withAnchor:GRAPHICS_RIGHT | GRAPHICS_TOP];
+	[[g_ResManager defaultFont] drawString:[NSString stringWithFormat:@"%d", score] atPoint:CGPointMake(self.frame.size.height, 300) withAnchor:GRAPHICS_RIGHT | GRAPHICS_TOP];
   
   /* This needed to be the width/2 because it happens
    * before rotation.

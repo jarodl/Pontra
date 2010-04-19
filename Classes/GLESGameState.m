@@ -72,13 +72,9 @@ CGSize _size;
   //Set the OpenGL projection matrix.  this was in glesgamestate3d, moved to here for when we re-enter this game state.
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	const GLfloat			//lightShininess = 100.0,
-	zNear = 0.1,
-	zFar = 3000.0, //probably should be done in substates.
-	fieldOfView = 60.0;
-	GLfloat size = zNear * tanf(fieldOfView / 180.0f * PI / 2.0);
 	CGRect rect = CGRectMake(0, 0, 480.0, 320.0);
-	glFrustumf(-size, size, -size / (rect.size.width / rect.size.height), size / (rect.size.width / rect.size.height), zNear, zFar);
+  glFrustumf(0, 480.0, 0, 320.0, 1.0, -1.0);
+//	glFrustumf(-size, size, -size / (rect.size.width / rect.size.height), size / (rect.size.width / rect.size.height), zNear, zFar);
 	glViewport(0, 0, rect.size.width, rect.size.height);
   
   /*
@@ -88,7 +84,7 @@ CGSize _size;
    *
    * - Jarod
    */
-	glRotatef(90.0f, 0, 0, -1); //rotate the display, so we play in landscape.  need to modify accelerometer data to reflect this world rotation, as well.
+//	glRotatef(90.0f, 0, 0, -1); //rotate the display, so we play in landscape.  need to modify accelerometer data to reflect this world rotation, as well.
   
 	glMatrixMode(GL_MODELVIEW);
 	glEnable(GL_TEXTURE_2D);

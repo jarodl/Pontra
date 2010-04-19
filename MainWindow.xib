@@ -38,8 +38,8 @@
 			<object class="IBUICustomObject" id="664661524"/>
 			<object class="IBUIViewController" id="943309135">
 				<string key="IBUINibName">PontraViewController</string>
-				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<bool key="IBUIHorizontal">YES</bool>
+				<bool key="IBUIWantsFullScreenLayout">YES</bool>
 			</object>
 			<object class="IBUIWindow" id="117978783">
 				<nil key="NSNextResponder"/>
@@ -139,7 +139,7 @@
 					<string>UIApplication</string>
 					<string>UIResponder</string>
 					<string>PontraViewController</string>
-					<string>{{214, 368}, {480, 320}}</string>
+					<string>{{330, 368}, {480, 320}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>{{525, 346}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
