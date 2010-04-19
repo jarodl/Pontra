@@ -71,7 +71,7 @@
  *  the 'BOTTOM' is actually the location's top point and
  *  the 'TOP' is actually the location's bottom point.
  */
-- (int) buttonPressed:(CGPoint) point {
+- (int) buttonPressedFromPoint:(CGPoint) point {
 
 	if ( point.x >= CENTER - 90 && point.x <= CENTER + 90 &&
 			 point.y >= BOTTOM - 15 && point.y <= BOTTOM + 15 ) {

@@ -16,7 +16,9 @@
 #import "ResourceManager.h"
 #import "gsLevel.h"
 #import "gsModal.h"
-#import "gsSettings.h"
+
+#import "GameState.h"
+#import "gsMainMenu.h"
 
 @interface gsGame : GLESGameState {
 	int control_pressed;

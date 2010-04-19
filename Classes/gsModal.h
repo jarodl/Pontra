@@ -27,6 +27,6 @@
 - (GLFont *) font:(UIColor*)color;
 - (void) displayText:(NSString *)str atPosition:(int)pos withColor:(UIColor *)color;
 - (void) Render;
-- (int) buttonPressed:(CGPoint)point;
+- (int) buttonPressedFromPoint:(CGPoint)point;
 	
 @end

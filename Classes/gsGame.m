@@ -77,7 +77,7 @@
 	current_level = 0;
 	
 	// pause menu
-	modal = [[gsModal alloc] initWithText:@"Paused" middle:@"Resume" andBottom:@"Settings"];
+	modal = [[gsModal alloc] initWithText:@"Paused" middle:@"Resume" andBottom:@"Quit"];
 	
 	// init levels
 	[self addLevels];
@@ -276,10 +276,13 @@
 	UITouch *touch = [touches anyObject];
 	CGPoint location = [touch locationInView:self];
 
-	if (pause && [modal buttonPressed:location] == 2) {
+	if (pause && [modal buttonPressedFromPoint:location] == 2) {
 		pause = false;
 		[modal setButton_pressed:0];
 		[sound Resume];
+	}
+	else if (pause && [modal buttonPressedFromPoint:location] == 3) {
+		[manager doStateChange:[gsMainMenu class]];
 	}
 	else if (location.x >= 90) {
 		pause = true;
@@ -321,7 +324,7 @@
 	
 	// handle pause
 	if (pause) {
-		[modal buttonPressed:location];
+		[modal buttonPressedFromPoint:location];
 		control_pressed = NO_CONTROL;
  	}
 		
@@ -392,9 +395,9 @@
 
 - (void)dealloc {
 	[ball release];
-	[sound release];
 	[modal release];
 	[super dealloc];
 }
 
 @end
+t
