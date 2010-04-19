@@ -285,7 +285,7 @@
 		pause = true;
 		[sound Pause];
 	}
-
+	
 	control_pressed = NO_CONTROL;
 }
 
@@ -322,6 +322,7 @@
 	// handle pause
 	if (pause) {
 		[modal buttonPressed:location];
+		control_pressed = NO_CONTROL;
  	}
 		
 }
