@@ -65,4 +65,12 @@
   return FALSE;
 }
 
+- (BOOL) isLessThanObject:(GameObject*) object {
+	if ([self side] == RIGHT) {	
+		if (object.x >= self.x + self.width/2)
+			return TRUE;
+  }
+  return FALSE;
+}
+
 @end

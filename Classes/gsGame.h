@@ -14,14 +14,17 @@
 #import "Balto.h"
 #import "GameObject.h"
 #import "ResourceManager.h"
+#import "gsLevel.h"
 
 @interface gsGame : GLESGameState {
 	int control_pressed;
   int score;
+	int current_level;
+	
 	Ball *ball;
-  Paddle *leftPaddle;
-  Paddle *rightPaddle;
 	Balto *sound;
+	
+	NSMutableArray *levels;
 	
 	BOOL soundSetting;
 	BOOL fxSetting;
@@ -29,9 +32,14 @@
 	BOOL pause;
 }
 
+@property (nonatomic) int current_level;
+
 @property (nonatomic, retain) Ball *ball;
 @property (nonatomic, retain) Balto *sound;
 
+@property (nonatomic, retain) NSMutableArray *levels;
+
+- (void) addLevels;
 - (void) touchesHandler:(NSSet*)touches;
 - (NSString *) settingsFile;
 - (void) handleCollision:(GameObject*) object;

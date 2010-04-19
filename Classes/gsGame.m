@@ -17,8 +17,7 @@
 
 @implementation gsGame
 
-@synthesize ball, sound;
-
+@synthesize ball, sound, levels, current_level;
 
 /*
  * initWithFrame andManager
@@ -36,7 +35,7 @@
     // Initialization code
     score = 0;
   }
-  
+
 	// initialize the sound
 	NSString *soundFile1 = [[NSBundle mainBundle] pathForResource:@"teachingrobot" ofType:@"wav"];
 	NSString *soundFile2 = [[NSBundle mainBundle] pathForResource:@"pop" ofType:@"wav"];
@@ -67,23 +66,38 @@
 	
   // init game objects
 	ball = [[Ball alloc] init];
-  
-  // For level one the left paddle should seek the ball no matter what.
-	leftPaddle = [[SeekerPaddle alloc] initWithPosition:CGPointMake(90, self.frame.size.height/2)];
-  // For the first level the left paddle should be unstoppable.
-  [leftPaddle setProximity:300];
-  [leftPaddle setSide:LEFT];
-
-  rightPaddle = [[SeekerPaddle alloc] initWithPosition:CGPointMake(self.frame.size.width - 15, self.frame.size.height/2)];
-  [rightPaddle setProximity:80];
-  [rightPaddle setSide:RIGHT];
-  
+	
   // flipped the height and width here, this is due to the rotation of the
   // frame again. We should fix that.
   // - Jarod
 	[ball setPos:CGPointMake(self.frame.size.width/2, self.frame.size.height/2)];
 	
+	// first level
+	current_level = 0;
+	
+	// init levels
+	[self addLevels];
+	
   return self;
+}
+
+/*
+ * addLevels
+ * Last modified: 18April2010
+ * - Mark
+ * 
+ * initializes the level components with
+ * a difficulty and adds them to the
+ * levels array.
+ * 
+ */
+- (void) addLevels {
+	gsLevel *lvl;
+	levels = [[NSMutableArray alloc] initWithCapacity:5];
+	for ( int i = 75, j = 0; i > 50; i-=5, j++ ) {
+		lvl = [[[gsLevel alloc] initWithDifficulty:i] autorelease];
+		[levels addObject:lvl];
+	}
 }
 
 - (void) Render
@@ -149,10 +163,10 @@
 	
   // Draw the player here
 	[ball Render];
+	
   // Draw the paddles
-  [leftPaddle Render];
-  [rightPaddle Render];
-  
+	[[levels objectAtIndex:current_level] Render];
+	  
 	//pop the 2d hud stuff off the projection stack
 	glMatrixMode(GL_PROJECTION);
 	glPopMatrix();
@@ -198,12 +212,13 @@
 
   // Call the ball's update method to apply velocity/acceleration.
   [ball Update];
-  [leftPaddle Update];
-  [rightPaddle Update];
+	
+	// Update paddles
+	[[levels objectAtIndex:current_level] Update];
   
   // Update the AI for the paddles
-  [leftPaddle seek:ball];
-  [rightPaddle seek:ball];
+	[[levels objectAtIndex:current_level] Seek:ball];
+	[[levels objectAtIndex:current_level] Avoid:ball];
   
   // Check for collisions and resolve them.
   [self handleCollision:ball];
@@ -236,7 +251,6 @@
 - (void) touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event
 {
 	[self touchesHandler:touches];
-	[self setNeedsDisplay];
 }
 
 /*
@@ -251,7 +265,6 @@
 - (void) touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event
 {
 	[self touchesHandler:touches];
-	[self setNeedsDisplay];
 }
 
 /*
@@ -330,12 +343,12 @@
   
   BOOL shouldpop = FALSE;
 	
-	if ([rightPaddle didCollideWith:object]) {
+	if ([[levels objectAtIndex:current_level] rightPaddleDidCollideWith:object]) {
 		[object collidedRight];
 		shouldpop = TRUE;
 	}
 	
-	if ([leftPaddle didCollideWith:object]) {
+	if ([[levels objectAtIndex:current_level] leftPaddleDidCollideWith:object]) {
 		[object collidedLeft];
 		shouldpop = TRUE;
 	}
@@ -362,6 +375,12 @@
 		shouldpop = TRUE;
   }
 	
+	// level done, advance ball back to start position
+	if ( [[levels objectAtIndex:current_level] shouldAdvanceToNext:object] ) {
+		current_level++;
+		[ball setPos:CGPointMake(self.frame.size.width/2, self.frame.size.height/2)];
+	}
+				
 	// play soundFX
 	if (shouldpop && fxSetting )
 		[sound Play:POP andLooping:NO];

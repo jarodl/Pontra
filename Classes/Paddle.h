@@ -26,5 +26,6 @@
 - (void) avoid:(GameObject*) object;
 - (void) seek:(GameObject*) object;
 - (BOOL) didCollideWith:(GameObject*) object;
+- (BOOL) isLessThanObject:(GameObject*) object;
 
 @end
