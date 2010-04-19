@@ -276,10 +276,14 @@
 	UITouch *touch = [touches anyObject];
 	CGPoint location = [touch locationInView:self];
 
-	if ([modal buttonPressed:location] == 2) {
+	if (pause && [modal buttonPressed:location] == 2) {
 		pause = false;
 		[modal setButton_pressed:0];
 		[sound Resume];
+	}
+	else if (location.x >= 90) {
+		pause = true;
+		[sound Pause];
 	}
 
 	control_pressed = NO_CONTROL;
@@ -303,23 +307,23 @@
 	printf("y: %g\n",location.y);
 	
 	if ( location.x >=0 && location.x <= 75 &&
-			location.y >= 0 && location.y <= 85 )
+			 location.y >= 0 && location.y <= 85 ) {
 		control_pressed = TOP_CONTROL;
-	else if ( location.x >=0 && location.x <= 75 &&
-					 location.y >= 235 && location.y <= 320 )
+	}
+	else if ( 
+			 location.x >=0 && location.x <= 75 &&
+ 			 location.y >= 235 && location.y <= 320 ) {
 		control_pressed = BOTTOM_CONTROL;
-	else if ( location.x >= 90 )
-		pause = true;
+	}
 	else {
 		control_pressed = NO_CONTROL;
 	}
 	
 	// handle pause
 	if (pause) {
-		[sound Pause];
 		[modal buttonPressed:location];
-		control_pressed = NO_CONTROL;
-	}
+ 	}
+		
 }
 
 /*
