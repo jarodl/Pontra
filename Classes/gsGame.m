@@ -43,6 +43,7 @@
 		NSArray *array = [[NSArray alloc]initWithContentsOfFile:filePath];
 		soundSetting = [[array objectAtIndex:0] boolValue];
 		fxSetting = [[array objectAtIndex:1] boolValue];
+		[array release];
 	} else {
 		soundSetting = TRUE;
 		fxSetting = TRUE;
@@ -97,7 +98,7 @@
 - (void) Render
 {
   //clear anything left over from the last frame, and set background color.
-	glClearColor(0x1b/256.0f, 0x1b/256.0f, 0x1b/256.0f, 1.0f);
+	glClearColor(0, 0, 0, 1);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //important to clear the depth buffer as well as color buffer.
 	glLoadIdentity();
   //Set up OpenGL projection matrix for 2d hud rendering.

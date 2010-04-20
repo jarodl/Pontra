@@ -17,6 +17,7 @@
 // Primary context for all OpenGL calls. Set this up in setup2D.
 // This should be cleared on teardown.
 EAGLContext* gles_context;
+
 // These next 3 variables should really be tied whatever state we get bound to.
 // This is why there is a white flash when a state changes.
 GLuint gles_framebuffer;
@@ -54,7 +55,7 @@ CGSize _size;
 }
 
 + (void) setup2D
-{
+{	
 	gles_context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
 	[EAGLContext setCurrentContext:gles_context];
 	glGenRenderbuffersOES(1, &gles_renderbuffer);
@@ -78,7 +79,7 @@ CGSize _size;
 {
 	CAEAGLLayer* eaglLayer = (CAEAGLLayer*)[self layer];
 	
-	NSLog(@"layer %@", eaglLayer);
+	// NSLog(@"layer %@", eaglLayer);
 	
 	//set up a few drawing properties.  App will run and display without this line, but the properties
 	//here should make it go faster.  todo: benchmark this.

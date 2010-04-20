@@ -29,12 +29,13 @@
 	
 		NSString *filePath = [self settingsFile];
 		if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-			NSArray *array = [[NSArray alloc]initWithContentsOfFile:filePath];
+			NSArray *array = [[NSArray alloc] initWithContentsOfFile:filePath];
 			BOOL soundSetting = [[array objectAtIndex:0] boolValue];
 			BOOL fxSetting = [[array objectAtIndex:1] boolValue];
       nameField.text = [array objectAtIndex:2];
 			[soundSwitch setOn:soundSetting animated:NO];
 			[fxSwitch setOn:fxSetting animated:NO];
+			[array release];
 		}
 
     return self;
