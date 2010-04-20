@@ -17,7 +17,7 @@
 
 @implementation gsGame
 
-@synthesize ball, sound, levels, current_level, modal;
+@synthesize ball, levels, current_level, modal;
 
 /*
  * initWithFrame andManager
@@ -35,17 +35,6 @@
     // Initialization code
     score = 0;
   }
-
-	// initialize the sound
-	NSString *soundFile1 = [[NSBundle mainBundle] pathForResource:@"teachingrobot" ofType:@"wav"];
-	NSString *soundFile2 = [[NSBundle mainBundle] pathForResource:@"pop" ofType:@"wav"];
-	NSMutableArray *sounds = [[NSMutableArray alloc] initWithCapacity:2];
-	[sounds addObject:soundFile1];
-	[sounds addObject:soundFile2];
-	
-	// initialize the sound with the array of audio files
-	sound = [[Balto alloc] initWithFiles:sounds];
-	[sounds release];
 		
 	// check settings if sound is on/off
 	NSString *filePath = [self settingsFile];
@@ -60,7 +49,7 @@
 	}
 	
 	if (soundSetting) {
-		[sound Play:THEME andLooping:YES];
+		[[g_ResManager sound] Play:THEME andLooping:YES];
 	}
 
 	pause = FALSE;
@@ -281,15 +270,15 @@
 	if (pause && [modal buttonPressedFromPoint:location] == 2) {
 		pause = false;
 		[modal setButton_pressed:0];
-		[sound Resume];
+		[[g_ResManager sound] Resume];
 	}
 	else if (pause && [modal buttonPressedFromPoint:location] == 3) {
-		[sound Stop];
+		[[g_ResManager sound] Stop];
 		[manager doStateChange:[gsMainMenu class]];
 	}
 	else if (location.x >= 90) {
 		pause = true;
-		[sound Pause];
+		[[g_ResManager sound] Pause];
 	}
 	
 	control_pressed = NO_CONTROL;
@@ -391,13 +380,13 @@
 				
 	// play soundFX
 	if (shouldpop && fxSetting )
-		[sound Play:POP andLooping:NO];
+		[[g_ResManager sound] Play:POP andLooping:NO];
+
 }
 
 - (void)dealloc {
 	[ball release];
 	[modal release];
-	[sound release];
 	[levels release];
 	[super dealloc];
 }

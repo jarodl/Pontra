@@ -13,6 +13,8 @@
 #import <Foundation/Foundation.h>
 #import "GLTexture.h"
 #import "GLFont.h"
+#import "Balto.h"
+
 @class GLESGameState;
 @class ResourceManager;
 
@@ -30,8 +32,7 @@ extern ResourceManager *g_ResManager; //paul <3's camel caps, hungarian notation
 	//used to allocate and manage GLTexture instances.  Needs to be cleared in dealloc.
 	NSMutableDictionary*	textures;
 	
-	//used to track sound allocations.  The actual sound data is buffered in SoundEngine; 'sounds' here only tracks the openAL ids of the loaded sounds.
-	NSMutableDictionary*	sounds;
+	Balto *sound;
   
 	NSMutableDictionary*	storage;
 	BOOL storage_dirty;
@@ -57,6 +58,9 @@ extern ResourceManager *g_ResManager; //paul <3's camel caps, hungarian notation
 - (id) getUserData:(NSString*) filename;
 - (BOOL) userDataExists:(NSString*) filename;
 + (NSString*) appendStorePath:(NSString*) filename;
+
+// sounds
+- (Balto *) sound;
 
 - (GLFont *) defaultFont;
 - (void) setDefaultFont: (GLFont *) newValue;

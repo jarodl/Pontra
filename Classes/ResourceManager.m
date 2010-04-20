@@ -50,7 +50,25 @@ ResourceManager *g_ResManager;
 		storage_dirty = TRUE;
 	}
 	
+	// initialize the sound
+	NSString *soundFile1 = [[NSBundle mainBundle] pathForResource:@"teachingrobot" ofType:@"wav"];
+	NSString *soundFile2 = [[NSBundle mainBundle] pathForResource:@"pop" ofType:@"wav"];
+	NSMutableArray *sounds = [[NSMutableArray alloc] initWithCapacity:2];
+	[sounds addObject:soundFile1];
+	[sounds addObject:soundFile2];
+	
+	// initialize the sound with the array of audio files
+	sound = [[Balto alloc] initWithFiles:sounds];
+	[sounds release];
+	
+	
 	return self;
+}
+
+- (Balto *) sound {
+	if( sound != nil )
+		return sound;
+	return nil;
 }
 
 - (void) shutdown {
@@ -58,6 +76,7 @@ ResourceManager *g_ResManager;
 	if(storage_dirty){
 		[storage writeToFile:storage_path atomically:YES];
 	}
+	[sound release];
 	[storage_path release];
 	[storage release];
 	[default_font release];

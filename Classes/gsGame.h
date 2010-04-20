@@ -11,7 +11,6 @@
 #import "Ball.h"
 #import "SeekerPaddle.h"
 #import "AvoiderPaddle.h"
-#import "Balto.h"
 #import "GameObject.h"
 #import "ResourceManager.h"
 #import "gsLevel.h"
@@ -26,7 +25,6 @@
 	int current_level;
 	
 	Ball *ball;
-	Balto *sound;
 	gsModal *modal;
 	
 	NSMutableArray *levels;
@@ -40,7 +38,6 @@
 @property (nonatomic) int current_level;
 
 @property (nonatomic, retain) Ball *ball;
-@property (nonatomic, retain) Balto *sound;
 @property (nonatomic,	retain) gsModal *modal;
 
 @property (nonatomic, retain) NSMutableArray *levels;
