@@ -398,6 +398,7 @@
 	[ball release];
 	[modal release];
 	[sound release];
+	[levels release];
 	[super dealloc];
 }
 
