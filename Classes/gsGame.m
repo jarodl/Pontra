@@ -36,6 +36,19 @@
     score = 0;
   }
 
+	// if the highscores are empty, allocate empty objects
+	if ( ![[NSFileManager defaultManager] fileExistsAtPath:[self scoresFile]] ) {
+		NSMutableArray *array = [[NSMutableArray alloc] init];
+		[array addObject:[NSNumber numberWithInt:0]];
+		[array addObject:[NSNumber numberWithInt:0]];
+		[array addObject:[NSNumber numberWithInt:0]];
+		[array addObject:[NSNumber numberWithInt:0]];
+		[array addObject:[NSNumber numberWithInt:0]];
+		
+		[array writeToFile:[self scoresFile] atomically:YES];
+		[array release];
+	}
+
 	// check settings if sound is on/off
 	NSString *filePath = [self settingsFile];
 	soundSetting = FALSE, fxSetting = FALSE;
@@ -249,66 +262,11 @@
  */
 - (void) saveScore
 {
-	NSNumber *lowScore1, *lowScore2, *lowScore3, *lowScore4, *lowScore5;
-	NSNumber *currentScore = [NSNumber numberWithInt:score];
-	
+	NSNumber *currentScore = [NSNumber numberWithInt:score];	
 	NSString *filePath = [self scoresFile];
-	NSString *name = @"";
-	
-	if ([[NSFileManager defaultManager] fileExistsAtPath:[self settingsFile]]) {
-		NSArray *array = [[NSArray alloc] initWithContentsOfFile:[self settingsFile]];
-		name = [array objectAtIndex:2];
-		[array release];
-	}
-		
-	NSMutableArray *array;
-	if ([[NSFileManager defaultManager] fileExistsAtPath:filePath])
-		array = [[NSMutableArray alloc] initWithContentsOfFile:filePath];
-	else {
-		array = [[NSMutableArray alloc] init];
-		[array addObject:@"NaN"]; [array addObject:[NSNumber numberWithInt:0]];
-		[array addObject:@"NaN"]; [array addObject:[NSNumber numberWithInt:0]];
-		[array addObject:@"NaN"]; [array addObject:[NSNumber numberWithInt:0]];
-		[array addObject:@"NaN"]; [array addObject:[NSNumber numberWithInt:0]];
-		[array addObject:@"NaN"]; [array addObject:[NSNumber numberWithInt:0]];
-	}
+	NSMutableArray *array = [[NSArray alloc] initWithContentsOfFile:filePath];
 
-	for ( int i = 0; i < [array count]; i += 2 )
-	{
-		switch (i) {
-			case 0: lowScore1 = [array objectAtIndex:1]; 
-				if ( currentScore > lowScore1 ) {
-					[array replaceObjectAtIndex:0 withObject:name];
-					[array replaceObjectAtIndex:1 withObject:currentScore];
-				}
-				break;
-			case 2:	lowScore2 = [array objectAtIndex:3];
-				if ( currentScore > lowScore2 ) {
-					[array replaceObjectAtIndex:2 withObject:name];
-					[array replaceObjectAtIndex:3 withObject:currentScore];
-				}
-				break;
-			case 4:	lowScore3 = [array objectAtIndex:5];
-				if ( currentScore > lowScore3 ) {
-					[array replaceObjectAtIndex:4 withObject:name];
-					[array replaceObjectAtIndex:5 withObject:currentScore];
-				}
-				break;
-			case 6:	lowScore4 = [array objectAtIndex:7];
-				if ( currentScore > lowScore4 ) {
-					[array replaceObjectAtIndex:6 withObject:name];
-					[array replaceObjectAtIndex:7 withObject:currentScore];
-				}
-				break;
-			case 8:	lowScore5 = [array objectAtIndex:9];
-				if ( currentScore > lowScore5 ) {
-					[array replaceObjectAtIndex:8 withObject:name];
-					[array replaceObjectAtIndex:9 withObject:currentScore];
-				}
-			default:
-				break;
-		}
-	} //for
+	[array addObject:currentScore];
 	
 	[array writeToFile:filePath atomically:YES];
 	[array release];

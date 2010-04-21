@@ -28,24 +28,27 @@
 		[[NSBundle mainBundle] loadNibNamed:@"gsHighscores" owner:self options:nil];
 		[self addSubview:subview];
 
-		NSString *filePath = [self settingsFile];
+		NSString *filePath = [self scoresFile];
 		if ([[NSFileManager defaultManager] fileExistsAtPath:filePath])
 		{
 			NSArray *array = [[NSArray alloc] initWithContentsOfFile:filePath];
-			NSString *name; 	NSNumber *score;
-			for ( int i = 0; i < [array count]; i+=2 ) {
-				name  = [array objectAtIndex:i];
-				score = [array objectAtIndex:(i+1)];
-				switch (i) {
-					case 0: [name1 setText:name];[score1 setText:[NSString stringWithFormat:@"%d",score]];break;
-					case 2:	[name2 setText:name];[score2 setText:[NSString stringWithFormat:@"%d",score]];break;
-					case 4:	[name3 setText:name];[score3 setText:[NSString stringWithFormat:@"%d",score]];break;
-					case 6:	[name4 setText:name];[score4 setText:[NSString stringWithFormat:@"%d",score]];break;
-					case 8:	[name5 setText:name];[score5 setText:[NSString stringWithFormat:@"%d",score]];break;					
-					default: break;
-				}
-				[array release];
-			}
+			NSNumber *score;
+			
+			NSArray *sort = [array sortedArrayUsingSelector:@selector(compare:)];
+			
+			int one   = [sort count]-1;
+			int two   = [sort count]-2;
+			int three = [sort count]-3;
+			int four  = [sort count]-4;
+			int five  = [sort count]-5;
+			
+			score = [sort objectAtIndex:one];  [score1 setText:[NSString stringWithFormat:@"%@",score]];
+			score = [sort objectAtIndex:two];  [score2 setText:[NSString stringWithFormat:@"%@",score]];
+			score = [sort objectAtIndex:three];[score3 setText:[NSString stringWithFormat:@"%@",score]];
+			score = [sort objectAtIndex:four]; [score4 setText:[NSString stringWithFormat:@"%@",score]];
+			score = [sort objectAtIndex:five]; [score5 setText:[NSString stringWithFormat:@"%@",score]];
+
+			[array release];
 		}//fi
 		
 	}
@@ -60,7 +63,7 @@
  * Returns the ponra-highscores.plist file 
  * 
  */
-- (NSString *)settingsFile {
+- (NSString *)scoresFile {
 	// Get the documents directory
 	NSArray	*paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];

@@ -26,6 +26,6 @@
 }
 
 - (IBAction) back;
-- (NSString *) settingsFile;
+- (NSString *) scoresFile;
 
 @end
