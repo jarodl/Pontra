@@ -13,25 +13,42 @@
 
 /*
  * initWithFrame andManager
- * Last modified: 17April2010
+ * Last modified: 20April2010
  * - Mark
  *
  * Initializes the frame that the highscores nib
  * is loaded in. Loads highscores data.
+ *
+ * This is so fucking terrible, but it's due at midnight.
  *	
  */
-- (id)initWithFrame:(CGRect)frame andManager:(GameStateManager *)pManager {
-    if (self = [super initWithFrame:frame andManager:pManager]) {
-      [[NSBundle mainBundle] loadNibNamed:@"gsHighscores" owner:self options:nil];
-      [self addSubview:subview];
-    }
-	
-	NSString *filePath = [self settingsFile];
-	if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
-		//NSArray *array = [[NSArray alloc]initWithContentsOfFile:filePath];
-		//BOOL soundSetting = [[array objectAtIndex:0] boolValue];
+- (id)initWithFrame:(CGRect)frame andManager:(GameStateManager *)pManager
+{
+	if (self = [super initWithFrame:frame andManager:pManager]) {
+		[[NSBundle mainBundle] loadNibNamed:@"gsHighscores" owner:self options:nil];
+		[self addSubview:subview];
+
+		NSString *filePath = [self settingsFile];
+		if ([[NSFileManager defaultManager] fileExistsAtPath:filePath])
+		{
+			NSArray *array = [[NSArray alloc] initWithContentsOfFile:filePath];
+			
+			for ( int i = 0; i < [array count]; i+=2 ) {
+				NSString *name = [array objectAtIndex:i];
+				NSString *score = [array objectAtIndex:(i+1)];
+				switch (i) {
+					case 0: [name1 setText:name];[score1 setText:score];break;
+					case 2:	[name2 setText:name];[score2 setText:score];break;
+					case 4:	[name3 setText:name];[score3 setText:score];break;
+					case 6:	[name4 setText:name];[score4 setText:score];break;
+					case 8:	[name5 setText:name];[score5 setText:score];break;					
+					default: break;
+				}
+				[array release];
+			}
+		}//fi
+		
 	}
-	
 	return self;
 }
 
@@ -40,7 +57,7 @@
  * Last modified: 17April2010
  * - Mark
  * 
- * Returns the settings.plist file 
+ * Returns the ponra-highscores.plist file 
  * 
  */
 - (NSString *)settingsFile {

@@ -46,7 +46,7 @@
  * Last modified: 17April2010
  * - Mark
  * 
- * Returns the settings.plist file 
+ * Returns the pontra-settings.plist file 
  * 
  */
 - (NSString *)settingsFile {
