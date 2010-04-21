@@ -35,7 +35,7 @@
     // Initialization code
     score = 0;
   }
-		
+
 	// check settings if sound is on/off
 	NSString *filePath = [self settingsFile];
 	soundSetting = FALSE, fxSetting = FALSE;
@@ -212,14 +212,106 @@
  * Last modified: 17April2010
  * - Mark
  * 
- * Returns the settings.plist file 
+ * Returns the pontra-settings.plist file 
  * 
  */
-- (NSString *)settingsFile {
+- (NSString *) settingsFile {
 	// Get the documents directory
 	NSArray	*paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
 	return [documentsDirectory stringByAppendingPathComponent:@"pontra-settings.plist"];
+}
+
+/*
+ * scoresFile
+ * Last modified: 20April2010
+ * - Mark
+ * 
+ * Returns the pontra-settings.plist file 
+ * 
+ */
+- (NSString *) scoresFile {
+	// Get the documents directory
+	NSArray	*paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	return [documentsDirectory stringByAppendingPathComponent:@"pontra-highscores.plist"];	
+}
+
+/*
+ * saveScore
+ * Last modified: 20April2010
+ * - Mark
+ * 
+ * saves the high score in the 
+ * least legit way possible. So nasty.
+ * Nasty like nicole baker nasty.
+ * 
+ */
+- (void) saveScore
+{
+	NSNumber *lowScore1, *lowScore2, *lowScore3, *lowScore4, *lowScore5;
+	NSNumber *currentScore = [NSNumber numberWithInt:score];
+	
+	NSString *filePath = [self scoresFile];
+	NSString *name = @"";
+	
+	if ([[NSFileManager defaultManager] fileExistsAtPath:[self settingsFile]]) {
+		NSArray *array = [[NSArray alloc] initWithContentsOfFile:[self settingsFile]];
+		name = [array objectAtIndex:2];
+		[array release];
+	}
+		
+	NSMutableArray *array;
+	if ([[NSFileManager defaultManager] fileExistsAtPath:filePath])
+		array = [[NSMutableArray alloc] initWithContentsOfFile:filePath];
+	else {
+		array = [[NSMutableArray alloc] init];
+		[array addObject:@"NaN"]; [array addObject:[NSNumber numberWithInt:0]];
+		[array addObject:@"NaN"]; [array addObject:[NSNumber numberWithInt:0]];
+		[array addObject:@"NaN"]; [array addObject:[NSNumber numberWithInt:0]];
+		[array addObject:@"NaN"]; [array addObject:[NSNumber numberWithInt:0]];
+		[array addObject:@"NaN"]; [array addObject:[NSNumber numberWithInt:0]];
+	}
+
+	for ( int i = 0; i < [array count]; i += 2 )
+	{
+		switch (i) {
+			case 0: lowScore1 = [array objectAtIndex:1]; 
+				if ( currentScore > lowScore1 ) {
+					[array replaceObjectAtIndex:0 withObject:name];
+					[array replaceObjectAtIndex:1 withObject:currentScore];
+				}
+				break;
+			case 2:	lowScore2 = [array objectAtIndex:3];
+				if ( currentScore > lowScore2 ) {
+					[array replaceObjectAtIndex:2 withObject:name];
+					[array replaceObjectAtIndex:3 withObject:currentScore];
+				}
+				break;
+			case 4:	lowScore3 = [array objectAtIndex:5];
+				if ( currentScore > lowScore3 ) {
+					[array replaceObjectAtIndex:4 withObject:name];
+					[array replaceObjectAtIndex:5 withObject:currentScore];
+				}
+				break;
+			case 6:	lowScore4 = [array objectAtIndex:7];
+				if ( currentScore > lowScore4 ) {
+					[array replaceObjectAtIndex:6 withObject:name];
+					[array replaceObjectAtIndex:7 withObject:currentScore];
+				}
+				break;
+			case 8:	lowScore5 = [array objectAtIndex:9];
+				if ( currentScore > lowScore5 ) {
+					[array replaceObjectAtIndex:8 withObject:name];
+					[array replaceObjectAtIndex:9 withObject:currentScore];
+				}
+			default:
+				break;
+		}
+	} //for
+	
+	[array writeToFile:filePath atomically:YES];
+	[array release];
 }
 
 /*
@@ -275,6 +367,7 @@
 	}
 	else if (pause && [modal buttonPressedFromPoint:location] == 3) {
 		[[g_ResManager sound] Stop];
+		[self saveScore];
 		[manager doStateChange:[gsMainMenu class]];
 	}
 	else if (location.x >= 90) {
@@ -376,6 +469,7 @@
 	if ( [[levels objectAtIndex:current_level] shouldAdvanceToNext:object] ) {
 		if (current_level < 4)
 			current_level++;
+		score += 25;
 		[ball setPos:CGPointMake(self.frame.size.width/2, self.frame.size.height/2)];
 	}
 				

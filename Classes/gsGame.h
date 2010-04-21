@@ -45,6 +45,8 @@
 - (void) addLevels;
 - (void) touchesHandler:(NSSet*)touches;
 - (NSString *) settingsFile;
+- (NSString *) scoresFile;
+- (void) saveScore;
 - (void) handleCollision:(GameObject*) object;
 
 @end

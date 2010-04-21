@@ -32,16 +32,16 @@
 		if ([[NSFileManager defaultManager] fileExistsAtPath:filePath])
 		{
 			NSArray *array = [[NSArray alloc] initWithContentsOfFile:filePath];
-			
+			NSString *name; 	NSNumber *score;
 			for ( int i = 0; i < [array count]; i+=2 ) {
-				NSString *name = [array objectAtIndex:i];
-				NSString *score = [array objectAtIndex:(i+1)];
+				name  = [array objectAtIndex:i];
+				score = [array objectAtIndex:(i+1)];
 				switch (i) {
-					case 0: [name1 setText:name];[score1 setText:score];break;
-					case 2:	[name2 setText:name];[score2 setText:score];break;
-					case 4:	[name3 setText:name];[score3 setText:score];break;
-					case 6:	[name4 setText:name];[score4 setText:score];break;
-					case 8:	[name5 setText:name];[score5 setText:score];break;					
+					case 0: [name1 setText:name];[score1 setText:[NSString stringWithFormat:@"%d",score]];break;
+					case 2:	[name2 setText:name];[score2 setText:[NSString stringWithFormat:@"%d",score]];break;
+					case 4:	[name3 setText:name];[score3 setText:[NSString stringWithFormat:@"%d",score]];break;
+					case 6:	[name4 setText:name];[score4 setText:[NSString stringWithFormat:@"%d",score]];break;
+					case 8:	[name5 setText:name];[score5 setText:[NSString stringWithFormat:@"%d",score]];break;					
 					default: break;
 				}
 				[array release];
