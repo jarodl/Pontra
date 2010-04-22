@@ -215,9 +215,6 @@
       break;
   }
   
-	// Check for collisions and resolve them.
-  [self handleCollision: ball];
-
   // Call the ball's update method to apply velocity/acceleration.
   [ball Update];
 	
