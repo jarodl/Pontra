@@ -38,9 +38,6 @@
 - (void) gameLoop: (id) sender
 {
   double currTime = [[NSDate date] timeIntervalSince1970];
-	//float dt = currTime - m_lastUpdateTime;  //can store this as double or float
-	
-	//	printf("main loop");
 	
 	[((GameState*)viewController.view) Update];
 	[((GameState*)viewController.view) Render];
@@ -55,7 +52,6 @@
 	
 	float sleepPeriod = LOOP_TIMER_MINIMUM;	
 	[NSTimer scheduledTimerWithTimeInterval:sleepPeriod target:self selector:@selector(gameLoop:) userInfo:nil repeats:NO];
-	//[self performSelector: @selector(gameLoop:) withObject:self afterDelay:  sleepPeriod];
 	
 	lastUpdateTime = currTime;
 }
@@ -65,6 +61,7 @@
   return bestFramesPerSecond;
 }
 
+// Handles the transition from the different menu items and the game.
 - (void) doStateChange: (Class) state
 {	
 	if( viewController.view != nil ) {

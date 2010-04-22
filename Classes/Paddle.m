@@ -65,6 +65,7 @@
   return FALSE;
 }
 
+// Returns true if the object is further to the right than the paddle.
 - (BOOL) isLessThanObject:(GameObject*) object {
 	if ([self side] == RIGHT) {	
 		if (object.x >= self.x + self.width/2)

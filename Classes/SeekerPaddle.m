@@ -10,6 +10,7 @@
 
 @implementation SeekerPaddle
 
+// The AI for the paddle. This needs improved but it will do for now.
 - (void) seek:(GameObject*) object
 {
   if ([self isInProximity:object]) {

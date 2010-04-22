@@ -10,6 +10,8 @@
 
 @implementation AvoiderPaddle
 
+// The AI for the paddle. This needs improved but it will do
+// for now.
 - (void) avoid:(GameObject*) object
 {
 	if ([self isInProximity:object]) {
@@ -28,6 +30,8 @@
   }
 }
 
+// Returns true if the ball is within the current paddle's
+// proximity.
 - (BOOL) isInProximity:(GameObject*) object
 {
   if ([self side] == LEFT) {

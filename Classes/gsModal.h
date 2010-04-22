@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ResourceManager.h"
 
+// This is displayed when the player hits pause.
 @interface gsModal : NSObject {
 	NSString *top_text;
 	NSString *middle_text;

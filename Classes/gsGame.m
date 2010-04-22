@@ -108,6 +108,14 @@
 	}
 }
 
+/*
+ * Render
+ * Last modified: 18April2010
+ * - Jarod
+ *
+ * Draws all of the game objects.
+ *
+ */
 - (void) Render
 {
   //clear anything left over from the last frame, and set background color.

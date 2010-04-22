@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #include "GameState.h"
 
+// Stores the top five high scores.
 @interface gsHighScores : GameState {
   IBOutlet UIView* subview;
 	
