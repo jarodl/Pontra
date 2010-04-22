@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ResourceManager.h"
 
+// All GameObjects (paddle, ball) will inherit from this.
 @interface GameObject : NSObject {
   int x;
   int y;
@@ -22,6 +23,7 @@
 @property (nonatomic) int y;
 @property (nonatomic) int x_velocity;
 @property (nonatomic) int y_velocity;
+// Stores the size of the sprite.
 @property (nonatomic) int width;
 @property (nonatomic) int height;
 

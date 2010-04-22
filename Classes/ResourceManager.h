@@ -32,7 +32,7 @@ CGFloat distsquared(CGPoint a, CGPoint b);
 //returns a unit vector pointing from a to b.
 CGPoint toward(CGPoint a, CGPoint b);
 
-extern ResourceManager *g_ResManager; //paul <3's camel caps, hungarian notation, and underscores.
+extern ResourceManager *g_ResManager;
 
 @interface ResourceManager : NSObject {
 	//used to allocate and manage GLTexture instances.  Needs to be cleared in dealloc.

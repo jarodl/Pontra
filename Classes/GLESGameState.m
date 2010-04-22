@@ -5,6 +5,7 @@
 //  Created by Jarod Luebbert on 4/15/10.
 //  Copyright 2010 nil. All rights reserved.
 //
+// Taken largely from the Oreily iPhone Game Development book.
 
 /*
  * Some of this code came from O'Reilly iPhone Game Development
@@ -109,7 +110,6 @@ CGSize _size;
 	
 	// For this sample, we also need a depth buffer, so we'll create and attach one via another renderbuffer.
 	//this must be done after context renderbufferStorage:fromDrawable: call above.  otherwise everything is crush.
-	//todo: release. -joe
 	GLint backingWidth, backingHeight;
 	glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_WIDTH_OES, &backingWidth);
 	glGetRenderbufferParameterivOES(GL_RENDERBUFFER_OES, GL_RENDERBUFFER_HEIGHT_OES, &backingHeight);
@@ -143,9 +143,6 @@ CGSize _size;
 	
 	glGetIntegerv(GL_RENDERBUFFER_BINDING_OES, (GLint *) &oldRenderbuffer);
 	glBindRenderbufferOES(GL_RENDERBUFFER_OES, gles_renderbuffer);
-	
-	//NSLog(@"oldrenderbuffer %d, renderbuffer %d", oldRenderbuffer, _renderbuffer);
-	
 	glFinish();
 	
 	if(![gles_context presentRenderbuffer:GL_RENDERBUFFER_OES])

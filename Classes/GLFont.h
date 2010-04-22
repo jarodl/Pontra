@@ -5,6 +5,7 @@
 //  Created by Joe Hogue on 4/27/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
+// Taken from the Oreily iPhone Game Development book.
 
 /*
  * Some of this code came from O'Reilly iPhone Game Development

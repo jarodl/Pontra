@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "GameState.h"
 
+// The main menu game state. This is where the player will choose between
+// the menu options.
 @interface gsMainMenu : GameState {
   IBOutlet UIView* subview;
 }

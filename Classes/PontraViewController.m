@@ -45,6 +45,9 @@
  * viewWillAppear
  * Added by Jarod
  * 
+ * This applies a rotation to the screen in order to get the app to run
+ * entirely in landscape mode.
+ *
  * Fixed. "Don't touch this." - M.C. Hammer
  *
  * 18April2010
