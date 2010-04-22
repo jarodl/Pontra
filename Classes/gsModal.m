@@ -18,6 +18,14 @@
 
 @synthesize top_text, middle_text, bottom_text, button_pressed, default_font;
 
+/* initWithText
+ * Last Modified: 19April2010
+ * - Mark
+ *
+ * initializes a modal with top/middle/bottom text
+ * for the menu
+ * 
+ */
 - (id) initWithText:(NSString*)top middle:(NSString*)middle andBottom:(NSString*)bottom
 {
 	if (self = [super init]) {
@@ -30,6 +38,13 @@
 	return self;
 }
 
+/* font
+ * Last Modified: 19April2010
+ * - Mark
+ *
+ * Returns the font with a given color
+ *
+ */
 - (GLFont *) font:(UIColor*)color
 {
 	 if ( default_font != nil )
@@ -44,6 +59,15 @@
 	return default_font;
 }
 
+/* Render
+ * Last Modified: 19April2010
+ * - Mark
+ *
+ * renders the modal image and displays the text
+ * in line with the image, providing position and
+ * color.
+ *
+ */
 - (void) Render
 {
 	[[g_ResManager getTexture:@"modal.png"] drawAtPoint:CGPointMake(480/2, 320/2) withRotation: 0 withScale: 1];
@@ -97,6 +121,13 @@
 	return 0;
 }
 
+/* displayText
+ * Last Modified: 19April2010
+ * - Mark
+ *
+ * displays text at a position with a given color
+ *
+ */
 - (void) displayText:(NSString *)str atPosition:(int)pos withColor:(UIColor *)color
 {
 	[[self font:color] drawString:[NSString stringWithString:str] 

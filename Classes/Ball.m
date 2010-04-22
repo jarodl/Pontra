@@ -13,6 +13,14 @@
 
 @implementation Ball
 
+/*
+ * init
+ * Last modified: 17April2010
+ * - Jarod
+ * 
+ * Initializes the ball
+ *
+ */
 - (id) init
 {
   if (self = [super init]) {
@@ -38,6 +46,15 @@
   [[g_ResManager getTexture:@"player.png"] drawAtPoint:CGPointMake(self.x, self.y)];
 }
 
+/*
+ * Update
+ * Last modified: 17April2010
+ * - Jarod
+ * 
+ * moves the ball with respect to
+ * its x and y velocities
+ * 
+ */
 - (void) Update
 {
   [self moveX:x_velocity];
@@ -80,6 +97,20 @@
 		y_velocity++;
 }
 
+/*
+ * - collideRight
+ * - collideLeft
+ * - collideTop
+ * - collideBottom
+ *
+ * Last modified: 17April2010
+ * - Jarod
+ * 
+ * Checks ball collisions within the playing
+ * field frame. When a collision occurs
+ * the ball is refelcted away from the side.
+ * 
+ */
 - (void) collidedRight
 {
   x -= width/2;

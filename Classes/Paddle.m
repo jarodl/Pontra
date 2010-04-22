@@ -12,6 +12,15 @@
 
 @synthesize side, proximity;
 
+/*
+ * initWithPosition
+ * Last modified: 17April2010
+ * - Jarod
+ * 
+ * initializes a paddle with a given
+ * position.
+ * 
+ */
 - (id) initWithPosition:(CGPoint) p
 {
   if (self = [super initWithPosition:p]) {
@@ -23,11 +32,27 @@
   return self;
 }
 
+/*
+ * Render
+ * Last modified: 17April2010
+ * - Jarod
+ * 
+ * Draws the paddle image
+ * 
+ */
 - (void) Render
 {
   [[g_ResManager getTexture:@"paddle.png"] drawAtPoint:CGPointMake(self.x, self.y)];
 }
 
+/*
+ * Update
+ * Last modified: 17April2010
+ * - Jarod
+ * 
+ * Updates the paddle's X/Y values
+ * 
+ */
 - (void) Update
 {
   int upper_bound = self.y + self.height/2 + y_velocity;
@@ -45,6 +70,14 @@
 {
 }
 
+/*
+ * didCollideWith
+ * Last modified: 17April2010
+ * - Jarod
+ * 
+ * Handles collision with the ball
+ * 
+ */
 - (BOOL) didCollideWith:(GameObject *)object
 {
   if ([self side] == LEFT) {
@@ -65,6 +98,16 @@
   return FALSE;
 }
 
+/*
+ * isLessThanObject
+ * Last modified: 17April2010
+ * - Mark
+ * 
+ * Returns true if the ball is not passed the
+ * right paddle. Used to check if
+ * the level should advance
+ * 
+ */
 - (BOOL) isLessThanObject:(GameObject*) object {
 	if ([self side] == RIGHT) {	
 		if (object.x >= self.x + self.width/2)

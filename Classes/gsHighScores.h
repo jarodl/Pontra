@@ -12,12 +12,6 @@
 @interface gsHighScores : GameState {
   IBOutlet UIView* subview;
 	
-	IBOutlet UILabel *name1;
-	IBOutlet UILabel *name2;
-	IBOutlet UILabel *name3;
-	IBOutlet UILabel *name4;
-	IBOutlet UILabel *name5;
-	
 	IBOutlet UILabel *score1;
 	IBOutlet UILabel *score2;
 	IBOutlet UILabel *score3;

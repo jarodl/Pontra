@@ -67,6 +67,7 @@
 	}
 
 	pause = FALSE;
+	gameover = FALSE;
 	
   // init game objects
 	ball = [[Ball alloc] init];
@@ -78,6 +79,7 @@
 	
 	// first level
 	current_level = 0;
+	level = 0;
 	
 	// pause menu
 	modal = [[gsModal alloc] initWithText:@"Paused" middle:@"Resume" andBottom:@"Quit"];
@@ -108,6 +110,16 @@
 	}
 }
 
+/*
+ * Render
+ * Last modified: 20April2010
+ * - Jarod
+ * 
+ * Does all OpenGL rendering
+ * draws controls, modals, paddles, 
+ * and ball
+ * 
+ */
 - (void) Render
 {
   //clear anything left over from the last frame, and set background color.
@@ -129,7 +141,7 @@
   
   // Draw level text to the screen
 	[[g_ResManager defaultFont] drawString:[NSString stringWithString:@"Go Right!"] atPoint:CGPointMake(self.frame.size.height/2, 300) withAnchor:GRAPHICS_HCENTER | GRAPHICS_TOP];
-	[[g_ResManager defaultFont] drawString:[NSString stringWithFormat:@"%d", score] atPoint:CGPointMake(self.frame.size.height, 300) withAnchor:GRAPHICS_RIGHT | GRAPHICS_TOP];
+	[[g_ResManager defaultFont] drawString:[NSString stringWithFormat:@"%d", score] atPoint:CGPointMake(self.frame.size.height-10, 300) withAnchor:GRAPHICS_RIGHT | GRAPHICS_TOP];
   
   /* This needed to be the width/2 because it happens
    * before rotation.
@@ -160,7 +172,7 @@
 	[[levels objectAtIndex:current_level] Render];
   
 	// Pause modal display
-	if (pause) {
+	if (pause || gameover) {
 		[modal Render];
 	}
 
@@ -185,7 +197,7 @@
  */
 - (void) Update
 {
-	if (pause)
+	if (pause || gameover)
 		return;
 	
   // Update the balls position based on what control the player
@@ -223,7 +235,7 @@
 /*
  * settingsFile
  * Last modified: 17April2010
- * - Mark
+ * - Travis
  * 
  * Returns the pontra-settings.plist file 
  * 
@@ -238,7 +250,7 @@
 /*
  * scoresFile
  * Last modified: 20April2010
- * - Mark
+ * - Travis
  * 
  * Returns the pontra-settings.plist file 
  * 
@@ -253,7 +265,7 @@
 /*
  * saveScore
  * Last modified: 20April2010
- * - Mark
+ * - Travis
  * 
  * saves the high score in the 
  * least legit way possible. So nasty.
@@ -318,6 +330,12 @@
 	UITouch *touch = [touches anyObject];
 	CGPoint location = [touch locationInView:self];
 
+	// game over menu
+	if (gameover && [modal buttonPressedFromPoint:location] == 2) {
+		[[g_ResManager sound] Stop];
+		[manager doStateChange:[gsMainMenu class]];
+	}
+	
 	if (pause && [modal buttonPressedFromPoint:location] == 2) {
 		pause = false;
 		[modal setButton_pressed:0];
@@ -374,7 +392,7 @@
 
 /*
  * collisionHandler
- * Last modified: 17April2010
+ * Last modified: 20April2010
  * - Mark
  *
  * Collision Handler that updates a game object
@@ -382,6 +400,8 @@
  *
  * Also plays sound effects on collision if
  * the settings are on.
+ * Handles level detection and concludes the
+ * game on end.
  *	
  */
 - (void) handleCollision:(GameObject*) object
@@ -427,8 +447,18 @@
 	if ( [[levels objectAtIndex:current_level] shouldAdvanceToNext:object] ) {
 		if (current_level < 4)
 			current_level++;
+		level++;		
 		score += 25;
 		[ball setPos:CGPointMake(self.frame.size.width/2, self.frame.size.height/2)];
+		
+		// Game ends after 40 levels, highest score is 1000
+		if ( level >= 40 ) {
+			[[g_ResManager sound] Stop];
+			[self saveScore];
+			gameover = TRUE;
+			[modal release];
+			modal = [[gsModal alloc] initWithText:@"Game Over" middle:@"Main Menu" andBottom:@""];
+		}
 	}
 				
 	// play soundFX
@@ -437,6 +467,7 @@
 
 }
 
+// release memory
 - (void)dealloc {
 	[ball release];
 	[modal release];

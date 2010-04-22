@@ -7,6 +7,12 @@
  *
  */
 
+/*
+ * Some of this code came from O'Reilly iPhone Game Development
+ * from Chapter 5 game which can be downloaded here: http://bit.ly/cE3C2F
+ */
+
+
 #ifndef _POINTMATH_H_
 #define _POINTMATH_H_
 

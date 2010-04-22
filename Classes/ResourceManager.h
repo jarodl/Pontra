@@ -6,6 +6,12 @@
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
+/*
+ * Some of this code came from O'Reilly iPhone Game Development
+ * from Chapter 5 game which can be downloaded here: http://bit.ly/cE3C2F
+ */
+
+
 #import <OpenGLES/EAGL.h>
 #import <OpenGLES/EAGLDrawable.h>
 #import <OpenGLES/ES1/gl.h>

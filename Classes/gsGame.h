@@ -23,6 +23,7 @@
 	int control_pressed;
   int score;
 	int current_level;
+	int level;
 	
 	Ball *ball;
 	gsModal *modal;
@@ -33,6 +34,7 @@
 	BOOL fxSetting;
 	
 	BOOL pause;
+	BOOL gameover;
 }
 
 @property (nonatomic) int current_level;

@@ -14,12 +14,10 @@
 /*
  * initWithFrame andManager
  * Last modified: 20April2010
- * - Mark
+ * - Travis
  *
  * Initializes the frame that the highscores nib
  * is loaded in. Loads highscores data.
- *
- * This is so fucking terrible, but it's due at midnight.
  *	
  */
 - (id)initWithFrame:(CGRect)frame andManager:(GameStateManager *)pManager
@@ -58,7 +56,7 @@
 /*
  * settingsFile
  * Last modified: 17April2010
- * - Mark
+ * - Travis
  * 
  * Returns the ponra-highscores.plist file 
  * 
@@ -73,7 +71,7 @@
 /*
  * back
  * Last modified: 17April2010
- * - Mark
+ * - Travis
  * 
  * When the user presses 'back' the state
  * is changed back to the gsMainMenu

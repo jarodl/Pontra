@@ -74,14 +74,14 @@
 					<object class="IBUILabel" id="782465565">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{187, 70}, {105, 30}}</string>
+						<string key="NSFrame">{{145, 70}, {190, 30}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Best Scores</string>
+						<string key="IBUIText">Top 5 Highest Scores</string>
 						<object class="NSFont" key="IBUIFont" id="131226158">
 							<string key="NSName">MarkerFelt-Thin</string>
 							<double key="NSSize">24</double>
@@ -117,6 +117,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<float key="IBUIMinimumFontSize">41</float>
+						<int key="IBUITextAlignment">1</int>
 					</object>
 					<object class="IBUILabel" id="993157254">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -136,6 +137,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<float key="IBUIMinimumFontSize">41</float>
+						<int key="IBUITextAlignment">1</int>
 					</object>
 					<object class="IBUILabel" id="814344315">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -155,6 +157,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<float key="IBUIMinimumFontSize">41</float>
+						<int key="IBUITextAlignment">1</int>
 					</object>
 					<object class="IBUILabel" id="929963284">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -174,6 +177,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<float key="IBUIMinimumFontSize">41</float>
+						<int key="IBUITextAlignment">1</int>
 					</object>
 					<object class="IBUILabel" id="490270474">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -193,6 +197,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 						<float key="IBUIMinimumFontSize">41</float>
+						<int key="IBUITextAlignment">1</int>
 					</object>
 				</object>
 				<string key="NSFrameSize">{480, 320}</string>
@@ -283,8 +288,8 @@
 							<reference ref="993157254"/>
 							<reference ref="814344315"/>
 							<reference ref="929963284"/>
-							<reference ref="782465565"/>
 							<reference ref="490270474"/>
+							<reference ref="782465565"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -429,11 +434,6 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>name1</string>
-							<string>name2</string>
-							<string>name3</string>
-							<string>name4</string>
-							<string>name5</string>
 							<string>score1</string>
 							<string>score2</string>
 							<string>score3</string>
@@ -443,11 +443,6 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>UILabel</string>
-							<string>UILabel</string>
-							<string>UILabel</string>
-							<string>UILabel</string>
-							<string>UILabel</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
 							<string>UILabel</string>

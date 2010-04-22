@@ -10,6 +10,16 @@
 
 @implementation SeekerPaddle
 
+/*
+ * seek
+ * Last modified: 17April2010
+ * - Jarod
+ * 
+ * if the ball is within the paddles
+ * view, it moves slowly toward the
+ * ball to block it.
+ * 
+ */
 - (void) seek:(GameObject*) object
 {
   if ([self isInProximity:object]) {
@@ -28,6 +38,15 @@
   }
 }
 
+/*
+ * isInProximity
+ * Last modified: 17April2010
+ * - Jarod
+ * 
+ * checks to see if the ball is within the
+ * paddles' view.
+ * 
+ */
 - (BOOL) isInProximity:(GameObject*) object
 {
   if ([self side] == LEFT) {

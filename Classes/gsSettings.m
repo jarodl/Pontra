@@ -14,7 +14,7 @@
 /*
  * initWithFrame andManager
  * Last modified: 17April2010
- * - Mark
+ * - Travis
  *
  * Initializes the frame that the settings nib
  * is loaded in. Also loads the saved settings
@@ -44,7 +44,7 @@
 /*
  * settingsFile
  * Last modified: 17April2010
- * - Mark
+ * - Travis
  * 
  * Returns the pontra-settings.plist file 
  * 
@@ -59,7 +59,7 @@
 /*
  * back
  * Last modified: 17April2010
- * - Mark
+ * - Travis
  * 
  * When the user presses 'back' the settings
  * are saved to the settings.plist and the state
