@@ -24,6 +24,8 @@ ResourceManager *g_ResManager;
 
 @implementation ResourceManager
 
+@synthesize sound;
+
 //initialize is called automatically before the class gets any other message, per from http://stackoverflow.com/questions/145154/what-does-your-objective-c-singleton-look-like
 + (void)initialize
 {
@@ -59,7 +61,7 @@ ResourceManager *g_ResManager;
 	// initialize the sound
 	NSString *soundFile1 = [[NSBundle mainBundle] pathForResource:@"teachingrobot" ofType:@"wav"];
 	NSString *soundFile2 = [[NSBundle mainBundle] pathForResource:@"pop" ofType:@"wav"];
-	NSMutableArray *sounds = [[NSMutableArray alloc] initWithCapacity:2];
+	NSMutableArray *sounds = [[NSMutableArray alloc] init];
 	[sounds addObject:soundFile1];
 	[sounds addObject:soundFile2];
 	
@@ -71,11 +73,11 @@ ResourceManager *g_ResManager;
 	return self;
 }
 
-- (Balto *) sound {
-	if( sound != nil )
-		return sound;
-	return nil;
-}
+//- (Balto *) sound {
+//	if( sound != nil )
+//		return sound;
+//	return nil;
+//}
 
 - (void) shutdown {
 	[self purgeTextures];

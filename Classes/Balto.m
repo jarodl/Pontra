@@ -88,7 +88,7 @@ char* ReadWAV( char *filename, SimpleWAVHeader *header ) {
 
 //
 // CreateBufferFromWav( data, header )
-// Last modified: 27Mar2010
+// Last modified: 20April2010
 //
 // the WAVBuffer method that generates and creates
 // an audio buffer from the wav data
@@ -102,7 +102,7 @@ char* ReadWAV( char *filename, SimpleWAVHeader *header ) {
 ALuint CreateBufferFromWav( char* data, SimpleWAVHeader header ) {
 	
 	ALuint buffer = 0;
-	ALuint format = 0;
+	ALenum format = 0;
 	
 	switch ( header.bitsPerSample ) {
 		case 8:
@@ -159,15 +159,12 @@ ALuint loadWAVFromFile( char* filename ) {
 
 @implementation Balto
 
-@synthesize audioFiles;
-
 /*
  * AudioPlayer( filenames, size )
- * Last modified: 28Mar2010
+ * Last modified: 20April2010
  *
- * Default constructor lodas the filename array of songs.
- * Sets the NUM_BUFFERS to 256 maximum allowed buffers
- * which I believe is the absolute max OpenAL allows.
+ * Default constructor initializes the sources and
+ * loads in the array of audio files.
  *
  * Returns:              <none>
  * Parameters:
@@ -177,39 +174,35 @@ ALuint loadWAVFromFile( char* filename ) {
  */
 
 - (id) initWithFiles:(NSMutableArray*)filenames
-{
-	if( self = [super init] ) {
-		
-		audioFiles = [[NSMutableArray alloc] initWithCapacity:(int)[filenames count]];
+{	
+	if ( self = [super init] )
+	{
 		playCount = 0;
-		
-		for ( int i = 0; i < (int)[filenames count]; i++)
-			[audioFiles addObject:[filenames objectAtIndex:i]];
 		
 		if ( ![self InitSources] )
 			NSLog(@"Failed to initialize OpenAL");
 		
 		// Preload files into buffers
-		[self Load];
+		[self Load:filenames];
 	}
 	return self;
 }
 
 /*
  * Load()
- * Last modified: 28Mar2010
+ * Last modified: 20April2010
  *
  * Method to load all the audio sources into the Buffers
  *
  * Returns:     <none>
- * Parameters: 	
- *				<none>
+ * Parameters: 	 
+ *			filename	in   array of all the wav filenames
  */
 
-- (void) Load
+- (void) Load:(NSMutableArray*)filenames
 {		
-	for (int i = 0; i < (int)[audioFiles count]; i++ ) {
-		const char* file = [[audioFiles objectAtIndex:i] UTF8String];
+	for (int i = 0; i < (int)[filenames count]; i++ ) {
+		const char* file = [[filenames objectAtIndex:i] UTF8String];
 		Buffers[i] = loadWAVFromFile((char*)file);
 	}
 }
@@ -354,7 +347,7 @@ ALuint loadWAVFromFile( char* filename ) {
 
 /*
  * CleanSources()
- * Last modified: 28Mar2010
+ * Last modified: 20April2010
  *
  * Resets finished sources to a free and available state.
  * Be sure to unqueue the unplayed buffers here.
@@ -377,6 +370,7 @@ ALuint loadWAVFromFile( char* filename ) {
 				if ( state != AL_PLAYING ) {
 					alSourceStop( Sources[i] );
 					alSourcei( Sources[i], AL_BUFFER, 0 );
+					alDeleteSources(1, &Sources[i]);
 					altSourceData[i] == SOURCE_FREE;
 					playCount--;
 				}}}
@@ -450,7 +444,7 @@ ALuint loadWAVFromFile( char* filename ) {
 
 /*
  * Delete()
- * Last modified: 15April2010
+ * Last modified: 20April2010
  *
  * Deletes the OpenAL buffers and sources by
  * calling the OpenAL methods, also destroys
@@ -463,9 +457,10 @@ ALuint loadWAVFromFile( char* filename ) {
 
 - (void) Delete
 {
-	
-	alDeleteBuffers(256, Buffers);
-	alDeleteSources(256, Sources);
+	for (int i = 0; i < 256; i++) {
+		alDeleteBuffers(1, &Buffers[i]);
+		alDeleteSources(1, &Sources[i]);
+	}
 	
 	Context = alcGetCurrentContext();
 	Device = alcGetContextsDevice(Context);
@@ -478,7 +473,7 @@ ALuint loadWAVFromFile( char* filename ) {
 
 /*
  * ~AudioPlayer()
- * Last modified: 28Mar2010
+ * Last modified: 20April2010
  *
  * Dealloc does some cleanup and calls the Delete method
  *
@@ -488,7 +483,6 @@ ALuint loadWAVFromFile( char* filename ) {
  */
 
 - (void) dealloc {
-	[audioFiles release];
 	[self Delete];
 	[super dealloc];
 }

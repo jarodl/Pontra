@@ -48,11 +48,7 @@
 	
 	int playCount;
 	char* filename;
-	
-	NSMutableArray *audioFiles;
 }
-
-@property (nonatomic, retain) NSMutableArray* audioFiles;
 
 - (id) initWithFiles:(NSMutableArray*)filenames;
 
@@ -62,7 +58,7 @@
 - (void) Stop;
 - (void) SetVolume:(float)volume;	
 
-- (void) Load;
+- (void) Load:(NSMutableArray*)filenames;
 
 
 - (BOOL) InitSources;

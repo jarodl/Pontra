@@ -47,6 +47,8 @@ extern ResourceManager *g_ResManager;
 	GLFont* default_font;
 }
 
+@property (nonatomic, retain) Balto *sound;
+
 + (ResourceManager *)instance;
 
 - (void) shutdown;
@@ -66,7 +68,7 @@ extern ResourceManager *g_ResManager;
 + (NSString*) appendStorePath:(NSString*) filename;
 
 // sounds
-- (Balto *) sound;
+//- (Balto *) sound;
 
 - (GLFont *) defaultFont;
 - (void) setDefaultFont: (GLFont *) newValue;
